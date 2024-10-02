@@ -1,3 +1,5 @@
+{% url 'home' as home_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,14 +20,14 @@
 <body>
     <header>
         <!-- Logo -->
-        <a href="index.html">
+        <a href="{% url 'home' %}">
             <h1 id="Logo">De Nada</h1>
         </a>
         <!-- Navbar -->
         <nav>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Menu</a>
@@ -49,6 +51,11 @@
         <section id="hero" aria-label="">
 
         </section>
+
+        {% block content %}
+        <!-- Content goes here -->
+        {% endblock %}
+
     </main>
 
     <!-- Footer -->
