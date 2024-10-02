@@ -43,16 +43,16 @@
                 <nav id="nav-menu">
                     <ul class="nav justify-content-center nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                            <a class="nav-link {% if request.path == menu_url %}active{% endif %}" href="{% url 'menu' %}">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'book' %}">Book</a>
+                            <a class="nav-link {% if request.path == book_url %}active{% endif %}" href="{% url 'book' %}">Book</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                            <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
