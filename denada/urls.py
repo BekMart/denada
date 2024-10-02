@@ -19,10 +19,12 @@ from django.urls import path
 from home.views import homepage
 from menu.views import menu_page
 from book.views import booking_page
+from contact.views import contact_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name='home'),
     path('menu/', menu_page, name='menu'),
-    path('book/', booking_page, name='book')
+    path('book/', booking_page, name='book'),
+    path('contact/', contact_page, name='contact'),
 ]
