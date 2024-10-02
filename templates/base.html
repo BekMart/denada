@@ -1,5 +1,6 @@
 {% url 'home' as home_url %}
 {% url 'menu' as menu_url %}
+{% url 'book' as book_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +35,7 @@
                     <a class="nav-link" href="{% url 'menu' %}">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Book</a>
+                    <a class="nav-link" href="{% url 'book' %}">Book</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
