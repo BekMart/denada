@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'menu',
     'book',
     'contact',
+    'login',
 ]
 
 MIDDLEWARE = [
