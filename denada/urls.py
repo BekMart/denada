@@ -21,6 +21,7 @@ from menu.views import menu_page
 from book.views import booking_page
 from contact.views import contact_page
 from login.views import login_page
+from signup.views import signup_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,5 @@ urlpatterns = [
     path('book/', booking_page, name='book'),
     path('contact/', contact_page, name='contact'),
     path('login/', login_page, name='login'),
+    path('signup/', signup_page, name='signup'),
 ]
