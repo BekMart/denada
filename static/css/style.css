@@ -65,7 +65,6 @@ header {
 
 /* Navbar */
 .sidenav-trigger i {
-    justify-content: center !important;
     font-size: 200% !important;
     line-height: 70px !important;
 }
