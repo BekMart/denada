@@ -12,3 +12,6 @@ class Restaurant(models.Model):
     max_capacity = models.IntegerField()
     num_tables = models.IntegerField()
     restaurant_image = CloudinaryField('image', default='placeholder', blank=True)
+
+    def __str__(self):
+        return self.name

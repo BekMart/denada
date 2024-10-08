@@ -9,6 +9,9 @@ class Type(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.name
+
 class Drink(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -22,6 +25,9 @@ class Drink(models.Model):
     gluten = models.BooleanField(default=False)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 class Food(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -34,3 +40,6 @@ class Food(models.Model):
     vegan = models.BooleanField(default=False)
     gluten = models.BooleanField(default=False)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name

@@ -11,9 +11,6 @@ class TypeAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('description',)
 
-    def __str__(self):
-        return f"{self.name}"
-
 @admin.register(Food)
 class FoodAdmin(SummernoteModelAdmin):
 
@@ -23,9 +20,6 @@ class FoodAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('description',)
 
-    def __str__(self):
-        return f"{self.name}"
-
 @admin.register(Drink)
 class DrinkAdmin(SummernoteModelAdmin):
 
@@ -34,8 +28,5 @@ class DrinkAdmin(SummernoteModelAdmin):
     list_filter = ('name', 'type', 'vegetarian', 'vegan', 'gluten',)
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('description',)
-
-    def __str__(self):
-        return f"{self.name}"
 
 # Register your models here.
