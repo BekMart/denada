@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary_storage',
+    'django_summernote',
     'cloudinary',
     'home',
     'menu',
@@ -99,7 +100,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-bekmart-denada-ufzzin8nbc5.ws.codeinstitute-ide.net/", "https://https://denada-2b03b2e8c951.herokuapp.com/",
+    "https://8000-bekmart-denada-ufzzin8nbc5.ws.codeinstitute-ide.net", "https://denada-2b03b2e8c951.herokuapp.com/",
 ]
 
 # Password validation
