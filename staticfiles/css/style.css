@@ -31,6 +31,8 @@ a > i {
 
 .divider {
     background-color: rgb(154, 26, 75) !important;
+    width: 65% !important;
+    margin-left: 50px !important;
 }
 
 /* Header */
