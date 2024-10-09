@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- food.html content starts here -->
+ 
+<div></div>
+    <div id="food-menu" class="col-12">
+        <h2>Food</h2>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    {% for food in food_list %}
+                    <li>
+                        <span class="title-calories">{{ food.name }}<span class="calories">
+                                ({{ food.calories }})</span></span>
+                        <span class="cost">£{{ food.price }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- food.html content ends here -->
+{% endblock %}

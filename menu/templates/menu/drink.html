@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- drink.html content starts here -->
+ 
+<div></div>
+    <div id="drink-menu" class="col-12">
+        <h2>Drinks</h2>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    {% for drink in drink_list %}
+                    <li>
+                        <span class="title-calories">{{ drink.name }}<span class="calories">
+                                ({{ drink.calories }})</span></span>
+                        <span class="cost">£{{ drink.price }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- drink.html content ends here -->
+{% endblock %}

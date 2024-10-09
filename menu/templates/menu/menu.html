@@ -9,17 +9,8 @@
     </div>
 </div>
 
-<h1>Food</h1>
-{% for food in object_list %}
-<span><em>{{food.name}}</em> ({{food.calories}}) £{{food.price}}</span>
-<br>
-{% endfor %}
-
-<h1>Drinks</h1>
-{% for drink in object_list %}
-<span><em>{{drink.name}}</em> ({{drink.calories}}) £{{drink.price}}</span>
-<br>
-{% endfor %}
+<h3><a id="food-title" href="{% url 'food' %}">Food</a></h3>
+<h3><a id="drink-title" href="{% url 'drink' %}">Drink</a></h3>
 
 <!-- menu.html content ends here -->
 {% endblock %}

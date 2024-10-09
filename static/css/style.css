@@ -159,3 +159,53 @@ footer {
     color: #b3d80d;
     margin-bottom: 0;
 }
+
+/* Menu Page */
+#food-title {
+    color: antiquewhite !important;
+    float: left;
+    margin-left: 20%;
+    border: solid 4px salmon;
+}
+
+#drink-title {
+    color: beige !important;
+    float: right;
+    margin-right: 20%;
+    border: solid 4px salmon;
+}
+
+#food-menu {
+    background-color: rgb(218, 145, 44);
+    color: rgb(23, 26, 200);
+    margin-bottom: 20px;   
+}
+
+#drink-menu {
+    background-color: rgb(150, 213, 192);
+    color: rgb(23, 26, 200);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline 4px;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-calories {
+    float: left;
+}
+
+.calories {
+    font-size: x-small;
+}
+
+.cost {
+    float: right;
+}
