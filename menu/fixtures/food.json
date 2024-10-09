@@ -1,0 +1,121 @@
+[
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Crisps",
+            "slug": "crisps",
+            "type": "5",
+            "description": "",
+            "price": "1.00",
+            "food_image": "",
+            "calories": "100",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Jacket Potato",
+            "slug": "jacket-potato",
+            "type": "7",
+            "description": "",
+            "price": "5.00",
+            "food_image": "",
+            "calories": "400",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Sandwiches",
+            "slug": "sanwiches",
+            "type": "7",
+            "description": "",
+            "price": "3.50",
+            "food_image": "",
+            "calories": "450",
+            "vegetarian": "False",
+            "vegan": "False",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Spaghetti Carbonara",
+            "slug": "spaghetti-carbonara",
+            "type": "8",
+            "description": "",
+            "price": "8.50",
+            "food_image": "",
+            "calories": "650",
+            "vegetarian": "False",
+            "vegan": "False",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Tacos",
+            "slug": "tacos",
+            "type": "8",
+            "description": "",
+            "price": "10.00",
+            "food_image": "",
+            "calories": "600",
+            "vegetarian": "False",
+            "vegan": "False",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Toast",
+            "slug": "toast",
+            "type": "6",
+            "description": "",
+            "price": "1.50",
+            "food_image": "",
+            "calories": "1250",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Cous Cous",
+            "slug": "cous-cous",
+            "type": "7",
+            "description": "",
+            "price": "3.00",
+            "food_image": "",
+            "calories": "200",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    }
+]

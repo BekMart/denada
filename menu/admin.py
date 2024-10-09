@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Type)
 class TypeAdmin(SummernoteModelAdmin):
 
-    list_display = ('name',)
+    list_display = ('name', 'id',)
     search_fields = ['name',]
     list_filter = ('name',)
     prepopulated_fields = {'slug': ('name',)}
