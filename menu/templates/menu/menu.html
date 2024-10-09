@@ -2,12 +2,24 @@
 
 {% block content %}
 <!-- menu.html content starts here -->
- 
+
 <div class="container-fluid">
     <div class="row">
         <h1>TAKE A LOOK AT OUR MENUS!</h1>
     </div>
 </div>
+
+<h1>Food</h1>
+{% for food in object_list %}
+<span><em>{{food.name}}</em> ({{food.calories}}) £{{food.price}}</span>
+<br>
+{% endfor %}
+
+<h1>Drinks</h1>
+{% for drink in object_list %}
+<span><em>{{drink.name}}</em> ({{drink.calories}}) £{{drink.price}}</span>
+<br>
+{% endfor %}
 
 <!-- menu.html content ends here -->
 {% endblock %}

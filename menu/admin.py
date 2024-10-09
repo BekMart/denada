@@ -16,7 +16,7 @@ class FoodAdmin(SummernoteModelAdmin):
 
     list_display = ('name', 'type', 'price', 'calories',)
     search_fields = ['name', 'type',]
-    list_filter = ('name', 'type', 'vegetarian', 'vegan', 'gluten',)
+    list_filter = ('type', 'vegetarian', 'vegan', 'gluten',)
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('description',)
 
@@ -25,7 +25,7 @@ class DrinkAdmin(SummernoteModelAdmin):
 
     list_display = ('name', 'type', 'price', 'calories',)
     search_fields = ['name', 'type',]
-    list_filter = ('name', 'type', 'vegetarian', 'vegan', 'gluten',)
+    list_filter = ('type', 'vegetarian', 'vegan', 'gluten',)
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('description',)
 
