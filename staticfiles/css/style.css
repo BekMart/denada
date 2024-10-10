@@ -175,6 +175,11 @@ footer {
     border: solid 4px salmon;
 }
 
+.type-heading {
+    text-decoration: underline;
+    font-size: larger;
+}
+
 #food-menu {
     background-color: rgb(218, 145, 44);
     color: rgb(23, 26, 200);

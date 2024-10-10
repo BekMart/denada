@@ -2,22 +2,24 @@
 
 {% block content %}
 <!-- food.html content starts here -->
- 
-<div></div>
-    <div id="food-menu" class="col-12">
-        <h2>Food</h2>
-        <div class="container">
-            <div class="row">
-                <ul>
-                    {% for food in food_list %}
-                    <li>
-                        <span class="title-calories">{{ food.name }}<span class="calories">
-                                ({{ food.calories }})</span></span>
-                        <span class="cost">£{{ food.price }}</span>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+
+<div id="food-menu" class="col-12">
+    <h2>Food</h2>
+    <div class="container">
+        <div class="row">
+            <ul>
+                {% regroup food_list by type as grouped_food %}
+                {% for group in grouped_food %}
+                <li class="type-heading">{{ group.grouper }}</li>
+                {% for item in group.list %}
+                <li>
+                    <span class="title-calories">{{ item.name }}<span class="calories">
+                            ({{ item.calories }})</span></span>
+                    <span class="cost">£{{ item.price }}</span>
+                </li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </div>

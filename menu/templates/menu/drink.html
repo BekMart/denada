@@ -2,19 +2,23 @@
 
 {% block content %}
 <!-- drink.html content starts here -->
- 
-<div></div>
+
+<div>
     <div id="drink-menu" class="col-12">
         <h2>Drinks</h2>
         <div class="container">
             <div class="row">
                 <ul>
-                    {% for drink in drink_list %}
+                    {% regroup drink_list by type as grouped_drink %}
+                    {% for group in grouped_drink %}
+                    <li class="type-heading">{{ group.grouper }}</li>
+                    {% for item in group.list %}
                     <li>
-                        <span class="title-calories">{{ drink.name }}<span class="calories">
-                                ({{ drink.calories }})</span></span>
-                        <span class="cost">£{{ drink.price }}</span>
+                        <span class="title-calories">{{ item.name }}<span class="calories">
+                                ({{ item.calories }})</span></span>
+                        <span class="cost">£{{ item.price }}</span>
                     </li>
+                    {% endfor %}
                     {% endfor %}
                 </ul>
             </div>
