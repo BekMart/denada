@@ -52,9 +52,7 @@ INSTALLED_APPS = [
     'home',
     'menu',
     'book',
-    'contact',
-    'login',
-    'signup',
+    'contact'
 ]
 
 
