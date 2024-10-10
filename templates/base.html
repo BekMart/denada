@@ -123,9 +123,14 @@
     <!-- Main Content -->
     <main>
         <!-- Hero image -->
-        <section id="hero" aria-label="">
+        <section id="hero" aria-label=""></section>
 
-        </section>
+        <!-- This lets user know if they are logged in or not -->
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">Hello, {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not currently logged in.</p>
+        {% endif %}
 
         {% block content %}
         <!-- Content goes here -->
