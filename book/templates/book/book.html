@@ -1,11 +1,30 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <!-- book.html content starts here -->
- 
+
 <div class="container-fluid">
     <div class="row">
         <h1>BOOK A TABLE HERE!</h1>
+    </div>
+</div>
+
+<!-- Create booking here -->
+<div>
+    <div class="'col-md-4 card mb-4 mt-3">
+        <div class="card-body">
+            {% if user.is_authenticated %}
+            <h3>Hey {{ user.username }}, fill in the form below to book a table!</h3>
+            <form id="bookingForm" method="post" style="margin-top: 1.3em;">
+                {{ booking_form | crispy }}
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-jg">Submit</button>
+            </form>
+            {% else %}
+            <h2>Please log in and then you can book a table!</h2>
+            {% endif %}
+        </div>
     </div>
 </div>
 
