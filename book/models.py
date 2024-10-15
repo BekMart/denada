@@ -10,7 +10,7 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name="user_booking"
     )
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_booking"
+        Restaurant, on_delete=models.CASCADE, related_name="restaurant_booking", default=1
     )
     party_size = models.IntegerField()
     date = models.DateField()
