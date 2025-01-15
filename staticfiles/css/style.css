@@ -24,7 +24,7 @@ body {
 
 /* Links in body */
 body a,
-a > i {
+a>i {
     text-decoration: none;
     color: rgb(154, 26, 75) !important;
 }
@@ -59,10 +59,10 @@ header {
 }
 
 .vert-line {
-    height: 50px; 
+    height: 50px;
     margin-top: 10px;
-    width: 1px; 
-    background-color:rgb(154, 26, 75);
+    width: 1px;
+    background-color: rgb(154, 26, 75);
 }
 
 /* Navbar */
@@ -94,9 +94,11 @@ nav {
 
 /* Hero image */
 #hero {
-    background-color: coral;
-    width: 100%; 
-    min-height: 220px;
+    background-color: gold;
+    background: url('../images/denada.jpg') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
 }
 
 /* Main Content */
@@ -160,6 +162,30 @@ footer {
     margin-bottom: 0;
 }
 
+/* Home Page */
+
+h1 {
+    margin: 0;
+}
+
+.home-images {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow images to wrap to the next line if needed */
+    justify-content: space-between;
+    /* Space images evenly within the container */
+}
+
+.home-images img {
+    padding: 2px;
+}
+
+.card-img-top {
+    height: auto;
+    margin-bottom: 10px;
+    /* Add some spacing between images */
+}
+
 /* Menu Page */
 #food-title {
     color: antiquewhite !important;
@@ -183,7 +209,7 @@ footer {
 #food-menu {
     background-color: rgb(218, 145, 44);
     color: rgb(23, 26, 200);
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
 }
 
 #drink-menu {
@@ -213,4 +239,12 @@ li {
 
 .cost {
     float: right;
+}
+
+/* Media query: tablets & larger (768px and above) */
+@media screen and (min-width: 768px) {
+
+    .card-img-top {
+        max-width: 33%;
+    }
 }

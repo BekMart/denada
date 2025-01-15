@@ -2,10 +2,81 @@
 
 {% block content %}
 <!-- index.html content starts here -->
- 
+{% load static %}
 <div class="container-fluid">
     <div class="row">
         <h1>WELCOME TO DE NADA</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div id="about-section" class="col-12">
+            <h3>{{ about.title }}</h3>
+            <p class="about-content">{{ about.content | safe }}</p>
+            <span class="home-images">
+                {% if "placeholder" in about.image_1.url %}
+                <img class="card-img-top" src="{% static 'images/about_1.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ about.image_1.url }}" alt="{{ about.title }}">
+                {% endif %}
+                {% if "placeholder" in about.image_2.url %}
+                <img class="card-img-top" src="{% static 'images/about_2.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ about.image_2.url }}" alt="{{ about.title }}">
+                {% endif %}
+                {% if "placeholder" in about.image_3.url %}
+                <img class="card-img-top" src="{% static 'images/about_3.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ about.image_3.url }}" alt="{{ about.title }}">
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div id="produce-section" class="col-12">
+            <h3>{{ produce.title }}</h3>
+            <p class="produce">{{ produce.content | safe }}</p>
+            <span class="home-images">
+                {% if "placeholder" in produce.image_1.url %}
+                <img class="card-img-top" src="{% static 'images/produce_1.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ produce.image_1.url }}" alt="{{ produce.title }}">
+                {% endif %}
+                {% if "placeholder" in produce.image_2.url %}
+                <img class="card-img-top" src="{% static 'images/produce_2.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ produce.image_2.url }}" alt="{{ produce.title }}">
+                {% endif %}
+                {% if "placeholder" in produce.image_3.url %}
+                <img class="card-img-top" src="{% static 'images/produce_3.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ produce.image_3.url }}" alt="{{ produce.title }}">
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div id="visit-section" class="col-12">
+            <h3>{{ visit.title }}</h3>
+            <p class="visit-content">{{ visit.content | safe }}</p>
+            <span class="home-images">
+                {% if "placeholder" in visit.image_1.url %}
+                <img class="card-img-top" src="{% static 'images/visit_1.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ visit.image_1.url }}" alt="{{ visit.title }}">
+                {% endif %}
+                {% if "placeholder" in visit.image_2.url %}
+                <img class="card-img-top" src="{% static 'images/visit_2.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ visit.image_2.url }}" alt="{{ visit.title }}">
+                {% endif %}
+                {% if "placeholder" in visit.image_3.url %}
+                <img class="card-img-top" src="{% static 'images/visit_3.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ visit.image_3.url }}" alt="{{ visit.title }}">
+                {% endif %}
+            </span>
+        </div>
     </div>
 </div>
 
