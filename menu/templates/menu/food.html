@@ -11,13 +11,16 @@
                 {% regroup food_list by type as grouped_food %}
                 {% for group in grouped_food %}
                 <li class="type-heading">{{ group.grouper }}</li>
-                {% for item in group.list %}
+                {% for item in group.list|dictsort:"price" %}
                 <li>
                     <span class="title-calories">{{ item.name }}<span class="calories">
                             ({{ item.calories }})</span></span>
                     <span class="cost">£{{ item.price }}</span>
                 </li>
                 {% endfor %}
+                {% if group.grouper.type_image %}
+                    <li><img src="{{ group.grouper.type_image.url }}" alt="{{ group.grouper }}"></li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>

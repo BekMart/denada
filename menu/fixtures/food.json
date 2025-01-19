@@ -3,13 +3,13 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Crisps",
-            "slug": "crisps",
-            "type": "5",
-            "description": "",
-            "price": "1.00",
+            "name": "Overnight Oats",
+            "slug": "overnight-oats",
+            "type": "6",
+            "description": "Oats soaked in almond milk, with chai seeds, sweetened with cinnamon and honey and topped with toasted almond flakes.",
+            "price": "4.00",
             "food_image": "",
-            "calories": "100",
+            "calories": "350",
             "vegetarian": "True",
             "vegan": "True",
             "gluten": "True",
@@ -20,14 +20,31 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Jacket Potato",
-            "slug": "jacket-potato",
-            "type": "7",
-            "description": "",
-            "price": "5.00",
+            "name": "Greek Yoghurt with Fruit and Granola",
+            "slug": "greek-yoghurt-with-fruit-and-granola",
+            "type": "6",
+            "description": "Natural greek yoghurt with a variety of fruit and granola.",
+            "price": "4.00",
             "food_image": "",
             "calories": "400",
             "vegetarian": "True",
+            "vegan": "False",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Acai bowl",
+            "slug": "acai-bowl",
+            "type": "6",
+            "description": "Acai bowls are my FAV, so you’ve come to the right place for the best smoothie bowls at a fraction of the price. These bowls taste indulgently creamy thanks to my tips and tricks with an unparalleled depth of flavor thanks to three types of fruit (no bland or watery acai here!). I’ve included 5 different homemade acai bowl recipes as well as how to make ahead!",
+            "price": "5.00",
+            "food_image": "",
+            "calories": "380",
+            "vegetarian": "True",
             "vegan": "True",
             "gluten": "True",
             "restaurant": "1"
@@ -37,11 +54,11 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Sandwiches",
-            "slug": "sanwiches",
-            "type": "7",
-            "description": "",
-            "price": "3.50",
+            "name": "Smashed avocado on Toast with Salmon and Egg",
+            "slug": "smashed-avocado-on-toast-with-salmon-and-egg",
+            "type": "6",
+            "description": "This is a favourite! Come and enjoy our colourful and healthy smoked salmon and poached eggs on our signature sourdough bread, topped with zesty smashed avocado.",
+            "price": "7.00",
             "food_image": "",
             "calories": "450",
             "vegetarian": "False",
@@ -54,15 +71,15 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Spaghetti Carbonara",
-            "slug": "spaghetti-carbonara",
-            "type": "8",
-            "description": "",
-            "price": "8.50",
+            "name": "Full English",
+            "slug": "full-english",
+            "type": "6",
+            "description": "Come in and enjoy our take on a full english - we will make your own personalised breakfast, just tell us what you want from the follwoing. Bacon, sausage, egg, hash brown, beans, mushrooms, grilled tomato, grilled halloumi, sourdough toast.",
+            "price": "9.00",
             "food_image": "",
-            "calories": "650",
-            "vegetarian": "False",
-            "vegan": "False",
+            "calories": "600",
+            "vegetarian": "True",
+            "vegan": "True",
             "gluten": "False",
             "restaurant": "1"
         }
@@ -71,11 +88,130 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Tacos",
-            "slug": "tacos",
+            "name": "Moroccan Cous Cous",
+            "slug": "moroccan-cous-cous",
+            "type": "7",
+            "description": "A flavorful, hearty Moroccan Couscous dish that’s packed with roasted vegetables, chickpeas and almonds. It’s perfect for summer and sure to be a hit! Enjoy for a healthy lunch or as a side with fish or chicken for a filling, exciting dinner.",
+            "price": "5.00",
+            "food_image": "",
+            "calories": "350",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Wraps",
+            "slug": "wraps",
+            "type": "7",
+            "description": "We have a selection of standard wraps available but feel free to ask us to customise any of them for you! All wraps are served with a side salad. Falafel & humous/Chicken Salad/Tuna Mayo.",
+            "price": "5.50",
+            "food_image": "",
+            "calories": "450",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "De Nada Salad",
+            "slug": "de-nada-salad",
+            "type": "7",
+            "description": "We have lots of different variations of salad which we will make fresh for you - there is sure to be something for everyone. Our most popular are Chicken Ceasar and Feta and Pomegranate.",
+            "price": "5.50",
+            "food_image": "",
+            "calories": "400",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Creamy Mushroom Soup",
+            "slug": "creamy-mushroom-soup",
+            "type": "7",
+            "description": "Feeling a bit chilly? Why not warm up with our deliciously creamy mushroom soup! Made with dairy free cream so that it can be enjoyed by all and served with a crusty sourdough bread.",
+            "price": "6.00",
+            "food_image": "",
+            "calories": "450",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Tomato and Red Lentil Pasta",
+            "slug": "tomato-and-red-lentil-pasta",
+            "type": "7",
+            "description": "Enjoy our rich, tomato and red lentil pasta, made with aubergine and tahini, either hot or cold. Fancy it spicy? Let us know and we can add some spice to your dish. Get it whilst you still can.",
+            "price": "6.00",
+            "food_image": "",
+            "calories": "500",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "False",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Buddhe Bowl",
+            "slug": "buddha-bowl",
+            "type": "7",
+            "description": "A Buddha bowl is typically a vegetarian meal served in a wide brimmed bowl (like Buddha's belly) with a healthy grain, several vegetables, fresh greens, topped with avocado, hummus or tahini sauce. The great thing about these bowls is you can create endless combinations and they all will be super hearty and satisfying",
+            "price": "7.00",
+            "food_image": "",
+            "calories": "500",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "5 Bean Chilli with Rice",
+            "slug": "5-bean-chilli-with-rice",
             "type": "8",
-            "description": "",
-            "price": "10.00",
+            "description": "Traditionally, chili combines ground or coarse-chopped beef (or other meat), dried red chili powder, onion, garlic, some liquid, and sometimes comino, oregano, beef suet, tomato, and masa (finely ground corn meal) to thicken. Texas-style chili has no beans. Southerners and Midwesterners generally add beans.",
+            "price": "7.00",
+            "food_image": "",
+            "calories": "500",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Chicken Stir-fry Noodles",
+            "slug": "chicken-stir-fry-noodles",
+            "type": "8",
+            "description": "Very basically, to stir fry means to add ingredients to a pan with very hot oil and cook quickly while stirring almost constantly. It's quite possibly the fastest way to get dinner on the table, depending on how many different ingredients you choose to add.",
+            "price": "8.00",
             "food_image": "",
             "calories": "600",
             "vegetarian": "False",
@@ -88,16 +224,16 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Toast",
-            "slug": "toast",
-            "type": "6",
-            "description": "",
-            "price": "1.50",
+            "name": "Prawn/Halloumi Tacos",
+            "slug": "prawn-halloumi-tacos",
+            "type": "8",
+            "description": "These street food style Prawn Tacos are a super speedy 15 minute meal. Stuffed with a simple homemade slaw and a zesty lime dressing, these are so delicious they’ll be a new family favourite in no time.",
+            "price": "8.00",
             "food_image": "",
-            "calories": "1250",
+            "calories": "600",
             "vegetarian": "True",
-            "vegan": "True",
-            "gluten": "False",
+            "vegan": "False",
+            "gluten": "True",
             "restaurant": "1"
         }
     },
@@ -105,16 +241,67 @@
         "model": "menu.food",
         "pk": null,
         "fields": {
-            "name": "Cous Cous",
-            "slug": "cous-cous",
-            "type": "7",
-            "description": "",
-            "price": "3.00",
+            "name": "Mushroom Risotto",
+            "slug": "mushroom-risotto",
+            "type": "8",
+            "description": "For a delicious, elegant main dish, make this mushroom risotto recipe! It's rich and creamy, made with white wine, fresh herbs, and Parmesan cheese.",
+            "price": "8.00",
             "food_image": "",
-            "calories": "200",
+            "calories": "600",
             "vegetarian": "True",
             "vegan": "True",
-            "gluten": "False",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Chana Masala Curry",
+            "slug": "chana-masala-currys",
+            "type": "8",
+            "description": "As one of the most popular dishes in the world, both in and out of India and Pakistan, channa masala (or chana masala, chole masala, or chholay, depending on where you're from)—chickpeas cooked in a spicy and tangy tomato-based sauce—is the kind of dish that stirs passions in the recipe-writing community.",
+            "price": "9.00",
+            "food_image": "",
+            "calories": "700",
+            "vegetarian": "True",
+            "vegan": "True",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Salmon, Rice and Veg",
+            "slug": "salmon-rice-and-veg",
+            "type": "8",
+            "description": "Keep it simple with our salmon fillet dish. We can steam, bake, fry or grill your salmon - you say the word and it'll be done. Typically served with steamed tenderstem brocolli and carrots",
+            "price": "10.00",
+            "food_image": "",
+            "calories": "550",
+            "vegetarian": "False",
+            "vegan": "False",
+            "gluten": "True",
+            "restaurant": "1"
+        }
+    },
+    {
+        "model": "menu.food",
+        "pk": null,
+        "fields": {
+            "name": "Steak and Chips",
+            "slug": "steak-and-chips",
+            "type": "8",
+            "description": "If you just want an old classic, come in and try our steak and chips! Cooked to your liking and served with peas and grilled mushroom and peppercorn, horseradish or blue cheese sauce.",
+            "price": "10.00",
+            "food_image": "",
+            "calories": "600",
+            "vegetarian": "False",
+            "vegan": "False",
+            "gluten": "True",
             "restaurant": "1"
         }
     }
