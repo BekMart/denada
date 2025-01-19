@@ -2,10 +2,21 @@
 
 {% block content %}
 <!-- menu.html content starts here -->
+{% load static %}
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <h1>TAKE A LOOK AT OUR MENUS!</h1>
+        <div id="menu-section" class="col-12">
+            <h3>{{ menu.title }}</h3>
+            <p class="menu-description">{{ menu.about | safe }}</p>
+            <div class="menu-image">
+                {% if "placeholder" in menu.menu_image.url %}
+                <img class="card-img-top" src="{% static 'images/menu_image.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ menu.menu_image.url }}" alt="{{ menu.title }}">
+                {% endif %}
+            </sdiv>
+        </div>
     </div>
 </div>
 

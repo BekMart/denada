@@ -1,6 +1,12 @@
 from django.contrib import admin
-from .models import Type, Food, Drink
+from .models import Menu, Type, Food, Drink
 from django_summernote.admin import SummernoteModelAdmin
+
+@admin.register(Menu)
+class TypeAdmin(SummernoteModelAdmin):
+
+    list_display = ('restaurant', 'id',)
+    summernote_fields = ('about',)
 
 @admin.register(Type)
 class TypeAdmin(SummernoteModelAdmin):

@@ -4,6 +4,16 @@ from home.models import Restaurant
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
+class Menu(models.Model):
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    title = models.CharField(max_length=50, unique=True)
+    about = models.TextField(blank=True)
+    menu_image = CloudinaryField('image', default='placeholder', blank=True)
+    updated_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.restaurant.name
+
 class Type(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
