@@ -163,7 +163,6 @@ footer {
 }
 
 /* Home Page */
-
 h1 {
     margin: 0;
 }
@@ -187,17 +186,26 @@ h1 {
 }
 
 /* Menu Page */
+.menu-image {
+    height: auto;
+    width: 100%;
+}
+
 #food-title {
-    color: antiquewhite !important;
+    color: rgb(255, 235, 205) !important;
+    padding: 5px 25px;
     float: left;
     margin-left: 20%;
+    margin-bottom: 5%;
     border: solid 4px salmon;
 }
 
 #drink-title {
-    color: beige !important;
+    color: rgb(255, 235, 205) !important;
+    padding: 5px 25px;
     float: right;
     margin-right: 20%;
+    margin-bottom: 5%;
     border: solid 4px salmon;
 }
 
@@ -244,7 +252,7 @@ li {
 /* Media query: tablets & larger (768px and above) */
 @media screen and (min-width: 768px) {
 
-    .card-img-top {
+    .home-images .card-img-top {
         max-width: 33%;
     }
 }
