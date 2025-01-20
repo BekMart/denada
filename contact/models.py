@@ -2,7 +2,7 @@ from django.db import models
 from home.models import Restaurant
 
 # Create your models here.
-class OpeningTime(models.Model):
+class Time(models.Model):
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="restaurant_times", default=1
     )
@@ -38,7 +38,9 @@ class Social(models.Model):
         Restaurant, on_delete=models.CASCADE, related_name="restaurant_socials", default=1
     )
     title = models.CharField(max_length=50, unique=True)
-    app = models.CharField(max_length=255)
+    facebook = models.CharField(max_length=350)
+    instagram = models.CharField(max_length=350)
+    twitter = models.CharField(max_length=350)
     updated_on = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

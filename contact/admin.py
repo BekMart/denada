@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import OpeningTime, Address, Contact, Social
+from .models import Time, Address, Contact, Social
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
-@admin.register(OpeningTime)
-class OpeningTimeAdmin(SummernoteModelAdmin):
+@admin.register(Time)
+class TimeAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'id',)
     summernote_fields = ('time_list',)
@@ -23,4 +23,4 @@ class ContactAdmin(SummernoteModelAdmin):
 class SocialAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'id',)
-    summernote_fields = ('app',)
+    summernote_fields = ('facebook', 'instagram', 'twitter',)

@@ -2,10 +2,39 @@
 
 {% block content %}
 <!-- contact.html content starts here -->
- 
-<div class="container-fluid">
+{% load static %}
+
+<div id="contact-page">
     <div class="row">
-        <h1>GET IN TOUCH!</h1>
+        <div class="container">
+            <div class="row">
+                <div id="opening-times-section">
+                    <h3>{{ time.title }}</h3>
+                    <p class="times-display">{{ time.time_list | safe }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="address-section">
+                    <h3>{{ address.title }}</h3>
+                    <p>Address: {{ address.restaurant.address }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="contact-section">
+                    <h3>{{ contact.title }}</h3>
+                    <p>Telephone: {{ contact.restaurant.phone }}</p>
+                    <p>Email: {{ contact.restaurant.email }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="social-section">
+                    <h3>{{ social.title }}</h3>
+                    <p>{{ social.facebook | safe }}</p>
+                    <p>{{ social.instagram | safe }}</p>
+                    <p>{{ social.twitter | safe }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
