@@ -199,17 +199,18 @@ h1 {
 #drink-title {
     color: rgb(255, 235, 205) !important;
     padding: 5px 25px;
-    margin-left: 20%;
     margin-bottom: 5%;
     border: solid 4px salmon;
 }
 
 #food-title {
     float: left;
+    margin-left: 20%;
 }
 
 #drink-title {
     float: right;
+    margin-right: 20%;
 }
 
 .type-heading {
@@ -223,16 +224,17 @@ h1 {
     margin-bottom: 20px;
 }
 
-.food-menu-image {
-    margin: 0 auto;
-    width: 85vw;
-} 
-
 #drink-menu {
     background-color: rgb(150, 213, 192);
     color: rgb(23, 26, 200);
     margin-bottom: 20px;
 }
+
+.food-menu-image,
+.drink-menu-image {
+    margin: 0 auto;
+    width: 85vw;
+} 
 
 h2 {
     text-align: center;
@@ -271,13 +273,15 @@ li {
     }
 
     /* Food menu page */
-    .food-item-list {
+    .food-item-list,
+    .drink-item-list {
         float: left; 
         width: 50%;
         margin-right: 20px;
     }
 
-    .food-menu-image {
+    .food-menu-image,
+    .drink-menu-image {
         min-height: 200px;
         max-height: 300px;
         max-width: 350px;      

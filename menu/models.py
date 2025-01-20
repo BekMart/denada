@@ -9,6 +9,7 @@ class Menu(models.Model):
     title = models.CharField(max_length=50, unique=True)
     about = models.TextField(blank=True)
     menu_image = CloudinaryField('image', default='placeholder', blank=True)
+    note = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class TypeAdmin(SummernoteModelAdmin):
 
     list_display = ('restaurant', 'id',)
-    summernote_fields = ('about',)
+    summernote_fields = ('about', 'note')
 
 @admin.register(Type)
 class TypeAdmin(SummernoteModelAdmin):

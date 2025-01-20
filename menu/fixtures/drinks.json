@@ -3,13 +3,13 @@
         "model": "menu.drink",
         "pk": null,
         "fields": {
-            "name": "Green Smoothie",
-            "slug": "green-smoothie",
-            "type": "3",
+            "name": "Fanta",
+            "slug": "fanta",
+            "type": "2",
             "description": "",
-            "price": "4.00",
+            "price": "1.50",
             "drink_image": "",
-            "calories": "100",
+            "calories": "139",
             "vegetarian": "True",
             "vegan": "True",
             "gluten": "True",
@@ -20,83 +20,15 @@
         "model": "menu.drink",
         "pk": null,
         "fields": {
-            "name": "Coke Zero",
-            "slug": "coke-zero",
+            "name": "Sprite",
+            "slug": "sprite",
             "type": "2",
             "description": "",
-            "price": "1.20",
+            "price": "1.50",
             "drink_image": "",
-            "calories": "0",
+            "calories": "139",
             "vegetarian": "True",
             "vegan": "True",
-            "gluten": "True",
-            "restaurant": "1"
-        }
-    },
-    {
-        "model": "menu.drink",
-        "pk": null,
-        "fields": {
-            "name": "Iced Coffee",
-            "slug": "iced-coffee",
-            "type": "2",
-            "description": "",
-            "price": "3.00",
-            "drink_image": "",
-            "calories": "300",
-            "vegetarian": "True",
-            "vegan": "False",
-            "gluten": "True",
-            "restaurant": "1"
-        }
-    },
-    {
-        "model": "menu.drink",
-        "pk": null,
-        "fields": {
-            "name": "j20",
-            "slug": "j20",
-            "type": "2",
-            "description": "",
-            "price": "2.00",
-            "drink_image": "",
-            "calories": "200",
-            "vegetarian": "True",
-            "vegan": "True",
-            "gluten": "True",
-            "restaurant": "1"
-        }
-    },
-    {
-        "model": "menu.drink",
-        "pk": null,
-        "fields": {
-            "name": "Chocolate Milkshake",
-            "slug": "chocolate-milkshake",
-            "type": "4",
-            "description": "",
-            "price": "4.00",
-            "drink_image": "",
-            "calories": "500",
-            "vegetarian": "True",
-            "vegan": "False",
-            "gluten": "True",
-            "restaurant": "1"
-        }
-    },
-    {
-        "model": "menu.drink",
-        "pk": null,
-        "fields": {
-            "name": "Strawberry Milkshake",
-            "slug": "strawberry-milkshake",
-            "type": "4",
-            "description": "",
-            "price": "4.00",
-            "drink_image": "",
-            "calories": "500",
-            "vegetarian": "True",
-            "vegan": "False",
             "gluten": "True",
             "restaurant": "1"
         }

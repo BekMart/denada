@@ -15,7 +15,8 @@
                 {% else %}
                 <img class="card-img-top" src=" {{ menu.menu_image.url }}" alt="{{ menu.title }}">
                 {% endif %}
-            </sdiv>
+            </div>
+            <p class="note">{{ menu.note | safe }}</p>
         </div>
     </div>
 </div>
