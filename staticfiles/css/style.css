@@ -234,7 +234,7 @@ h1 {
 .drink-menu-image {
     margin: 0 auto;
     width: 85vw;
-} 
+}
 
 h2 {
     text-align: center;
@@ -264,6 +264,13 @@ li {
     float: right;
 }
 
+/* Contact Page */
+/* Map */
+#map {
+    width: 100vw;
+    height: 250px;
+}
+
 /* Media query: tablets & larger (768px and above) */
 @media screen and (min-width: 768px) {
 
@@ -275,7 +282,7 @@ li {
     /* Food menu page */
     .food-item-list,
     .drink-item-list {
-        float: left; 
+        float: left;
         width: 50%;
         margin-right: 20px;
     }
@@ -284,9 +291,15 @@ li {
     .drink-menu-image {
         min-height: 200px;
         max-height: 300px;
-        max-width: 350px;      
+        max-width: 350px;
         float: right;
         margin: 2% auto;
         padding-right: 2rem;
+    }
+
+    /* Contact Page */
+    #map {
+        max-width: 50vw;
+        margin: 0 auto;
     }
 }
