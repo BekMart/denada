@@ -8,39 +8,60 @@
     <div class="row">
         <div class="container">
             <div class="row">
-                <div id="opening-times-section">
-                    <h3>{{ time.title }}</h3>
-                    <p class="times-display">{{ time.time_list | safe }}</p>
-                </div>
-            </div>
-            <div class="row">
                 <div id="address-section">
                     <h3>{{ address.title }}</h3>
-                    <p>Address: {{ address.restaurant.address }}</p>
+                    <p>
+                        <h5>Location:</h5> {{ address.restaurant.address | safe }}
+                    </p>
                 </div>
                 <iframe id="map"
                     src="https://maps.googleapis.com/maps/embed/v1/place?key=AIzaSyD58rZJ7jykBhKYsTg4IuTLybiz_XmyaX4&q=123_Mutley_Plain_Mutley_Plymouth"
                     allowfullscreen>
                 </iframe>
             </div>
-            <div class="row">
-                <div id="contact-section">
-                    <h3>{{ contact.title }}</h3>
-                    <p>Telephone: {{ contact.restaurant.phone }}</p>
-                    <p>Email: {{ contact.restaurant.email }}</p>
+            <div id="contact-flex">
+                <div class="row">
+                    <div id="opening-times-section">
+                        <h5>{{ time.title }}</h5>
+                        <p class="times-display">{{ time.time_list | safe }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div id="social-section">
-                    <h3>{{ social.title }}</h3>
-                    <p>{{ social.facebook | safe }}</p>
-                    <p>{{ social.instagram | safe }}</p>
-                    <p>{{ social.twitter | safe }}</p>
+                <div class="row">
+                    <div id="contact-section">
+                        <h4>{{ contact.title }}</h4>
+                        <p>
+                            <h5>Telephone:</h5> {{ contact.restaurant.phone }}
+                        </p>
+                        <p>
+                            <h5>Email:</h5> {{ contact.restaurant.email }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="social-section">
+                        <h4>{{ social.title }}</h4>
+                        <div id="add-links">
+                            <ul>
+                                <li><a href="https://www.facebook.com/" target="_blank"
+                                        aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
+                                        <i class="fa-brands fa-facebook"></i>{{ social.facebook | safe }}</a>
+                                </li>
+                                <li><a href="https://www.instagram.com/" target="_blank"
+                                        aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
+                                        <i class="fa-brands fa-square-instagram"></i>{{ social.instagram | safe }}</a>
+                                </li>
+                                <li><a href="https://twitter.com/" target="_blank"
+                                        aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
+                                        <i class="fa-brands fa-square-x-twitter"></i>{{ social.twitter | safe }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- contact.html content ends here -->
-{% endblock %}
+    <!-- contact.html content ends here -->
+    {% endblock %}

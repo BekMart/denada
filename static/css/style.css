@@ -118,8 +118,10 @@ nav {
 main {
     color: #d55b3e;
     background-color: #fcf4d9;
-    flex: 1 0 auto; /* Make main element take up any surplus space to push the footer down */
-    margin-top: 70px !important; /* Push the start of element down so it isn't hidden by header */
+    flex: 1 0 auto;
+    /* Make main element take up any surplus space to push the footer down */
+    margin-top: 70px !important;
+    /* Push the start of element down so it isn't hidden by header */
 }
 
 /* Footer */
@@ -137,6 +139,7 @@ footer {
 
 #opening-times h5 {
     margin-bottom: 2px;
+    text-decoration: none;
 }
 
 #opening-times ul {
@@ -181,8 +184,10 @@ h1 {
 
 .home-images {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
-    justify-content: space-between; /* Space images evenly within the container */
+    flex-wrap: wrap;
+    /* Allow images to wrap to the next line if needed */
+    justify-content: space-between;
+    /* Space images evenly within the container */
 }
 
 .home-images img {
@@ -191,7 +196,8 @@ h1 {
 
 .card-img-top {
     height: auto;
-    margin-bottom: 10px; /* Add some spacing between images */
+    margin-bottom: 10px;
+    /* Add some spacing between images */
 }
 
 /* Menu Page */
@@ -310,14 +316,34 @@ label.form-label {
     margin-bottom: 0;
 }
 
-
 /* Contact Page */
+h5 {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+#address-section p {
+    margin-bottom: 5px;
+}
+
 /* Map */
 #map {
     width: 100vw;
     height: 250px;
     border: 3px solid #00aaa0;
     padding: 0;
+}
+
+/* Social links*/
+#add-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#add-links i {
+    color: #d55b3e !important;
+    padding-right: 20px;
 }
 
 /* Media query: tablets & larger (768px and above) */
@@ -369,5 +395,22 @@ label.form-label {
     #map {
         max-width: 50vw;
         margin: 0 auto;
+    }
+
+    #contact-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contact-section {
+        order: 1;
+    }
+
+    #opening-times-section {
+        order: 2;
+    }
+
+    #social-section {
+        order: 3;
     }
 }
