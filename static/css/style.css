@@ -101,12 +101,9 @@ nav {
     display: none;
 }
 
-/* Sign up page */
-#signup_intro {
-    margin-bottom: 0;
-}
-
-#signup_form {
+/* Authentication pages */
+#signup_form,
+#login_form {
     border: #00aaa0 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
@@ -114,13 +111,37 @@ nav {
     margin-top: -30px;
 }
 
-/* label.form-label {
-    color: #d55b3e !important;
-    font-size: larger;
+#signup_form li {
+    list-style-type: circle !important;
+    font-size: xx-small;
+    align-self: flex-start !important;
+    color: #00aaa0;
+}
+
+#signup_form {
+    padding-bottom: 50px;
+}
+
+.login label {
+    display: none;
+    /* color: #d55b3e !important;
+    font-size: x-small;
     display: flex;
     align-self: flex-start;
+    margin-bottom: 0; */
+}
+
+#logout_form {
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 15px;
+    max-width: 500px;
+}
+
+#logout_form div {
     margin-bottom: 0;
-} */
+}
 
 /* Hero image */
 #hero {
@@ -335,13 +356,6 @@ label.active {
     display: flex;
     align-self: flex-start;
     margin-bottom: 0;
-}
-
-#signup_form li {
-    list-style-type: circle !important;
-    font-size: xx-small;
-    align-self: flex-start !important;
-    color: #00aaa0;
 }
 
 /* Contact Page */
