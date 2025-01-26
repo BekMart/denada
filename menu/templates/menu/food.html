@@ -4,27 +4,30 @@
 <!-- food.html content starts here -->
 
 <div id="food-menu" class="col-12">
-    <h2>Food</h2>
-    <div class="container">
-        <div class="row">
-            <ul>
-                {% regroup food_list by type as grouped_food %}
-                {% for group in grouped_food %}
-                <li class="type-heading">{{ group.grouper }}</li>
-                {% for item in group.list|dictsort:"price" %}
-                <li class="food-item-list">
-                    <span class="title-calories">{{ item.name }}<span class="calories">
-                            ({{ item.calories }})</span></span>
-                    <span class="cost">£{{ item.price }}</span>
-                </li>
-                {% endfor %}
-                {% if group.grouper.type_image %}
-                    <li><img class="food-menu-image" src="{{ group.grouper.type_image.url }}" alt="{{ group.grouper }}"></li>
-                {% endif %}
-                {% endfor %}
-            </ul>
+    <fieldset id="food-box">
+        <h2>Food</h2>
+        <div id="food-container" class="container">
+            <div class="row">
+                <ul>
+                    {% regroup food_list by type as grouped_food %}
+                    {% for group in grouped_food %}
+                    <li class="type-heading">{{ group.grouper }}</li>
+                    {% for item in group.list|dictsort:"price" %}
+                    <li class="food-item-list">
+                        <span class="title-calories">{{ item.name }}<span class="calories">
+                                ({{ item.calories }})</span></span>
+                        <span class="cost">£{{ item.price }}</span>
+                    </li>
+                    {% endfor %}
+                    {% if group.grouper.type_image %}
+                    <li><img class="food-menu-image" src="{{ group.grouper.type_image.url }}" alt="{{ group.grouper }}">
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
+    </fieldset>
 </div>
 
 <!-- food.html content ends here -->

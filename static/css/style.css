@@ -14,8 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     /* Generic project style */
-    background-color: rgb(166, 129, 200);
-    color: blanchedalmond;
+    background-color: #fcf4d9;
+    color: #d55b3e;
     font-family: 'Vidaloka', serif;
     font-size: larger;
     font-weight: 300;
@@ -26,18 +26,18 @@ body {
 body a,
 a>i {
     text-decoration: none;
-    color: rgb(154, 26, 75) !important;
+    color: #00aaa0 !important;
 }
 
 .divider {
-    background-color: rgb(154, 26, 75) !important;
+    background-color: #00aaa0 !important;
     width: 65% !important;
     margin-left: 50px !important;
 }
 
 /* Header */
 header {
-    background-color: blanchedalmond;
+    background-color: #fcf4d9;
     position: fixed;
     z-index: 99;
     width: 100vw;
@@ -53,16 +53,25 @@ header {
 }
 
 /* Slogan */
-#slogan {
+/* #slogan {
     font-size: smaller;
     color: #4C3825;
-}
+} */
 
 .vert-line {
     height: 50px;
     margin-top: 10px;
     width: 1px;
-    background-color: rgb(154, 26, 75);
+    background-color: #00aaa0;
+}
+
+/* Alert messages */
+.alert {
+    margin-bottom: 0;
+}
+
+#alert-row {
+    margin-bottom: 0 !important;
 }
 
 /* Navbar */
@@ -84,7 +93,7 @@ nav {
 /* slide out menu */
 #slide-out {
     margin-top: 70px;
-    background-color: rgba(255, 235, 205, 0.9);
+    background-color: #fcf4d9;
 }
 
 /* Hidden headers */
@@ -94,7 +103,7 @@ nav {
 
 /* Hero image */
 #hero {
-    background-color: gold;
+    background-color: #d55b3e;
     background: url('../images/denada.jpg') no-repeat center center/cover;
     position: relative;
     width: 100%;
@@ -107,17 +116,16 @@ nav {
 
 /* Main Content */
 main {
-    color: #F3EADC;
-    background-color: #4C3825;
-    /* Make main element take up any surplus space to push the footer down */
-    flex: 1 0 auto;
-    /* Push the start of element down so it isn't hidden by header */
-    margin-top: 70px !important;
+    color: #d55b3e;
+    background-color: #fcf4d9;
+    flex: 1 0 auto; /* Make main element take up any surplus space to push the footer down */
+    margin-top: 70px !important; /* Push the start of element down so it isn't hidden by header */
 }
 
 /* Footer */
 footer {
-    background-color: #dd5aa5;
+    background-color: #00aaa0;
+    color: #fcf4d9;
     font-size: small;
     font-weight: 500;
 }
@@ -162,7 +170,7 @@ footer {
 #social-links i {
     font-size: 150%;
     padding: 2px;
-    color: #b3d80d;
+    color: #fcf4d9 !important;
     margin-bottom: 0;
 }
 
@@ -173,10 +181,8 @@ h1 {
 
 .home-images {
     display: flex;
-    flex-wrap: wrap;
-    /* Allow images to wrap to the next line if needed */
-    justify-content: space-between;
-    /* Space images evenly within the container */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    justify-content: space-between; /* Space images evenly within the container */
 }
 
 .home-images img {
@@ -185,8 +191,7 @@ h1 {
 
 .card-img-top {
     height: auto;
-    margin-bottom: 10px;
-    /* Add some spacing between images */
+    margin-bottom: 10px; /* Add some spacing between images */
 }
 
 /* Menu Page */
@@ -195,12 +200,26 @@ h1 {
     width: 100%;
 }
 
+/* link to book page */
+#book-link {
+    font-family: 'Vidaloka', serif;
+    font-size: larger;
+    color: #fcf4d9;
+    background-color: #d55b3e;
+    border: #00aaa0 solid 2px;
+    border-radius: 25%;
+    height: 60px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 #food-title,
 #drink-title {
-    color: rgb(255, 235, 205) !important;
+    color: #d55b3e !important;
     padding: 5px 25px;
     margin-bottom: 5%;
-    border: solid 4px salmon;
+    border: solid 4px #00aaa0;
 }
 
 #food-title {
@@ -213,27 +232,29 @@ h1 {
     margin-right: 20%;
 }
 
+/* Menu pages */
 .type-heading {
     text-decoration: underline;
-    font-size: larger;
+    font-size: x-large;
+    font-weight: 800;
+    padding-bottom: 10px;
 }
 
 #food-menu {
-    background-color: rgb(218, 145, 44);
-    color: rgb(23, 26, 200);
-    margin-bottom: 20px;
+    background-color: #fcf4d9;
+    color: #d55b3e;
 }
 
 #drink-menu {
-    background-color: rgb(150, 213, 192);
-    color: rgb(23, 26, 200);
-    margin-bottom: 20px;
+    background-color: #fcf4d9;
+    color: #d55b3e;
 }
 
 .food-menu-image,
 .drink-menu-image {
     margin: 0 auto;
-    width: 85vw;
+    width: 100%;
+    padding: 10px 0 30px;
 }
 
 h2 {
@@ -269,6 +290,8 @@ li {
 #map {
     width: 100vw;
     height: 250px;
+    border: 3px solid #00aaa0;
+    padding: 0;
 }
 
 /* Media query: tablets & larger (768px and above) */
@@ -280,21 +303,33 @@ li {
     }
 
     /* Food menu page */
+    #food-container,
+    #drink-container {
+        width: 90%;
+        margin: 0 5%;
+        padding: 0;
+    }
+
     .food-item-list,
     .drink-item-list {
         float: left;
-        width: 50%;
-        margin-right: 20px;
+        width: 60%;
+        margin-right: 10%;
     }
 
     .food-menu-image,
     .drink-menu-image {
         min-height: 200px;
-        max-height: 300px;
+        max-height: 350px;
         max-width: 350px;
         float: right;
-        margin: 2% auto;
-        padding-right: 2rem;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        border: 3px solid #00aaa0;
+        background-color: #F9F6EE;
+        margin: 10px 15%;
     }
 
     /* Contact Page */

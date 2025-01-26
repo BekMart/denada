@@ -8,7 +8,8 @@
     <div class="row">
         <div id="menu-section" class="col-12">
             <h3>{{ menu.title }}</h3>
-            <p class="menu-description">{{ menu.about | safe }}</p>
+            <p id="menu-description">{{ menu.about | safe }}</p>
+            <a href="{% url 'book' %}"><button id="book-link">Book a table here!</button></a>
             <div class="menu-image">
                 {% if "placeholder" in menu.menu_image.url %}
                 <img class="card-img-top" src="{% static 'images/menu_image.jpg' %}" alt="placeholder image">
