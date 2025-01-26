@@ -207,7 +207,7 @@ h1 {
     color: #fcf4d9;
     background-color: #d55b3e;
     border: #00aaa0 solid 2px;
-    border-radius: 25%;
+    border-radius: 50px;
     height: 60px;
     width: 200px;
     margin-top: 10px;
@@ -220,6 +220,7 @@ h1 {
     padding: 5px 25px;
     margin-bottom: 5%;
     border: solid 4px #00aaa0;
+    background-color: #F9F6EE;
 }
 
 #food-title {
@@ -285,6 +286,31 @@ li {
     float: right;
 }
 
+/* Booking page */
+/* Form */
+.card-body {
+    background-color: #fcf4d9;
+    border: none !important;
+    padding: 0;
+}
+
+#bookingForm {
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+label.form-label {
+    color: #d55b3e !important;
+    font-size: larger;
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+
 /* Contact Page */
 /* Map */
 #map {
@@ -330,6 +356,13 @@ li {
         border: 3px solid #00aaa0;
         background-color: #F9F6EE;
         margin: 10px 15%;
+    }
+
+    /* Booking page */
+    #bookingForm {
+        width: 60%;
+        margin: 20px auto;
+        max-width: 700px;
     }
 
     /* Contact Page */
