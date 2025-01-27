@@ -8,7 +8,7 @@ from .models import Booking
 def booking_page(request):
     booking_form = BookingForm()
     now = timezone.now()
-    user_bookings = Booking.objects.filter(date__gte=now.date())
+    user_bookings = Booking.objects.filter(date__gte=now.date()).order_by('date', 'time')
 
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
