@@ -16,12 +16,26 @@
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-jg">Submit</button>
                 </form>
+                <div id="current-bookings-section">
+                    <h4>Your current bookings:</h4>
+                    <ul>
+                        {% if user_bookings %}
+                        {% for booking in user_bookings %}
+                        <li id="booking-details">Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
+                            {{ booking.party_size }}</li>
+                        {% endfor %}
+                        {% else %}
+                        <li>You have no current bookings.</li>
+                        {% endif %}
+                    </ul>
+                </div>
                 {% else %}
                 <div id="login-booking-box">
                     <h3>Please<br><a href="{% url 'account_login' %}">log in</a>/<a
-                            href="{% url 'account_signup' %}">create an account</a><br>to book a table!</h3>
-                    {% endif %}
+                            href="{% url 'account_signup' %}">create
+                            an account</a><br>to book a table!</h3>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

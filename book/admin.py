@@ -7,7 +7,7 @@ class BookingAdmin(admin.ModelAdmin):
 
     list_display = ('user', 'restaurant', 'party_size', 'date', 'time', 'status')
     search_fields = ['user', 'restaurant']
-    list_filter = ('restaurant', 'date', 'time', 'status')
+    list_filter = ('restaurant', 'user', 'date', 'time', 'status')
 
     def get_status_display(self, obj):
         return STATUS[obj.status][1]  # Access the second element (string value)

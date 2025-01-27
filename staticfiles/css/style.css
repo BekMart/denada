@@ -365,6 +365,20 @@ label {
     margin-bottom: 0;
 }
 
+/* Current bookings section */
+#current-bookings-section ul {
+    display: inline-block;
+}
+
+#booking-details {
+    text-align: center;
+    border: #00aaa0 3px solid;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 /* Contact Page */
 h5 {
     font-weight: 900;
