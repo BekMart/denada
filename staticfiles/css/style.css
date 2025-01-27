@@ -52,12 +52,6 @@ header {
     margin-bottom: 0;
 }
 
-/* Slogan */
-/* #slogan {
-    font-size: smaller;
-    color: #4C3825;
-} */
-
 .vert-line {
     height: 50px;
     margin-top: 10px;
@@ -122,13 +116,21 @@ nav {
     padding-bottom: 50px;
 }
 
-.login label {
-    display: none;
-    /* color: #d55b3e !important;
+/* Remember me label */
+.login p:last-of-type {
     font-size: x-small;
     display: flex;
     align-self: flex-start;
-    margin-bottom: 0; */
+    margin-bottom: 0;
+}
+
+/* Remember me checbox */
+#id_remember {
+    border: #d55b3e 3px solid !important;
+    height: 18px;
+    width: 18px;
+    background-color: #F9F6EE;
+    margin-left: 120px;
 }
 
 #logout_form {
@@ -350,7 +352,7 @@ li {
     margin: 20px 0;
 }
 
-label.active {
+label {
     color: #d55b3e !important;
     font-size: larger;
     display: flex;
@@ -386,6 +388,21 @@ h5 {
 #add-links i {
     color: #d55b3e !important;
     padding-right: 20px;
+}
+
+/* 404 error page */
+#lost-box {
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#lost-box i {
+    margin: 50px auto 70px;
+    scale: 5;
 }
 
 /* Media query: tablets & larger (768px and above) */
