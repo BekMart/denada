@@ -17,12 +17,15 @@
                     <button id="submitButton" type="submit" class="btn btn-signup btn-jg">Submit</button>
                 </form>
                 {% else %}
-                <h2>Please log in and then you can book a table!</h2>
-                {% endif %}
+                <div id="login-booking-box">
+                    <h3>Please<br><a href="{% url 'account_login' %}">log in</a>/<a
+                            href="{% url 'account_signup' %}">create an account</a><br>to book a table!</h3>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-    <!-- book.html content ends here -->
-    {% endblock %}
+<!-- book.html content ends here -->
+{% endblock %}

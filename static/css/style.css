@@ -337,10 +337,15 @@ li {
 }
 
 /* Booking page */
+#login-booking-box {
+    background-color: #F9F6EE !important;
+    border: #00aaa0 solid 3px !important;
+    padding-bottom: 20px;
+}
 /* Form */
 .card-body {
-    background-color: #fcf4d9;
-    border: none !important;
+    background-color: #fcf4d9 !important;
+    border: none;
     padding: 0;
 }
 
