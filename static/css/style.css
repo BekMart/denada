@@ -487,6 +487,10 @@ h5 {
     #contact-flex {
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
     }
 
     #contact-section {

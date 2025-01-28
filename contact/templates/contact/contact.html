@@ -20,42 +20,36 @@
                 </iframe>
             </div>
             <div id="contact-flex">
-                <div class="row">
-                    <div id="opening-times-section">
-                        <h5>{{ time.title }}</h5>
-                        <p class="times-display">{{ time.time_list | safe }}</p>
-                    </div>
+                <div id="opening-times-section">
+                    <h5>{{ time.title }}</h5>
+                    <p class="times-display">{{ time.time_list | safe }}</p>
                 </div>
-                <div class="row">
-                    <div id="contact-section">
-                        <h4>{{ contact.title }}</h4>
-                        <p>
-                            <h5>Telephone:</h5> {{ contact.restaurant.phone }}
-                        </p>
-                        <p>
-                            <h5>Email:</h5> {{ contact.restaurant.email }}
-                        </p>
-                    </div>
+                <div id="contact-section">
+                    <h4>{{ contact.title }}</h4>
+                    <p>
+                        <h5>Telephone:</h5> {{ contact.restaurant.phone }}
+                    </p>
+                    <p>
+                        <h5>Email:</h5> {{ contact.restaurant.email }}
+                    </p>
                 </div>
-                <div class="row">
-                    <div id="social-section">
-                        <h4>{{ social.title }}</h4>
-                        <div id="add-links">
-                            <ul>
-                                <li><a href="https://www.facebook.com/" target="_blank"
-                                        aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
-                                        <i class="fa-brands fa-facebook"></i>{{ social.facebook | safe }}</a>
-                                </li>
-                                <li><a href="https://www.instagram.com/" target="_blank"
-                                        aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
-                                        <i class="fa-brands fa-square-instagram"></i>{{ social.instagram | safe }}</a>
-                                </li>
-                                <li><a href="https://twitter.com/" target="_blank"
-                                        aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
-                                        <i class="fa-brands fa-square-x-twitter"></i>{{ social.twitter | safe }}</a>
-                                </li>
-                            </ul>
-                        </div>
+                <div id="social-section">
+                    <h4>{{ social.title }}</h4>
+                    <div id="add-links">
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"
+                                    aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
+                                    <i class="fa-brands fa-facebook"></i>{{ social.facebook | safe }}</a>
+                            </li>
+                            <li><a href="https://www.instagram.com/" target="_blank"
+                                    aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
+                                    <i class="fa-brands fa-square-instagram"></i>{{ social.instagram | safe }}</a>
+                            </li>
+                            <li><a href="https://twitter.com/" target="_blank"
+                                    aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
+                                    <i class="fa-brands fa-square-x-twitter"></i>{{ social.twitter | safe }}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -63,5 +57,6 @@
     </div>
 </div>
 
-    <!-- contact.html content ends here -->
-    {% endblock %}
+
+<!-- contact.html content ends here -->
+{% endblock %}
