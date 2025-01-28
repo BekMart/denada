@@ -339,10 +339,17 @@ li {
 
 /* Booking page */
 #login-booking-box {
-    background-color: #F9F6EE !important;
-    border: #00aaa0 solid 3px !important;
+    background-color: #F9F6EE;
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
     padding-bottom: 20px;
 }
+
+#book-box {
+    box-shadow: none;
+    border: none;
+}
+
 /* Form */
 .card-body {
     background-color: #fcf4d9 !important;
@@ -464,6 +471,7 @@ h5 {
     }
 
     /* Booking page */
+    #login-booking-box,
     #bookingForm {
         width: 60%;
         margin: 20px auto;
