@@ -132,6 +132,8 @@ nav {
     width: 18px;
     background-color: #F9F6EE;
     margin-left: 120px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #logout_form {
