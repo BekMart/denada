@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- edit_booking.html content starts here -->
+
+<div class="container-fluid">
+    <div>
+        <div id="book-box" class="'col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                <!-- {% if user.is_authenticated %} -->
+                <h3>Edit Booking</h3>
+                <form id="bookingForm" method="post" action="{% url 'edit_booking' booking.id %}" style="margin-top: 1.3em;">
+                    <input type="hidden" id="booking_id" name="booking_id" value="{{ booking.id }}"> 
+                    {{ booking_form | crispy }}
+                    {% csrf_token %}
+                    <button id="updateButton" type="submit" class="btn btn-signup btn-jg">Update</button>
+                </form>
+                <!-- {% endif %} -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- book.html content ends here -->
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'js/bookings.js' %}"></script>
+{% endblock %}

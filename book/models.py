@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from home.models import Restaurant
 
-STATUS = ((0, "Pending"), (1, "Confirmed"), (2, "Declined"))
+STATUS = ((0, "Confirmed"), (1, "Declined"))
 
 # Create your models here.
 class Booking(models.Model):

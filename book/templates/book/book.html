@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
 <!-- book.html content starts here -->
-
 <div class="container-fluid">
-    <!-- Create booking here -->
     <div>
         <div id="book-box" class="'col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <h3>Hey {{ user.username }},<br> fill in the form below to book a table!</h3>
-                <form id="bookingForm" method="post" style="margin-top: 1.3em;">
+                <form id="bookingForm" method="post" style="margin-top: 1.3em;"> 
+                    <input type="hidden" id="booking_id" name="booking_id" value="{{ booking.id }}"> 
                     {{ booking_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-jg">Submit</button>
@@ -23,6 +23,7 @@
                         {% for booking in user_bookings %}
                         <li id="booking-details">Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
                             {{ booking.party_size }}</li>
+                        <a href="{% url 'edit_booking' booking.id %}">Edit</a>
                         {% endfor %}
                         {% else %}
                         <li>You have no current bookings.</li>
@@ -42,4 +43,8 @@
 </div>
 
 <!-- book.html content ends here -->
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'js/bookings.js' %}"></script>
 {% endblock %}

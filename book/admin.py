@@ -5,7 +5,7 @@ from .models import Booking, STATUS
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
 
-    list_display = ('user', 'restaurant', 'party_size', 'date', 'time', 'status')
+    list_display = ('user', 'restaurant', 'party_size', 'date', 'time', 'status', 'id')
     search_fields = ['user', 'restaurant']
     list_filter = ('restaurant', 'user', 'date', 'time', 'status')
 
