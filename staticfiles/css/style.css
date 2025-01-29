@@ -390,6 +390,7 @@ label {
     padding: 5px;
 }
 
+/* Authentication buttons */
 .btn-signup {
     border-radius: 10px;
 }
@@ -402,10 +403,43 @@ label {
     margin: 5px 5px 20px;
 }
 
+/* Delete button */
 .btn-delete {
     background-color: #d55b3e !important;
     border-radius: 10px;
     margin: 5px 5px 20px;
+}
+
+/* Delete Modal */
+.modal {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+}
+
+.modal-dialog {
+    max-width: 80%;
+}
+
+.modal-content {
+    background-color: #fcf4d9;
+    border: #00aaa0 3px solid;
+    border-radius: 10px;
+}
+
+.modal-footer {
+    background-color: #fcf4d9 !important;
+}
+
+.btn-secondary {
+    border-radius: 10px;
+    margin-right: 5px !important;
+}
+
+#deleteConfirm {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #fff !important;
+    background-color: #d55b3e !important;
+    border-radius: 10px;
+    margin-left: 5px !important;
 }
 
 /* Contact Page */
