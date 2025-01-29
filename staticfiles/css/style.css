@@ -132,6 +132,8 @@ nav {
     width: 18px;
     background-color: #F9F6EE;
     margin-left: 120px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #logout_form {
@@ -271,6 +273,7 @@ h1 {
     padding: 5px 25px;
     margin-bottom: 5%;
     border: solid 4px #00aaa0;
+    border-radius: 10px;
     background-color: #F9F6EE;
 }
 
@@ -292,11 +295,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-#food-menu {
-    background-color: #fcf4d9;
-    color: #d55b3e;
-}
-
+#food-menu,
 #drink-menu {
     background-color: #fcf4d9;
     color: #d55b3e;
@@ -402,6 +401,7 @@ h5 {
     width: 100vw;
     height: 250px;
     border: 3px solid #00aaa0;
+    border-radius: 10px;
     padding: 0;
 }
 
@@ -466,6 +466,7 @@ h5 {
 
     fieldset {
         border: 3px solid #00aaa0;
+        border-radius: 10px;
         background-color: #F9F6EE;
         margin: 10px 15%;
     }
@@ -489,6 +490,8 @@ h5 {
         justify-content: space-between;
         flex-wrap: nowrap;
         flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
     }
 
     #contact-section {
