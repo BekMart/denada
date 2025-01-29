@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['8000-bekmart-denada-pmjer456oxu.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -114,7 +114,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-bekmart-denada-pmjer456oxu.ws.codeinstitute-ide.net", "https://denada-2b03b2e8c951.herokuapp.com/",
+    "https://localhost", "https://denada-2b03b2e8c951.herokuapp.com/",
 ]
 
 # Password validation
