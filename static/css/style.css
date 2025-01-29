@@ -373,6 +373,10 @@ label {
     margin-bottom: 0;
 }
 
+.invalid-feedback {
+    display: none !important;
+}
+
 /* Current bookings section */
 #current-bookings-section ul {
     display: inline-block;
