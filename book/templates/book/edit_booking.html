@@ -11,9 +11,9 @@
             <div class="card-body">
                 <!-- {% if user.is_authenticated %} -->
                 <h3>Edit Booking</h3>
-                <form id="bookingForm" method="post" action="{% url 'edit_booking' booking.id %}" style="margin-top: 1.3em;">
-                    <input type="hidden" id="booking_id" name="booking_id" value="{{ booking.id }}"> 
-                    {{ booking_form | crispy }}
+                <form id="editForm" method="post" style="margin-top: 1.3em;"> 
+                    <input type="hidden" id="edit_booking_id" name="edit_booking_id" value="{{ edit_booking.id }}"> 
+                    {{ edit_form | crispy }}
                     {% csrf_token %}
                     <button id="updateButton" type="submit" class="btn btn-signup btn-jg">Update</button>
                 </form>
@@ -26,6 +26,6 @@
 <!-- book.html content ends here -->
 {% endblock %}
 
-{% block extras %}
+<!-- {% block extras %}
 <script src="{% static 'js/bookings.js' %}"></script>
-{% endblock %}
+{% endblock %} -->

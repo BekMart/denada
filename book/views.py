@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.utils import timezone
-from .forms import BookingForm
+from .forms import BookingForm, EditForm
 from .models import Booking
 
 # Create your views here.
@@ -39,28 +39,21 @@ def booking_page(request):
 
 def edit_booking(request, booking_id):
     """
-    View for users to edit their bookings
+    View for editing an existing booking.
     """
-    booking = get_object_or_404(Booking, id=booking_id)
-    form = BookingForm()
+    booking = Booking.objects.get(pk=booking_id) 
 
-    if request.method == 'GET':
-        booking.status = 1 # Update booking status to 1 - declined
-        booking.save() # Update database
-
-        form = BookingForm()  # Create form with initial data
-        context = {'form': form, 'booking': booking}
-        return render(request, 'book/edit_booking.html', context)
-
-    elif request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()  # Save the updated booking details
-            # Redirect to a confirmation page or booking list after successful update
-            return redirect('book')  # Replace with your desired redirect URL
+    if request.method == 'POST':
+        if request.user.is_authenticated and request.user == booking.user:  # Check for authentication and ownership
+            edit_form = EditForm(data=request.POST, instance=booking) # load editForm
+            if edit_form.is_valid(): # check that form is valid
+                edit_form.save() # update database
+                messages.success(request, 'Booking updated successfully!')
+                return redirect('book')  # Redirect back to the booking page
         else:
-            context = {'form': form, 'booking': booking}
-            return render(request, 'book/edit_booking.html', context)
+            messages.error(request, 'You are not authorized to edit this booking.')
 
     else:
-        return redirect('book')  # Redirect to booking page for invalid requests
+        edit_form = EditForm(data=request.POST)
+
+    return render(request, 'book/edit_booking.html', {'edit_form': edit_form})

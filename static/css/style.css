@@ -356,7 +356,8 @@ li {
     padding: 0;
 }
 
-#bookingForm {
+#bookingForm,
+#editForm {
     border: #00aaa0 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
@@ -473,7 +474,8 @@ h5 {
 
     /* Booking page */
     #login-booking-box,
-    #bookingForm {
+    #bookingForm,
+    #editForm {
         width: 60%;
         margin: 20px auto;
         max-width: 700px;
