@@ -23,7 +23,7 @@
                         {% for booking in user_bookings %}
                         <li id="booking-details">Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
                             {{ booking.party_size }}</li>
-                        <a id="edit-button" href="{% url 'edit_booking' booking.id %}">Edit</a>
+                        <a id="editButton" type="submit" class="btn btn-signup btn-jg" href="{% url 'edit_booking' booking.id %}">Edit</a>
                         <button class="btn btn-delete" booking_id="{{ booking.id }}">Cancel</button>
                         {% endfor %}
                         {% else %}

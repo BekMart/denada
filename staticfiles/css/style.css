@@ -388,7 +388,24 @@ label {
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 5px;
-    margin-bottom: 10px;
+}
+
+.btn-signup {
+    border-radius: 10px;
+}
+
+/* Edit button */
+#editButton {
+    color: #fff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    border-radius: 10px;
+    margin: 5px 5px 20px;
+}
+
+.btn-delete {
+    background-color: #d55b3e !important;
+    border-radius: 10px;
+    margin: 5px 5px 20px;
 }
 
 /* Contact Page */
