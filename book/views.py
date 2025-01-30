@@ -35,7 +35,7 @@ def booking_page(request):
         "book/book.html",
         {"booking_form": booking_form, "user_bookings": user_bookings}
     )
-    
+
 
 def edit_booking(request, booking_id):
     """
