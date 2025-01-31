@@ -67,7 +67,7 @@ def booking_page(request):
                 return redirect('book')
             else:
                 messages.error(
-                    request, "No available tables match your booking request. Please try a different time or date."
+                    request, "No available tables match your booking request.<br> Please try a different time or date."
                 )
 
     return render(
@@ -103,6 +103,7 @@ def cancel_booking(request, booking_id):
     """
     View for user to delete booking
     """
+    print('Cancel booking is running')
     booking = Booking.objects.get(pk=booking_id) 
 
     if request.user == booking.user:  # Check for authentication and ownership
