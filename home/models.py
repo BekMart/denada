@@ -10,7 +10,6 @@ class Restaurant(models.Model):
     phone = models.CharField(max_length=13)
     email = models.EmailField()
     max_capacity = models.IntegerField()
-    num_tables = models.IntegerField()
     restaurant_image = CloudinaryField('image', default='placeholder', blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 
