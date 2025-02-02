@@ -50,7 +50,7 @@ class Booking(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ["date", "time"]
 
     def __str__(self):
         return f"Booking for {self.restaurant} | {self.party_size} guests | {self.date} | {self.time} | {self.get_status_display()}"
