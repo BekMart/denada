@@ -47,7 +47,7 @@ header {
 /* Logo */
 #logo {
     text-transform: uppercase;
-    font-size: 300%;
+    font-size: 200%;
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -301,6 +301,11 @@ h1 {
     color: #d55b3e;
 }
 
+.food-item-list,
+.drink-item-list {
+    font-size: smaller;
+}
+
 .food-menu-image,
 .drink-menu-image {
     margin: 0 auto;
@@ -488,6 +493,28 @@ h5 {
     scale: 5;
 }
 
+/* Media query: tablets & larger (344px and above) */
+@media screen and (min-width: 344px) {
+    
+    /* Larger logo */
+    #logo {
+        font-size: 300%;
+    }
+
+}
+
+/* Media query: tablets & larger (390px and above) */
+@media screen and (min-width: 390px) {
+
+    /* Menu item list larger font */
+    .food-item-list,
+    .drink-item-list {
+        font-size: medium;
+    }
+
+}
+
+
 /* Media query: tablets & larger (768px and above) */
 @media screen and (min-width: 768px) {
 
@@ -524,7 +551,8 @@ h5 {
         border: 3px solid #00aaa0;
         border-radius: 10px;
         background-color: #F9F6EE;
-        margin: 10px 15%;
+        margin: 10px auto;
+        max-width: 1000px !important;
     }
 
     /* Booking page */
