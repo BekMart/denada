@@ -314,9 +314,12 @@ h1 {
 
 .food-menu-image,
 .drink-menu-image {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
     margin: 0 auto;
-    width: 100%;
     padding: 10px 0 30px;
+    object-fit: cover;
 }
 
 h2 {
@@ -518,6 +521,12 @@ h5 {
         font-size: medium;
     }
 
+    .food-menu-image,
+    .drink-menu-image {
+        max-height: 350px;
+        max-width: 350px;
+    }
+
 }
 
 /* Media query: tablets & larger (500px and above) */
@@ -543,24 +552,21 @@ h5 {
     #food-container,
     #drink-container {
         width: 90%;
-        margin: 0 5%;
-        padding: 0;
+        padding: 0 5%;
     }
 
     .food-item-list,
     .drink-item-list {
         float: left;
-        width: 60%;
-        margin-right: 10%;
+        width: 50%;
+        margin-right: 5%;
     }
 
     .food-menu-image,
     .drink-menu-image {
-        min-height: 200px;
-        max-height: 350px;
-        max-width: 350px;
+        width: 300px;
+        height: 300px;
         float: right;
-        margin: 0 auto;
     }
 
     fieldset {
@@ -568,7 +574,7 @@ h5 {
         border-radius: 10px;
         background-color: #F9F6EE;
         margin: 10px auto;
-        max-width: 1000px !important;
+        width: 700px;
     }
 
     /* Booking page */
@@ -606,4 +612,13 @@ h5 {
     #social-section {
         order: 3;
     }
+}
+
+/* Media query: tablets & larger (1280px and above) */
+@media screen and (min-width: 1280px) {
+    /* Menus */
+    fieldset {
+        width: 1000px;
+    }
+
 }
