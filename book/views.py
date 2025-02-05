@@ -62,12 +62,12 @@ def booking_page(request):
                 booking.save()
 
                 messages.success(
-                    request, "Your booking has been approved! We look forward to seeing you soon."
+                    request, "Your booking has been approved!<br>We look forward to seeing you soon."
                 )
                 return redirect('book')
             else:
                 messages.error(
-                    request, "No available tables match your booking request.<br> Please try a different time or date."
+                    request, "No available tables match your booking request.<br>Please try a different time or date."
                 )
 
     return render(

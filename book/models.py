@@ -15,7 +15,7 @@ class DiningTable(models.Model):
     seats = models.PositiveIntegerField()
 
     def __str__(self):
-        return f"Table at {self.restaurant} with {self.seats} seats"
+        return f"Table {self.id} at {self.restaurant} with {self.seats} seats"
     
 
 class Booking(models.Model):
