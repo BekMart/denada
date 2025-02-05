@@ -117,6 +117,10 @@ nav {
     padding-bottom: 50px;
 }
 
+#logout_form {
+    margin-bottom: 200px;
+}
+
 /* Remember me label */
 .login p:last-of-type {
     font-size: x-small;
@@ -262,14 +266,16 @@ h1 {
 /* link to book page */
 #book-link {
     font-family: 'Vidaloka', serif;
-    font-size: larger;
-    color: #fcf4d9;
-    background-color: #d55b3e;
-    border: #00aaa0 solid 2px;
+    text-transform: uppercase;
+    font-size: 200%;
+    font-weight: 900;
+    color: #d55b3e;
+    background-color: #F9F6EE;
+    border: #00aaa0 solid 5px;
     border-radius: 50px;
-    height: 60px;
-    width: 200px;
-    margin-top: 10px;
+    height: 100px;
+    width: 250px;
+    /* margin-top: 10px; */
     margin-bottom: 25px;
 }
 
@@ -294,6 +300,10 @@ h1 {
 }
 
 /* Menu pages */
+#food-container .row {
+    margin-bottom: 0;
+}
+
 .type-heading {
     text-decoration: underline;
     font-size: x-large;
@@ -394,6 +404,7 @@ label {
 /* Current bookings section */
 #current-bookings-section ul {
     display: inline-block;
+    margin-bottom: 0;
 }
 
 #booking-details {
@@ -457,6 +468,10 @@ label {
 }
 
 /* Contact Page */
+h4 {
+    margin-top: 50px;
+}
+
 h5 {
     font-weight: 900;
     text-decoration: underline;
@@ -573,7 +588,7 @@ h5 {
         border: 3px solid #00aaa0;
         border-radius: 10px;
         background-color: #F9F6EE;
-        margin: 10px auto;
+        margin: 30px auto;
         width: 700px;
     }
 
