@@ -70,7 +70,7 @@ class BookingForm(forms.ModelForm):
 class EditForm(forms.ModelForm):
     """
     Form for editing an existing booking.
-    This forms allows users to update their existing booking details,
+    This form allows users to update their existing booking details,
     including the number of guests, date, time and special requests.
     """
 
@@ -90,7 +90,7 @@ class EditForm(forms.ModelForm):
     )
 
     # Dropdown selection for time slots in 30-minute increments between 08:00-21:30
-    TIME_SLOTS = [(f"{hour:02d}:{minute:02d}", f"{hour:02d}:{minute:02d}") 
+    TIME_SLOTS = [(f"{hour:02d}:{minute:02d}", f"{hour:02d}:{minute:02d}")
                   for hour in range(8, 22)  # These are the opening times
                   for minute in (0, 30)]  # Display in 30 minute increments
 
