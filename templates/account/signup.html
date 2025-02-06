@@ -13,7 +13,8 @@
 
       <p>{% blocktrans %}
         A very warm welcome from everyone at De Nada!<hr>
-        Already have an account? Please <a class="link" href="{{ login_url }}">sign in</a> instead.
+        Already have an account?<br> 
+        Please <a class="link" href="{{ login_url }}">sign in</a> instead.
       {% endblocktrans %}</p>
     </div>
   </div>
@@ -24,7 +25,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}"
+        <input type="hidden" name="{{ redirect_field_name }}" class="alert alert-block alert-danger"
           value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-signup right" type="submit">
