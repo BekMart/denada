@@ -3,32 +3,63 @@
 {% block content %}
 <!-- food.html content starts here -->
 
+<!-- Food menu -->
 <div id="food-menu" class="col-12">
-    <fieldset id="food-box">
-        <h2>Food</h2>
-        <div id="food-container" class="container">
-            <div class="row">
-                <ul>
-                    {% regroup food_list by type as grouped_food %}
-                    {% for group in grouped_food %}
-                    <li class="type-heading">{{ group.grouper }}</li>
-                    {% for item in group.list|dictsort:"price" %}
-                    <li class="food-item-list">
-                        <span class="title-calories">{{ item.name }}<span class="calories">
-                                ({{ item.calories }})</span></span>
-                        <span class="cost">£{{ item.price }}</span>
-                    </li>
-                    {% endfor %}
-                    {% if group.grouper.type_image %}
-                    <li><img class="food-menu-image" src="{{ group.grouper.type_image.url }}" alt="{{ group.grouper }}">
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </fieldset>
-</div>
+  <!-- Boarder -->
+  <fieldset id="food-box">
 
+    <!-- Title -->
+    <h2>Food</h2>
+    <div id="food-container" class="container">
+      <div class="row">
+
+        <!-- Foods list -->
+        {% comment %} 
+        Group and display foods by type: 
+        - Uses Django's {%regroup%} template tag to categorize foods by type. 
+        - Each type is displayed as a heading. 
+        {% endcomment %}
+        <ul>
+          {% regroup food_list by type as grouped_food %}
+          {% for group in grouped_food %}
+
+          <!-- Food type headings -->
+          <li class="type-heading">{{ group.grouper }}</li>
+
+          <!-- Display food's name, calorie info and price in a list -->
+          {% comment %} 
+          Loop through each food item in the group and sort by price. 
+          - Foods within the group are sorted by price (using dictsort:"price"). 
+          - Displays food name, calorie information, and price. 
+          {% endcomment %}
+          {% for item in group.list|dictsort:"price" %}
+          <li class="food-item-list">
+            <span class="title-calories">{{ item.name }}
+                <span class="calories">({{ item.calories }})</span>
+            </span>
+            <span class="cost">£{{ item.price }}</span>
+          </li>
+          {% endfor %}
+
+          <!-- Display food type image -->
+          {% comment %}
+          If the food type has an associated image, display it. 
+          - Ensures the image is correctly linked using group.grouper.type_image.
+          {% endcomment %}
+          {% if group.grouper.type_image %}
+          <li>
+            <img
+              class="food-menu-image"
+              src="{{ group.grouper.type_image.url }}"
+              alt="{{ group.grouper }}"
+            />
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+</div>
 <!-- food.html content ends here -->
 {% endblock %}

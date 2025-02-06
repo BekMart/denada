@@ -1,6 +1,11 @@
+<!-- Loads Django's static files for CSS, JavaScript, and images -->
 {% load static %}
 
-{% url 'home' as home_url %}
+{% comment %} 
+Define commonly used URLs as variables to improve readability and avoid redundant URL calls. 
+This allows easier modifications if routes change. 
+{% endcomment %}
+{% url 'home' as home_url %} 
 {% url 'menu' as menu_url %}
 {% url 'book' as book_url %}
 {% url 'contact' as contact_url %}
@@ -10,187 +15,356 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags for search engines -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- Title -->
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="De Nada - A place to enjoy healthy and tasty food and drinks, listen to good music and much more. Student discount available and pet friendly!"
+    />
+    <meta
+      name="keywords"
+      content="De nada, restaurant, cafe, coffee, food, drink, menu, Plymouth, Mutley, community, art, music, bands, gigs, jam night, board games, books, student, discount, local, vegan, vegetarian, gluten, alternatives, friends, eco, pet, friendly, fresh, organic, healthy, booking, reservation"
+    />
+
+    <!-- Page title -->
     <title>De Nada</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon.png">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
 
-<body>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/images/favicon.png"
+    />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- Materialize CSS for slide-out navigation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <!-- Header navigation -->
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <div class="container">
-                    <!-- Logo -->
-                    <a href="{% url 'home' %}" id="logo">De Nada</a>
-                    <a href="#" class="sidenav-trigger" data-target="slide-out"><i class="material-icons">menu</i></a>
-                    <!-- Menu -->
-                    <ul class="hide-on-med-and-down right">
-                        <li>
-                            <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li>
-                            <a class="{% if request.path == menu_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'menu' %}">Menu</a>
-                        </li>
-                        <li>
-                            <a class="{% if request.path == book_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'book' %}">Book</a>
-                        </li>
-                        <li>
-                            <a class="{% if request.path == contact_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'contact' %}">Contact</a>
-                        </li>
-                        <li>
-                            <div class="vert-line"></div>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li>
-                            <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        {% else %}
-                        <li>
-                            <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_signup' %}">Sign Up</a>
-                        </li>
-                        <li>
-                            <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_login' %}">Login</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <ul class="sidenav" id="slide-out">
-            <li>
-                <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'home' %}"><i class="material-icons">home</i>Home</a>
-            </li>
-            <li>
-                <a class="{% if request.path == menu_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'menu' %}"><i class="material-icons">menu_book</i>Menu</a>
-            </li>
-            <li>
-                <a class="{% if request.path == book_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'book' %}"><i class="material-icons">event</i>Book</a>
-            </li>
-            <li>
-                <a class="{% if request.path == contact_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'contact' %}"><i class="material-icons">phone</i>Contact</a>
-            </li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            {% if user.is_authenticated %}
-            <li>
-                <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_logout' %}"><i class="material-icons">logout</i>Logout</a>
-            </li>
-            {% else %}
-            <li>
-                <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_signup' %}"><i class="material-icons">person</i>Sign Up</a>
-            </li>
-            <li>
-                <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_login' %}"><i class="material-icons">login</i>Login</a>
-            </li>
-            {% endif %}
-        </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+
+            <!-- Logo with link to landing page -->
+            <a href="{% url 'home' %}" id="logo">De Nada</a>
+
+            <!-- Mobile navigation toggle -->
+            <a href="#" class="sidenav-trigger" data-target="slide-out"
+              ><i class="material-icons">menu</i></a
+            >
+
+            <!-- Main Navigation -->
+            {% comment %} 
+            Main Navigation: 
+            - Uses Materialize CSS and Bootstrap for styling. 
+            - Highlights the active page using {% if request.path == url %} to dynamically apply an "active" class. 
+            - Displays different links based on user authentication status. 
+            {% endcomment %}
+            <ul class="hide-on-med-and-down right">
+              {% comment %} 
+              Each navigation link: 
+              - Checks if the current request path matches the URL using {% if request.path == url %} 
+              - If matched, the "active" class is applied for styling. 
+              {% endcomment %}
+              <li>
+                <a
+                  class="{% if request.path == home_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'home' %}"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="{% if request.path == menu_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'menu' %}"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  class="{% if request.path == book_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'book' %}"
+                  >Book</a
+                >
+              </li>
+              <li>
+                <a
+                  class="{% if request.path == contact_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'contact' %}"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <!-- Verticle line -->
+                <div class="vert-line"></div>
+              </li>
+
+              <!-- Authentication handling -->
+              {% comment %} 
+              User Authentication Handling: 
+              - If the user is authenticated, show a "Logout" option. 
+              - If the user is NOT authenticated, show "Sign Up" and "Login" options. 
+              {% endcomment %}
+              {% if user.is_authenticated %}
+              <li>
+                <a
+                  class="{% if request.path == logout_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'account_logout' %}"
+                  >Logout</a
+                >
+              </li>
+              {% else %}
+              <li>
+                <a
+                  class="{% if request.path == signup_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'account_signup' %}"
+                  >Sign Up</a
+                >
+              </li>
+              <li>
+                <a
+                  class="{% if request.path == login_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'account_login' %}"
+                  >Login</a
+                >
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile slide out navigation -->
+      {% comment %} 
+      Mobile Navigation (Sidenav): 
+      - Uses Materialize CSS for mobile-friendly navigation. 
+      - Provides the same navigation options as the main menu. 
+      {% endcomment %}
+      <ul class="sidenav" id="slide-out">
+        <li>
+          <a
+            class="{% if request.path == home_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'home' %}"
+            ><i class="material-icons">home</i>Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="{% if request.path == menu_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'menu' %}"
+            ><i class="material-icons">menu_book</i>Menu</a
+          >
+        </li>
+        <li>
+          <a
+            class="{% if request.path == book_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'book' %}"
+            ><i class="material-icons">event</i>Book</a
+          >
+        </li>
+        <li>
+          <a
+            class="{% if request.path == contact_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'contact' %}"
+            ><i class="material-icons">phone</i>Contact</a
+          >
+        </li>
+        <li>
+            <!-- Horizntal line -->
+          <div class="divider"></div>
+        </li>
+
+        <!-- Mobile authentication handling -->
+        {% if user.is_authenticated %}
+        <li>
+          <a
+            class="{% if request.path == logout_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'account_logout' %}"
+            ><i class="material-icons">logout</i>Logout</a
+          >
+        </li>
+        {% else %}
+        <li>
+          <a
+            class="{% if request.path == signup_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'account_signup' %}"
+            ><i class="material-icons">person</i>Sign Up</a
+          >
+        </li>
+        <li>
+          <a
+            class="{% if request.path == login_url %}active{% endif %}"
+            aria-current="page"
+            href="{% url 'account_login' %}"
+            ><i class="material-icons">login</i>Login</a
+          >
+        </li>
+        {% endif %}
+      </ul>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- displaying Django messages -->
-        <div class="container">
-            <div id="alert-row" class="row">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
-                </div>
+      <!-- Area for displaying Django messages -->
+      <div class="container">
+        <div id="alert-row" class="row">
+          <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div
+              class="alert {{ message.tags }} alert-dismissible fade show"
+              id="msg"
+              role="alert"
+            >
+              {{ message | safe }}
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
             </div>
+            {% endfor %}
+          </div>
         </div>
-        <!-- Hero image -->
-        <section id="hero" aria-label="Picture of a Barista at a coffee shop preparing coffee in the background and a coffee being pulled in the foreground"></section>
+      </div>
 
-        <!-- This lets user know if they are logged in or not -->
-        {% if user.is_authenticated %}
+      <!-- Hero image -->
+      <section
+        id="hero"
+        aria-label="Picture of a Barista at a coffee shop preparing coffee in the background and a coffee being pulled in the foreground"
+      ></section>
+
+      <!-- Authentication status -->
+      {% comment %}
+      User Authentication Status:
+      - If the user is authenticated, display a personalized greeting with their username.
+      - If the user is not authenticated, display a message indicating they are not logged in.
+      - This provides immediate feedback to the user about their login status.
+      {% endcomment %}
+      {% if user.is_authenticated %}
         <p class="text-end m-3">Hello, {{ user }}</p>
-        {% else %}
+      {% else %}
         <p class="text-end m-3">You are not currently logged in.</p>
-        {% endif %}
-
-        {% block content %}
-        <!-- Content goes here -->
-        {% endblock %}
+      {% endif %} 
+      
+      {% block content %}
+      <!-- Page specific content goes here -->
+      {% endblock %}
 
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <section id="opening-times">
-                        <h5>Open Everyday:</h5>
-                        <ul>
-                            <li>08:00 - 22:00</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-6">
-                    <section id="copyright">
-                        <h2 class="hidden-text">Copyright</h2>
-                        <p>© Copyright 2024 <br>
-                            BekMart</p>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <section id="social-links">
-                        <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank"
-                                    aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
-                                    <i class="fa-brands fa-facebook"></i></a>
-                            </li>
-                            <li><a href="https://www.instagram.com/" target="_blank"
-                                    aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
-                                    <i class="fa-brands fa-square-instagram"></i></a>
-                            </li>
-                            <li><a href="https://twitter.com/" target="_blank"
-                                    aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
-                                    <i class="fa-brands fa-square-x-twitter"></i></a>
-                            </li>
-                        </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+
+          <!-- Display opening times -->
+          <div class="col-6">
+            <section id="opening-times">
+              <h5>Open Everyday:</h5>
+              <ul>
+                <li>08:00 - 22:00</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Display copyright details -->
+          <div class="col-6">
+            <section id="copyright">
+              <h2 class="hidden-text">Copyright</h2>
+              <p>
+                © Copyright 2024 <br />
+                BekMart
+              </p>
+            </section>
+          </div>
         </div>
-        </section>
+        <div class="row">
+          <div class="col">
+
+            <!-- Display social media icons/links -->
+            <section id="social-links">
+              <ul>
+                <!-- Facebook -->
+                <li>
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    aria-label="Visit our Facebook page (opens in new tab)"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <!-- Instagram -->
+                <li>
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    aria-label="Visit our Instagram page (opens in new tab)"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-square-instagram"></i
+                  ></a>
+                </li>
+                <!-- Twitter -->
+                <li>
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    aria-label="Visit our Twitter page (opens in new tab)"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-square-x-twitter"></i
+                  ></a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Scripts -->
     <!-- Font Awesome icon link -->
     <script src="https://kit.fontawesome.com/7e995090f4.js" crossorigin="anonymous"></script>
     <!-- Materialize Javascript -->
@@ -198,8 +372,13 @@
     <!-- Static JavaScript -->
     <script src="{% static 'js/script.js' %}"></script>
 
+
+    {% comment %}
+    Extra Scripts Block:
+    - Needed to apply additional custom JavaScript functions for booking system.
+    - This block is defined in the necessary child templates to activate this. 
+    {% endcomment %}
     {% block extras %}
     {% endblock %}
-</body>
-
+  </body>
 </html>

@@ -1,16 +1,25 @@
 {% extends "base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}
+{% trans "Sign In" %}
+{% endblock %}
 
 {% block content %}
+<!-- signup.html content starts here -->
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
+
+      <!-- Page title -->
       <h3>{% trans "Sign Up" %}</h3>
 
+      <!-- Introductory message with a link to login page -->
+      {% comment %}
+      Introductory message for new users:
+      - Uses Django's {% blocktrans %} for translation support.
+      - Provides a welcome message and an option to sign in if they already have an account.
+      {% endcomment %}
       <p>{% blocktrans %}
         A very warm welcome from everyone at De Nada!<hr>
         Already have an account?<br> 
@@ -18,8 +27,17 @@
       {% endblocktrans %}</p>
     </div>
   </div>
+
+  <!-- Sign up form -->
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
+      {% comment %}
+      Sign Up Form:
+      - Uses POST method for security.
+      - CSRF token for protection against cross-site request forgery attacks.
+      - Dynamically renders the sign-up form using {{ form.as_p }}.
+      - If there's a redirect field (e.g., for redirecting after sign-up), it is included as a hidden input.
+      {% endcomment %}
       <form class="signup" id="signup_form" method="post"
         action="{% url 'account_signup' %}">
         {% csrf_token %}
@@ -28,10 +46,12 @@
         <input type="hidden" name="{{ redirect_field_name }}" class="alert alert-block alert-danger"
           value="{{ redirect_field_value }}" />
         {% endif %}
+        <!-- Submit button -->
         <button class="btn btn-signup right" type="submit">
           {% trans "Sign Up" %}</button>
       </form>
     </div>
   </div>
 </div>
+<!-- signup.html content ends here -->
 {% endblock content %}

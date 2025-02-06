@@ -1,84 +1,194 @@
+<!-- Extends the base template for consistent layout and styles -->
 {% extends 'base.html' %}
+{% load static %} 
 
 {% block content %}
 <!-- index.html content starts here -->
-{% load static %}
 <div class="container-fluid">
-    <div class="row">
-        <h1>WELCOME TO DE NADA</h1>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div id="about-section" class="col-12">
-            <h3>{{ about.title }}</h3>
-            <p class="about-content">{{ about.content | safe }}</p>
-            <span class="home-images">
-                {% if "placeholder" in about.image_1.url %}
-                <img class="card-img-top" src="{% static 'images/about_1.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ about.image_1.url }}" alt="{{ about.title }}">
-                {% endif %}
-                {% if "placeholder" in about.image_2.url %}
-                <img class="card-img-top" src="{% static 'images/about_2.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ about.image_2.url }}" alt="{{ about.title }}">
-                {% endif %}
-                {% if "placeholder" in about.image_3.url %}
-                <img class="card-img-top" src="{% static 'images/about_3.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ about.image_3.url }}" alt="{{ about.title }}">
-                {% endif %}
-            </span>
-        </div>
-    </div>
-    <div class="row">
-        <div id="produce-section" class="col-12">
-            <h3>{{ produce.title }}</h3>
-            <p class="produce">{{ produce.content | safe }}</p>
-            <span class="home-images">
-                {% if "placeholder" in produce.image_1.url %}
-                <img class="card-img-top" src="{% static 'images/produce_1.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ produce.image_1.url }}" alt="{{ produce.title }}">
-                {% endif %}
-                {% if "placeholder" in produce.image_2.url %}
-                <img class="card-img-top" src="{% static 'images/produce_2.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ produce.image_2.url }}" alt="{{ produce.title }}">
-                {% endif %}
-                {% if "placeholder" in produce.image_3.url %}
-                <img class="card-img-top" src="{% static 'images/produce_3.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ produce.image_3.url }}" alt="{{ produce.title }}">
-                {% endif %}
-            </span>
-        </div>
-    </div>
-    <div class="row">
-        <div id="visit-section" class="col-12">
-            <h3>{{ visit.title }}</h3>
-            <p class="visit-content">{{ visit.content | safe }}</p>
-            <span class="home-images">
-                {% if "placeholder" in visit.image_1.url %}
-                <img class="card-img-top" src="{% static 'images/visit_1.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ visit.image_1.url }}" alt="{{ visit.title }}">
-                {% endif %}
-                {% if "placeholder" in visit.image_2.url %}
-                <img class="card-img-top" src="{% static 'images/visit_2.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ visit.image_2.url }}" alt="{{ visit.title }}">
-                {% endif %}
-                {% if "placeholder" in visit.image_3.url %}
-                <img class="card-img-top" src="{% static 'images/visit_3.jpg' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ visit.image_3.url }}" alt="{{ visit.title }}">
-                {% endif %}
-            </span>
-        </div>
-    </div>
+  <div class="row">
+    <!-- Landing page title -->
+    <h1>WELCOME TO DE NADA</h1>
+  </div>
 </div>
 
+<div class="container">
+
+  <!-- About section -->
+  <div class="row">
+    <div id="about-section" class="col-12">
+      <!-- Title -->
+      <h3>{{ about.title }}</h3>
+      <!-- Information about the restaurant from the database -->
+      <p class="about-content">{{ about.content | safe }}</p>
+      <!-- Image gallery for about section -->
+      <span class="home-images">
+        {% comment %} 
+        Display images dynamically. 
+        - If the image field contains "placeholder", show a default static image. 
+        - Otherwise, display the uploaded image. 
+        {% endcomment %}
+
+        <!-- Image of owners -->
+        {% if "placeholder" in about.image_1.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/about_1.jpg' %}"
+          alt="Close up image of the yung cuple who own the resturant. They both look smiley and friendly."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{about.image_1.url}}"
+          alt="Close up image of the yung cuple who own the resturant. They both look smiley and friendly"
+        />
+        {% endif %}
+
+        <!-- Image of restaurant -->
+        {% if "placeholder" in about.image_2.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/about_2.jpg' %}"
+          alt="Image of the front of the restaurant. It's gt a green exterior and very wooden decor with lots of plants and a balcony n the first floor."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{about.image_2.url}}"
+          alt="Image of the front of the restaurant. It's gt a green exterior and very wooden decor with lots of plants and a balcony n the first floor."
+        />
+        {% endif %}
+
+        <!-- Image of the resident dog -->
+        {% if "placeholder" in about.image_3.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/about_3.jpg' %}"
+          alt="Close up image of the owner's dog, sat on a chair outside of the restaurant. A very cute, foxy looking dog, with a big smile."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{about.image_3.url}}"
+          alt="Close up image of the owner's dog, sat on a chair outside of the restaurant. A very cute, foxy looking dog, with a big smile."
+        />
+        {% endif %}
+      </span>
+    </div>
+  </div>
+
+  <!-- Produce section -->
+  <div class="row">
+    <div id="produce-section" class="col-12">
+      <!-- Title -->
+      <h3>{{ produce.title }}</h3>
+      <!-- Information about the produce used at the restaurant -->
+      <p class="produce">{{ produce.content | safe }}</p>
+      <!-- Image gallery for produce section -->
+      <span class="home-images">
+        <!-- Image of bakery -->
+        {% if "placeholder" in produce.image_1.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/produce_1.jpg' %}"
+          alt="Image of a kind looking elderly lady in a bakery, holding a loaf of fresh sourdough bread."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{produce.image_1.url}}"
+          alt="Image of a kind looking elderly lady in a bakery, holding a loaf of fresh sourdough bread."
+        />
+        {% endif %}
+
+        <!-- Image of vegtable stand -->
+        {% if "placeholder" in produce.image_2.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/produce_2.jpg' %}"
+          alt="Image of a vegtable stand. All the vegtables are stacked in nice wooden crates and all loook really fresh and colourful."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{produce.image_2.url}}"
+          alt="Image of a vegtable stand. All the vegtables are stacked in nice wooden crates and all loook really fresh and colourful."
+        />
+        {% endif %}
+
+        <!-- Image of butcher -->
+        {% if "placeholder" in produce.image_3.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/produce_3.jpg' %}"
+          alt="Image of a young smiling butcher in front of the counter of a butchers shop with some fresh meats hanging behind him."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{produce.image_3.url}}"
+          alt="Image of a young smiling butcher in front of the counter of a butchers shop with some fresh meats hanging behind him."
+        />
+        {% endif %}
+      </span>
+    </div>
+  </div>
+
+  <!-- Visit us section -->
+  <div class="row">
+    <div id="visit-section" class="col-12">
+      <!-- Title -->
+      <h3>{{ visit.title }}</h3>
+      <!-- Information about events at the restaurant encouraging users to visit -->
+      <p class="visit-content">{{ visit.content | safe }}</p>
+      <!-- Image gallery for visit us section -->
+      <span class="home-images">
+        <!-- Image of girl reading -->
+        {% if "placeholder" in visit.image_1.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/visit_1.jpg' %}"
+          alt="Image of a young asian student girl with her headphones on, reading a book at a table with a coffee."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{visit.image_1.url}}"
+          alt="Image of a young asian student girl with her headphones on, reading a book at a table with a coffee."
+        />
+        {% endif %}
+
+        <!-- Image of playing boardgame -->
+        {% if "placeholder" in visit.image_2.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/visit_2.jpg' %}"
+          alt="Image of 3 young, alternative people laughing and playing a board game in the resturant."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{visit.image_2.url}}"
+          alt="Image of 3 young, alternative people laughing and playing a board game in the resturant."
+        />
+        {% endif %}
+
+        <!-- Image of girl singing -->
+        {% if "placeholder" in visit.image_3.url %}
+        <img
+          class="card-img-top"
+          src="{% static 'images/visit_3.jpg' %}"
+          alt="Image of a young girl singing and playing guitar in the restaurant."
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          src="{{visit.image_3.url}}"
+          alt="Image of a young girl singing and playing guitar in the restaurant."
+        />
+        {% endif %}
+      </span>
+    </div>
+  </div>
+</div>
 <!-- index.html content ends here -->
 {% endblock %}

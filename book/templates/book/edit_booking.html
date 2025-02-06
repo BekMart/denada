@@ -2,30 +2,44 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block content %}
+{%block content %}
 <!-- edit_booking.html content starts here -->
-
 <div class="container-fluid">
-    <div>
-        <div id="book-box" class="'col-md-4 card mb-4 mt-3">
-            <div class="card-body">
-                <!-- {% if user.is_authenticated %} -->
-                <h3>Edit Booking</h3>
-                <form id="editForm" method="post" style="margin-top: 1.3em;"> 
-                    <input type="hidden" id="edit_booking_id" name="edit_booking_id" value="{{ edit_booking.id }}"> 
-                    {{ edit_form | crispy }}
-                    {% csrf_token %}
-                    <button id="updateButton" type="submit" class="btn btn-signup btn-jg">Update</button>
-                </form>
-                <!-- {% endif %} -->
-            </div>
-        </div>
-    </div>
-</div>
+  <div>
+    <div id="book-box" class="'col-md-4 card mb-4 mt-3">
+      <div class="card-body">
 
-<!-- book.html content ends here -->
-{% endblock %}
+        <!-- Page title -->
+        <h3>Edit Booking</h3>
+
+        <!-- Edit booking form -->
+        {% comment %} 
+        Form for editing a booking: 
+        - Uses POST method to securely submit form data. 
+        - Includes a hidden field to store the booking ID for reference. 
+        - Uses crispy forms for enhanced styling. 
+        - CSRF token included for security. 
+        {% endcomment %}
+        <form id="editForm" method="post" style="margin-top: 1.3em">
+          <input
+            type="hidden"
+            id="edit_booking_id"
+            name="edit_booking_id"
+            value="{{ edit_booking.id }}"
+          />
+          {{ edit_form | crispy }} {% csrf_token %}
+          <button id="updateButton" type="submit" class="btn btn-signup btn-jg">
+            Update
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit_booking.html content ends here -->
+{% endblock %} 
 
 {% block extras %}
+<!-- JavaScript file for handling invalid input validation -->
 <script src="{% static 'js/invalid.js' %}"></script>
 {% endblock %}

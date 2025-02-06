@@ -1,40 +1,63 @@
-{% extends 'base.html' %} {% block content %}
-<!-- menu.html content starts here -->
-{% load static %}
+{% extends 'base.html' %}
+{% load static %} 
 
+{% block content %}
+<!-- menu.html content starts here -->
 <div class="container">
   <div class="row">
+
+    <!-- Main menu page -->
     <div id="menu-section" class="col-12">
+      <!-- Title -->
       <h3>{{ menu.title }}</h3>
+
+      <!-- General information about the menus and instructins on hw to find menu's-->
       <p id="menu-description">{{ menu.about | safe }}</p>
 
+      <!-- Links to food and drink menu's -->
+      {% comment %}
+      Navigation Links for Food and Drink menus:
+      - Uses Django's {% url %} template tag to dynamically generate URLs.
+      - Ensures easy navigation to food and drink sections.
+      {% endcomment %}
       <h3><a id="food-title" href="{% url 'food' %}">Food</a></h3>
       <h3><a id="drink-title" href="{% url 'drink' %}">Drink</a></h3>
 
+      <!-- Image of a couple at the restaurant -->
+      {% comment %} 
+      Display image dynamically. 
+      - If the image field contains "placeholder", show a default static image. 
+      - Otherwise, display the uploaded image. 
+      {% endcomment %}
       <div class="menu-image">
         {% if "placeholder" in menu.menu_image.url %}
-        <img
-          class="card-img-top"
-          src="{% static 'images/menu_image.jpg' %}"
-          alt="placeholder image"
+          <img 
+          class="card-img-top" 
+          src="{% static 'images/menu_image.jpg' %}" 
+          alt="Image of smiley older couple sat across the table from eachother, having breakfast infront of the window."
         />
         {% else %}
-        <img
-          class="card-img-top"
-          src=" {{ menu.menu_image.url }}"
-          alt="{{ menu.title }}"
+          <img 
+          class="card-img-top" 
+          src="{{menu.menu_image.url}}" 
+          alt="Image of smiley older couple sat across the table from eachother, having breakfast infront of the window."
         />
         {% endif %}
       </div>
+
+      <!-- Small print about menus/alternatives -->
       <p class="note">{{ menu.note | safe }}</p>
 
+      <!-- Link to booking page -->
+      {% comment %}
+      Button to navigate to the booking page.
+      - Wraps the button inside an <a> tag to make it clickable.
+      {% endcomment %}
       <a href="{% url 'book' %}">
         <button id="book-link">Book a table</button>
       </a>
-      
     </div>
   </div>
 </div>
-
 <!-- menu.html content ends here -->
 {% endblock %}

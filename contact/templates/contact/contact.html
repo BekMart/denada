@@ -1,50 +1,84 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <!-- contact.html content starts here -->
-{% load static %}
-
 <div id="contact-page">
     <div class="row">
         <div class="container">
+
+            <!-- Location section -->
             <div class="row">
+
+                <!-- Address section -->
                 <div id="address-section">
                     <h3>{{ address.title }}</h3>
+                    <!-- Displays address -->
                     <p>
                         <h5>Location:</h5> {{ address.restaurant.address | safe }}
                     </p>
                 </div>
+
+                <!-- Embedded interactive map -->
+                {% comment %}
+                Embedded Google Map displaying the restaurant location.
+                - Uses Google Maps API with an embedded query.
+                - Replace the "q" parameter value with the correct restaurant address.
+                {% endcomment %}
                 <iframe id="map"
                     src="https://maps.googleapis.com/maps/embed/v1/place?key=AIzaSyD58rZJ7jykBhKYsTg4IuTLybiz_XmyaX4&q=123_Mutley_Plain_Mutley_Plymouth"
                     allowfullscreen>
                 </iframe>
+
             </div>
+
+            <!-- Contact section -->
+            <!-- id for flexbox on larger devices -->
             <div id="contact-flex">
+
+                <!-- Opening times section -->
                 <div id="opening-times-section">
                     <h4>{{ time.title }}</h4>
+                    <!-- Display list of daily opening times -->
                     <p class="times-display">{{ time.time_list | safe }}</p>
                 </div>
+
+                <!-- Contact details section -->
                 <div id="contact-section">
                     <h4>{{ contact.title }}</h4>
+                    <!-- Display telephone number -->
                     <p>
                         <h5>Telephone:</h5> {{ contact.restaurant.phone }}
                     </p>
+                    <!-- Display email address -->
                     <p>
                         <h5>Email:</h5> {{ contact.restaurant.email }}
                     </p>
                 </div>
+
+                <!-- Social media section -->
                 <div id="social-section">
                     <h4>{{ social.title }}</h4>
                     <div id="add-links">
                         <ul>
+                            {% comment %}
+                            List of social media links:
+                            - Uses Font Awesome icons.
+                            - Opens in a new tab.
+                            - "rel=noopener" for security.
+                            - Uses Django variables to dynamically fetch social links.
+                            {% endcomment %}
+                            <!-- Facebook link -->
                             <li><a href="https://www.facebook.com/" target="_blank"
                                     aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
                                     <i class="fa-brands fa-facebook"></i>{{ social.facebook | safe }}</a>
                             </li>
+                            <!-- Instagram link -->
                             <li><a href="https://www.instagram.com/" target="_blank"
                                     aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
                                     <i class="fa-brands fa-square-instagram"></i>{{ social.instagram | safe }}</a>
                             </li>
+                            <!-- Twitter link -->
                             <li><a href="https://twitter.com/" target="_blank"
                                     aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
                                     <i class="fa-brands fa-square-x-twitter"></i>{{ social.twitter | safe }}</a>
@@ -56,7 +90,5 @@
         </div>
     </div>
 </div>
-
-
 <!-- contact.html content ends here -->
 {% endblock %}

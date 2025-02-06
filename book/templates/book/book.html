@@ -1,74 +1,147 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %}
+<!-- Loads crispy forms for better form styling -->
 {% load crispy_forms_tags %}
 
 {% block content %}
 <!-- book.html content starts here -->
 <div class="container-fluid">
-    <div>
-        <div id="book-box" class="'col-md-4 card mb-4 mt-3">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h3>Hey {{ user.username }},<br> fill in the form below to book a table!</h3>
-                <form id="bookingForm" method="post" style="margin-top: 1.3em;">
-                    <input type="hidden" id="booking_id" name="booking_id" value="{{ booking.id }}">
-                    {{ booking_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-jg">Submit</button>
-                </form>
-                <div id="current-bookings-section">
-                    <h4>Your current bookings:</h4>
-                    <ul>
-                        {% if user_bookings %}
-                        {% for booking in user_bookings %}
-                        <li id="booking-details">Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
-                            {{ booking.party_size }}</li>
-                        <a id="editButton" type="submit" class="btn btn-signup btn-jg" href="{% url 'edit_booking' booking.id %}">Edit</a>
-                        <button class="btn btn-delete" booking_id="{{ booking.id }}">Cancel</button>
-                        {% endfor %}
-                        {% else %}
-                        <li>You have no current bookings.</li>
-                        {% endif %}
-                    </ul>
-                </div>
-                {% else %}
-                <div id="login-booking-box">
-                    <h3>Please<br><a href="{% url 'account_login' %}">log in</a>/<a
-                            href="{% url 'account_signup' %}">create
-                            an account</a><br>to book a table!</h3>
-                </div>
-                {% endif %}
-            </div>
+  <div>
+    <div id="book-box" class="'col-md-4 card mb-4 mt-3">
+      <div class="card-body">
+
+        <!-- Check if user is authenticated and logged in -->
+        {% comment %} 
+        Check if the user is authenticated before displaying the
+        booking form and their current bookings. If not authenticated, prompt
+        them to log in or sign up. 
+        {% endcomment %} 
+        {% if user.is_authenticated%}
+
+        <!-- Greeting the authenticated user -->
+        <h3>
+          Hey {{ user.username }},<br />fill in the form below to book a table!
+        </h3>
+
+        <!-- Booking form -->
+        {% comment %} 
+        Booking form submission section. - Uses POST method to
+        securely send data. - Includes a hidden field for booking ID (used for
+        updating an existing booking). - Uses crispy forms for better UI and
+        form rendering. - Includes CSRF token for security. 
+        {% endcomment %}
+        <form id="bookingForm" method="post" style="margin-top: 1.3em">
+          <input
+            type="hidden"
+            id="booking_id"
+            name="booking_id"
+            value="{{ booking.id }}"
+          />
+          {{ booking_form | crispy }} {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-jg">
+            Submit
+          </button>
+        </form>
+
+        <!-- Current booking section -->
+        <div id="current-bookings-section">
+          <h4>Your current bookings:</h4>
+          <ul>
+            {% comment %} 
+            Display the user's current/upcoming bookings in a list format. 
+            - If the user has bookings, display each booking with its details. 
+            - Provide an "Edit" button linking to the edit booking page. 
+            - Provide a "Cancel" button with a booking ID for potential JavaScript handling. 
+            {% endcomment %} 
+            {% if user_bookings %} 
+            {% for booking in user_bookings %}
+            <!-- Display existing/upcoming bookings -->
+            <li id="booking-details">
+              Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
+              {{ booking.party_size }}
+            </li>
+            <!-- Edit button -->
+            <a
+              id="editButton"
+              type="submit"
+              class="btn btn-signup btn-jg"
+              href="{% url 'edit_booking' booking.id %}"
+              >Edit</a
+            >
+            <!-- Cancel button -->
+            <button class="btn btn-delete" booking_id="{{ booking.id }}">
+              Cancel
+            </button>
+            {% endfor %} {% else %}
+            <li>You have no current bookings.</li>
+            {% endif %}
+          </ul>
         </div>
+
+        {% else %} 
+        
+        <!-- Display links to login/signup if not authenticated -->
+        {% comment %} 
+        If the user is not authenticated, display a prompt with login and signup links.
+        {% endcomment %}
+        <div id="login-booking-box">
+          <h3>
+            Please<br /><a href="{% url 'account_login' %}">log in</a>/<a
+              href="{% url 'account_signup' %}"
+              >create an account</a
+            ><br />to book a table!
+          </h3>
+        </div>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Cancel a reservation?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Are you sure you want to cancel your reservation?<br>
-                This action cannot be undone.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Yes</a>
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="deleteModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Cancel a reservation?</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        Are you sure you want to cancel your reservation?<br />
+        This action cannot be undone.
+      </div>
+      <!-- Modal footer with buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          No
+        </button>
+        <!-- 'Yes' button triggers cancellation process -->
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Yes</a>
+      </div>
     </div>
+  </div>
 </div>
-
 <!-- book.html content ends here -->
 {% endblock %}
 
+<!-- Additional JavaScript dependencies for Bootstrap and custom functionality -->
 {% block extras %}
-<!-- Needed for cancellation modal -->
+<!-- Bootstrap JavaScript for modal functionality -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript file for handling bookings (edit/delete functions) -->
 <script src="{% static 'js/bookings.js' %}"></script>
 {% endblock %}

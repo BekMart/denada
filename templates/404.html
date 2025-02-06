@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <!-- 404.html content starts here -->
 <div class="container">
-    <div class="row">
-        <h3>Page not found</h3>
-        <div id="lost-box">
-            <i class="fa-solid fa-ban"></i>
-            <p>Sorry, the page you are looking for cannot be found.<br>
-                Please check the address and try again <br>
-                or return to the home page <a href="{% url 'home' %}">here.</a>
-            </p>
-        </div>
-    </div>
-</div>
+  <div class="row">
 
+    <!-- Page title -->
+    <h3>Page not found</h3>
+
+    <!-- Error 404 page notice with link to landing page -->
+    {% comment %} 
+    Error message for 404 - Page Not Found: 
+    - Displays an error icon using Font Awesome. 
+    - Provides a user-friendly message indicating the page does not exist. 
+    - Includes a link to redirect users back to the homepage.
+    {% endcomment %}
+    <div id="lost-box">
+      <i class="fa-solid fa-ban"></i>
+      <p>
+        Sorry, the page you are looking for cannot be found.<br />
+        Please check the address and try again <br />
+        or return to the home page <a href="{% url 'home' %}">here.</a>
+      </p>
+    </div>
+  </div>
+</div>
 <!-- 404.html content ends here -->
 {% endblock %}

@@ -1,34 +1,65 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
 {% block content %}
 <!-- drink.html content starts here -->
 
+<!-- Drink menu -->
 <div id="drink-menu" class="col-12">
-    <fieldset id="drink-box">
-        <h2>Drinks</h2>
-        <div id="drink-container" class="container">
-            <div class="row">
-                <ul>
-                    {% regroup drink_list by type as grouped_drink %}
-                    {% for group in grouped_drink %}
-                    <li class="type-heading">{{ group.grouper }}</li>
-                    {% for item in group.list|dictsort:"price" %}
-                    <li class="drink-item-list">
-                        <span class="title-calories">{{ item.name }}<span class="calories">
-                                ({{ item.calories }})</span></span>
-                        <span class="cost">£{{ item.price }}</span>
-                    </li>
-                    {% endfor %}
-                    {% if group.grouper.type_image %}
-                    <li><img class="drink-menu-image" src="{{ group.grouper.type_image.url }}"
-                            alt="{{ group.grouper }}"></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </fieldset>
-</div>
+  <!-- Boarder -->
+  <fieldset id="drink-box">
 
+    <!-- Title -->
+    <h2>Drinks</h2>
+    <div id="drink-container" class="container">
+      <div class="row">
+
+        <!-- Drinks list -->
+        {% comment %} 
+        Group and display drinks by type: 
+        - Uses Django's {%regroup %} template tag to categorize drinks by type. 
+        - Each type is displayed as a heading. 
+        {% endcomment %}
+        <ul>
+          {% regroup drink_list by type as grouped_drink %}
+          {% for group in grouped_drink %}
+
+          <!-- Drink type heading -->
+          <li class="type-heading">{{ group.grouper }}</li>
+
+          <!-- Display drinks's name, calorie info and price in a list -->
+          {% comment %} 
+          Loop through each drink item in the group and sort by price. 
+          - Drinks within the group are sorted by price (using dictsort:"price"). 
+          - Displays drink name, calorie information, and price. 
+          {% endcomment %}
+          {% for item in group.list|dictsort:"price" %}
+          <li class="drink-item-list">
+            <span class="title-calories">{{ item.name }}
+                <span class="calories">({{ item.calories }})</span>
+            </span>
+            <span class="cost">£{{ item.price }}</span>
+          </li>
+          {% endfor %}
+
+          <!-- Display drink type image -->
+          {% comment %} 
+          If the drink type has an associated image, display it. 
+          - Ensures the image is correctly linked using group.grouper.type_image.
+          {% endcomment %}
+          {% if group.grouper.type_image %}
+          <li>
+            <img
+              class="drink-menu-image"
+              src="{{ group.grouper.type_image.url }}"
+              alt="{{ group.grouper }}"
+            />
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </fieldset>
+</div>
 <!-- drink.html content ends here -->
 {% endblock %}
