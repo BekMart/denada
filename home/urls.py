@@ -3,5 +3,5 @@ from . import views
 
 # Define URL patterns for the home app
 urlpatterns = [
-    path('', views.homepage, name='home'),  # Route for contact page
+    path('', views.homepage, name='home'),  # Route for home page
 ]
