@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by browser */
+/* Resets margin and padding for all elements and ensures consistent box sizing. */
 * {
     padding: 0;
     margin: 0;
@@ -10,9 +11,9 @@
 
 /* General styles */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh; /* Body takes up full height of the viewport */
+    display: flex; 
+    flex-direction: column; 
     /* Generic project style */
     background-color: #fcf4d9;
     color: #d55b3e;
@@ -22,17 +23,9 @@ body {
     text-align: center;
 }
 
-/* Links in body */
-body a,
-a>i {
-    text-decoration: none;
-    color: #00aaa0 !important;
-}
-
-.divider {
-    background-color: #00aaa0 !important;
-    width: 65% !important;
-    margin-left: 50px !important;
+/* Hidden headers */
+.hidden-text {
+    display: none;
 }
 
 /* Header */
@@ -44,7 +37,7 @@ header {
     height: 70px;
 }
 
-/* Logo */
+/* Logo/Page Title */
 #logo {
     text-transform: uppercase;
     font-size: 200%;
@@ -52,6 +45,22 @@ header {
     margin-bottom: 0;
 }
 
+/* Navigation */
+/* Override materialize built in styling */
+nav {
+    height: 70px !important;
+    line-height: 70px !important;
+    background-color: transparent !important;
+}
+
+/* Links/icon links in body */
+body a,
+a>i {
+    text-decoration: none;
+    color: #00aaa0 !important;
+}
+
+/* Vertical line in header */
 .vert-line {
     height: 50px;
     margin-top: 10px;
@@ -59,30 +68,16 @@ header {
     background-color: #00aaa0;
 }
 
-/* Alert messages */
-.alert {
-    margin-bottom: 0;
-}
-
-#alert-row {
-    margin-bottom: 0 !important;
-}
-
-/* Navbar */
+/* Sidenav menu button */
 .sidenav-trigger i {
     font-size: 200% !important;
     line-height: 70px !important;
 }
 
+/* Sidenav background */
 .sidenav-overlay {
     opacity: 0 !important;
     z-index: 1 !important;
-}
-
-nav {
-    height: 70px !important;
-    line-height: 70px !important;
-    background-color: transparent !important;
 }
 
 /* slide out menu */
@@ -91,12 +86,400 @@ nav {
     background-color: #fcf4d9;
 }
 
-/* Hidden headers */
-.hidden-text {
-    display: none;
+/* Horizontal line in slide out navigation */
+.divider {
+    background-color: #00aaa0 !important;
+    width: 65% !important;
+    margin-left: 50px !important;
+}
+
+/* Alert messages */
+.alert {
+    margin-bottom: 0;
+}
+
+/* Space below alert message display */
+#alert-row {
+    margin-bottom: 0 !important;
+}
+
+/* Hero image */
+#hero {
+    background-color: #d55b3e;
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+}
+
+/* Main Content */
+main {
+    flex: 1 0 auto; /* Make main element take up any surplus space to push the footer down */
+    margin-top: 70px !important; /* Push the start of element down so it isn't hidden by header */
+}
+
+/* Space around user authentication message */
+.m-3 {
+    margin: 0 1rem 0 0 !important;
+}
+
+/* Footer */
+footer {
+    background-color: #00aaa0;
+    color: #fcf4d9;
+    font-size: small;
+    font-weight: 500;
+}
+
+/* Opening times */
+#opening-times {
+    text-align: left;
+}
+
+/* Opening times header */
+#opening-times h5 {
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+
+/* Opening times details */
+#opening-times ul {
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+
+#opening-times li {
+    list-style-type: none;
+}
+
+/* Copyright section */
+#copyright {
+    text-align: right;
+}
+
+/* Copyright content */
+#copyright p {
+    font-size: medium;
+}
+
+/* Social newtork section */
+#social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    padding: 2px;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+/* Social network icons */
+#social-links i {
+    font-size: 150%;
+    padding: 2px;
+    color: #fcf4d9 !important;
+    margin-bottom: 0;
+}
+
+/* Home Page */
+/* Main title of landing page */
+h1 {
+    margin: 0;
+}
+
+/* Images in home page */
+.home-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    justify-content: space-between; /* Space images evenly within the container */
+}
+
+.home-images img {
+    padding: 2px;
+}
+
+.card-img-top {
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Main menu Page */
+/* Link to food and drink menus */
+#food-title,
+#drink-title {
+    color: #d55b3e !important;
+    padding: 5px 25px;
+    margin-bottom: 5%;
+    border: solid 4px #00aaa0;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+}
+
+#food-title {
+    float: left;
+    margin-left: 20%;
+}
+
+#drink-title {
+    float: right;
+    margin-right: 20%;
+}
+
+/* Image on menu page */
+.menu-image {
+    height: auto;
+    width: 100%;
+}
+
+.menu-image .card-img-top {
+    max-height: 300px;
+    background-position: 20%;
+}
+
+/* link to booking page */
+#book-link {
+    font-family: 'Vidaloka', serif;
+    text-transform: uppercase;
+    font-size: 200%;
+    font-weight: 900;
+    color: #d55b3e;
+    background-color: #F9F6EE;
+    border: #00aaa0 solid 5px;
+    border-radius: 50px;
+    height: 100px;
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+/* Food/Drink menu pages */
+/* Space around menu */
+#drink-container .row,
+#food-container .row {
+    margin-bottom: 0;
+}
+
+/* Menu title */
+h2 {
+    text-align: center;
+    text-decoration: underline 4px;
+    margin: 1rem;
+}
+
+/* Food/Drink type headings */
+.type-heading {
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+/* Food/Drink list items */
+.food-item-list,
+.drink-item-list {
+    font-size: smaller;
+}
+
+/* Food/Drink displayed images */
+.food-menu-image,
+.drink-menu-image {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 10px 0 30px;
+    object-fit: cover;
+}
+
+/* List of items */
+ul {
+    padding: 0 !important;
+}
+
+/* Individual list items */
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Title and calorie span */
+.title-calories {
+    float: left;
+}
+
+/* Calorie details */
+.calories {
+    font-size: x-small;
+}
+
+/* Cost details */
+.cost {
+    float: right;
+}
+
+/* Booking page */
+/* Unauthenticated/login or sign up box */
+#login-booking-box {
+    margin: 0 auto 200px;
+    background-color: #F9F6EE;
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+/* Override box shadow from built in styling */
+#book-box {
+    box-shadow: none;
+    border: none;
+}
+
+/* Override styling frm built in crispy forms */
+.card-body {
+    background-color: #fcf4d9 !important;
+    border: none;
+    padding: 0;
+}
+
+/* Booking/Edit booking forms */
+#bookingForm,
+#editForm {
+    border: #00aaa0 solid 3px;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* Booking form headings */
+label {
+    color: #d55b3e !important;
+    font-size: larger;
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+/* Submit button */
+.btn-signup {
+    border-radius: 10px;
+}
+
+/* Current bookings section */
+/* List of users current bookings */
+#current-bookings-section ul {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/* Displayed booking details */
+#booking-details {
+    text-align: center;
+    border: #00aaa0 3px solid;
+    border-radius: 10px;
+    background-color: #F9F6EE;
+    padding: 5px;
+}
+
+/* Edit button */
+#editButton {
+    color: #fff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    border-radius: 10px;
+    margin: 5px 5px 20px;
+}
+
+/* Delete button */
+.btn-delete {
+    background-color: #d55b3e !important;
+    border-radius: 10px;
+    margin: 5px 5px 20px;
+}
+
+/* Delete Modal */
+/* Modal background */
+.modal {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw !important;
+    max-height: 100% !important;
+}
+
+/* Built in close button */
+.modal-header .btn-close {
+    display: none; 
+}
+
+/* Modal box */
+.modal-content {
+    background-color: #fcf4d9;
+    border: #00aaa0 3px solid;
+    border-radius: 10px;
+    align-items: center;
+    width: 70% !important;
+    margin: 50px auto;
+}
+
+/* Where buttons sit in modal */
+.modal-footer {
+    background-color: #fcf4d9 !important;
+}
+
+/* No button */
+.btn-secondary {
+    border-radius: 10px;
+    margin-right: 5px !important;
+}
+
+/* Yes button */
+#deleteConfirm {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #fff !important;
+    background-color: #d55b3e !important;
+    border-radius: 10px;
+    margin-left: 5px !important;
+}
+
+/* Contact Page */
+/* Title headings */
+h4 {
+    margin-top: 50px;
+}
+
+/* Detail headings */
+h5 {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+/* Address details */
+#address-section p {
+    margin-bottom: 5px;
+}
+
+/* Map */
+#map {
+    width: 100vw;
+    height: 250px;
+    border: 3px solid #00aaa0;
+    border-radius: 10px;
+    padding: 0;
+}
+
+/* Social links*/
+#add-links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/* Social icons */
+#add-links i {
+    color: #d55b3e !important;
+    padding-right: 20px;
 }
 
 /* Authentication pages */
+/* Sign up and login forms */
 #signup_form,
 #login_form {
     border: #00aaa0 solid 3px;
@@ -110,8 +493,8 @@ nav {
     padding-bottom: 50px;
 }
 
+/* Password requirements */
 #signup_form li {
-    list-style-type: circle !important;
     font-size: xx-small;
     align-self: flex-start !important;
     color: #00aaa0;
@@ -136,6 +519,7 @@ nav {
     pointer-events: auto;
 }
 
+/* Logout form */
 #logout_form {
     border: #00aaa0 solid 3px;
     border-radius: 10px;
@@ -145,385 +529,43 @@ nav {
     margin-bottom: 200px;
 }
 
-/* Hero image */
-#hero {
-    background-color: #d55b3e;
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    position: relative;
-    width: 100%;
-    min-height: 200px;
-}
-
-.m-3 {
-    margin: 0 1rem 0 0 !important;
-}
-
-/* Main Content */
-main {
-    color: #d55b3e;
-    background-color: #fcf4d9;
-    flex: 1 0 auto;
-    /* Make main element take up any surplus space to push the footer down */
-    margin-top: 70px !important;
-    /* Push the start of element down so it isn't hidden by header */
-}
-
-/* Footer */
-footer {
-    background-color: #00aaa0;
-    color: #fcf4d9;
-    font-size: small;
-    font-weight: 500;
-}
-
-/* Opening times */
-#opening-times {
-    text-align: left;
-}
-
-#opening-times h5 {
-    margin-bottom: 2px;
-    text-decoration: none;
-}
-
-#opening-times ul {
-    padding-left: 5px;
-    margin-bottom: 0;
-}
-
-#opening-times li {
-    list-style-type: none;
-}
-
-/* Copyright section */
-#copyright {
-    text-align: right;
-}
-
-#copyright p {
-    font-size: medium;
-}
-
-/* Social newtork icons */
-#social-links ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: center;
-    padding: 2px;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-links i {
-    font-size: 150%;
-    padding: 2px;
-    color: #fcf4d9 !important;
-    margin-bottom: 0;
-}
-
-/* Home Page */
-h1 {
-    margin: 0;
-}
-
-.home-images {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allow images to wrap to the next line if needed */
-    justify-content: space-between;
-    /* Space images evenly within the container */
-}
-
-.home-images img {
-    padding: 2px;
-}
-
-.card-img-top {
-    height: auto;
-    margin-bottom: 10px;
-    /* Add some spacing between images */
-    object-fit: cover;
-}
-
-/* Menu Page */
-.menu-image {
-    height: auto;
-    width: 100%;
-}
-
-.menu-image .card-img-top {
-    max-height: 300px;
-    background-position: 20%;
-}
-
-/* link to book page */
-#book-link {
-    font-family: 'Vidaloka', serif;
-    text-transform: uppercase;
-    font-size: 200%;
-    font-weight: 900;
-    color: #d55b3e;
-    background-color: #F9F6EE;
-    border: #00aaa0 solid 5px;
-    border-radius: 50px;
-    height: 100px;
-    width: 250px;
-    margin-bottom: 25px;
-}
-
-#food-title,
-#drink-title {
-    color: #d55b3e !important;
-    padding: 5px 25px;
-    margin-bottom: 5%;
-    border: solid 4px #00aaa0;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-}
-
-#food-title {
-    float: left;
-    margin-left: 20%;
-}
-
-#drink-title {
-    float: right;
-    margin-right: 20%;
-}
-
-/* Menu pages */
-#food-container .row {
-    margin-bottom: 0;
-}
-
-.type-heading {
-    text-decoration: underline;
-    font-size: x-large;
-    font-weight: 800;
-    padding-bottom: 10px;
-}
-
-#food-menu,
-#drink-menu {
-    background-color: #fcf4d9;
-    color: #d55b3e;
-}
-
-.food-item-list,
-.drink-item-list {
-    font-size: smaller;
-}
-
-.food-menu-image,
-.drink-menu-image {
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 50%;
-    margin: 0 auto;
-    padding: 10px 0 30px;
-    object-fit: cover;
-}
-
-h2 {
-    text-align: center;
-    text-decoration: underline 4px;
-    margin: 1rem;
-}
-
-ul {
-    padding: 0 !important;
-}
-
-li {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.title-calories {
-    float: left;
-}
-
-.calories {
-    font-size: x-small;
-}
-
-.cost {
-    float: right;
-}
-
-/* Booking page */
-#login-booking-box {
-    background-color: #F9F6EE;
-    border: #00aaa0 solid 3px;
-    border-radius: 10px;
-    padding-bottom: 20px;
-}
-
-#book-box {
-    box-shadow: none;
-    border: none;
-}
-
-/* Form */
-.card-body {
-    background-color: #fcf4d9 !important;
-    border: none;
-    padding: 0;
-}
-
-#bookingForm,
-#editForm {
-    border: #00aaa0 solid 3px;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 15px;
-    margin: 20px 0;
-}
-
-label {
-    color: #d55b3e !important;
-    font-size: larger;
-    display: flex;
-    align-self: flex-start;
-    margin-bottom: 0;
-}
-
-/* Current bookings section */
-#current-bookings-section ul {
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-#booking-details {
-    text-align: center;
-    border: #00aaa0 3px solid;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 5px;
-}
-
-/* Authentication buttons */
-.btn-signup {
-    border-radius: 10px;
-}
-
-/* Edit button */
-#editButton {
-    color: #fff !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    border-radius: 10px;
-    margin: 5px 5px 20px;
-}
-
-/* Delete button */
-.btn-delete {
-    background-color: #d55b3e !important;
-    border-radius: 10px;
-    margin: 5px 5px 20px;
-}
-
-/* Delete Modal */
-.modal {
-    background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
-}
-
-.modal-dialog {
-    max-width: 80%;
-}
-
-.modal-content {
-    background-color: #fcf4d9;
-    border: #00aaa0 3px solid;
-    border-radius: 10px;
-}
-
-.modal-footer {
-    background-color: #fcf4d9 !important;
-}
-
-.btn-secondary {
-    border-radius: 10px;
-    margin-right: 5px !important;
-}
-
-#deleteConfirm {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    color: #fff !important;
-    background-color: #d55b3e !important;
-    border-radius: 10px;
-    margin-left: 5px !important;
-}
-
-/* Contact Page */
-h4 {
-    margin-top: 50px;
-}
-
-h5 {
-    font-weight: 900;
-    text-decoration: underline;
-}
-
-#address-section p {
-    margin-bottom: 5px;
-}
-
-/* Map */
-#map {
-    width: 100vw;
-    height: 250px;
-    border: 3px solid #00aaa0;
-    border-radius: 10px;
-    padding: 0;
-}
-
-/* Social links*/
-#add-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-
-#add-links i {
-    color: #d55b3e !important;
-    padding-right: 20px;
-}
-
 /* 404 error page */
+/* 404 error notice contents */
 #lost-box {
     border: #00aaa0 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 15px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 200px;
 }
 
+/* No entry icon */
 #lost-box i {
     margin: 50px auto 70px;
     scale: 5;
 }
 
-/* Media query: tablets & larger (344px and above) */
+/* Media query: 344px and above */
 @media screen and (min-width: 344px) {
     
-    /* Larger logo */
+    /* Larger logo - doesn't push icon into main  */
     #logo {
         font-size: 300%;
     }
 
 }
 
-/* Media query: tablets & larger (390px and above) */
+/* Media query: 390px and above */
 @media screen and (min-width: 390px) {
 
-    /* Menu item list larger font */
+    /* Menu item list */
     .food-item-list,
     .drink-item-list {
         font-size: medium;
     }
 
+    /* Menu image */
     .food-menu-image,
     .drink-menu-image {
         max-height: 350px;
@@ -532,96 +574,105 @@ h5 {
 
 }
 
-/* Media query: tablets & larger (500px and above) */
+/* Media query: 500px and above */
 @media screen and (min-width: 500px) {
     
     /* Hero image */
     #hero {
-        background-position: 0 70%;
+        background-position: 0 70%; /* Push image up slightly */
         min-height: 400px;
     }
-}
 
+}
 
 /* Media query: tablets & larger (768px and above) */
 @media screen and (min-width: 768px) {
 
     /* Home images */
     .home-images .card-img-top {
-        max-width: 33%;
+        max-width: 33%; /* Aligned horizontally in a row */
     }
 
-    /* Food menu page */
+    /* Food/Drink menu pages */
+    /* Space inside menu */
     #food-container,
     #drink-container {
-        width: 90%;
-        padding: 0 5%;
+        width: 90%; /* Creates space inside the menu border */
+        padding: 0 5%; /* Spacing between border and menu contents */
     }
 
+    /* Menu item list */
     .food-item-list,
     .drink-item-list {
-        float: left;
-        width: 50%;
-        margin-right: 5%;
+        float: left; /* Float on the left of the menu */
+        width: 50%; /* Take up 50% */
+        margin-right: 5%; /* Padding between list and picture */
     }
 
+    /* Menu images */
     .food-menu-image,
     .drink-menu-image {
-        width: 300px;
-        height: 300px;
-        float: right;
+        float: right; /* Float to the right of the menu */
+        height: 300px; /* Reduce size to fit nicely alongisde ist items */
     }
 
+    /* Boarder around menu */
     fieldset {
         border: 3px solid #00aaa0;
         border-radius: 10px;
         background-color: #F9F6EE;
         margin: 30px auto;
-        width: 700px;
+        width: 700px; /* Set width so that boarder doesn't fill vw */
     }
 
     /* Booking page */
+    /* All booking forms and notice/link to login if unauthenticated */
     #login-booking-box,
     #bookingForm,
     #editForm {
-        width: 60%;
-        margin: 20px auto;
+        width: 60%; 
         max-width: 700px;
     }
 
     /* Contact Page */
+    /* Map */
     #map {
         max-width: 50vw;
         margin: 0 auto;
     }
 
+    /* Bottom section of contact page */
     #contact-flex {
-        display: flex;
+        display: flex; /* Use flex for layout */
         justify-content: space-between;
-        flex-wrap: nowrap;
-        flex-direction: row;
+        flex-wrap: nowrap; /* All elements aligned */
+        flex-direction: row; /* In a row */
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto; /* Centered */
     }
 
+    /* Contact details */
     #contact-section {
-        order: 1;
+        order: 1; /* Change order of display - appears first */
     }
 
+    /* Opening times display */
     #opening-times-section {
-        order: 2;
+        order: 2; /* Swapped position so that this is in the center */
     }
 
+    /* Social media links/icons */
     #social-section {
-        order: 3;
+        order: 3; /* Now appears last */
     }
+
 }
 
-/* Media query: tablets & larger (1280px and above) */
+/* Media query: laptops & larger (1280px and above) */
 @media screen and (min-width: 1280px) {
     /* Menus */
     fieldset {
-        width: 1000px;
+        width: 1000px; /* Increase width to 1000px */
     }
 
 }
