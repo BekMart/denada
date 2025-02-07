@@ -1,10 +1,18 @@
-// For slide nav menu
+// For slide navigation menu
+// Select all elements with the class "sidenav"
 const slide_menu = document.querySelectorAll(".sidenav");
-M.Sidenav.init(slide_menu, {});
-// To ensure that alert closes when close button clicked 
+
+// Initialize Materialize CSS Sidenav component for each selected element
+M.Sidenav.init(slide_menu, {}); 
+
+// To ensure that the alert closes when the close button is clicked
+// Select the close button element with the class 'btn-close'
 const closeButton = document.querySelector('.btn-close');
-closeButton.addEventListener('click', () => {
-    // Code to close the alert or perform other actions
+
+// Check if the closeButton exists before adding an event listener (`?.` prevents errors)
+closeButton?.addEventListener('click', () => {
+    // Find the closest parent element with the class 'alert'
     const alertElement = closeButton.closest('.alert');
-    alertElement.style.display = 'none'; // Hide the alert
+    // Hide the alert by setting its display property to 'none'
+    alertElement.style.display = 'none';
 });
