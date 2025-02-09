@@ -106,7 +106,26 @@ The ERD below illustrates the different models used within the database and the 
 
 - In hindsight, I believe the design could have been more concise and efficient. As this was my first time creating a database model, I learned a lot throughout the process. I had to add models and modify fields along the way, which led to challenges when populating existing fields. This experience underscored the importance of thorough planning, as having a well-structured design from the outset would have made the process much smoother.
 - Looking back, I could have structured the models more effectively by linking the main pages to the restaurant model and attaching subsections to the relevant pages, rather than connecting everything directly to the restaurant model.
-- Additionally, I now realize that placing the address and contact details within the main restaurant model was not the best approach. Instead, these details would have been more appropriately stored in separate models where they are specific and relevant to their context. 
+- Additionally, I now realize that placing the address and contact details within the main restaurant model was not the best approach. Instead, these details would have been more appropriately stored in separate models where they are specific and relevant to their context.
+
+### Wireframes
+
+Below are the original wireframe images created during the design thinking process for this website. While the final outcome has evolved, the core page structure remains intact. Creating wireframes was a valuable tool, providing a foundation to build upon and refine as development progressed.
+
+![These are basic images outlining the initial website structure designed during the planning phase.][wireframes]
+
+- The pages follow a consistent structure, implemented using a base.html template. This template includes common elements such as the logo, navigation bar, general styling, and footer.
+- The main **landing page** content has remained the same, however, the layout has been adjusted during development:
+    - On mobile devices, multiple images are used on the home page to engage users and enhance aesthetics.
+    - On tablets and larger screens, images transition from a vertical to a horizontal layout, which I believe works well visually.
+- A main **menu page** was introduced to provide an overview of the available menus, with links to separate food and drink menus and a booking page.
+    - The food and drink menus consist of item lists, including prices and calorie details, accompanied by representative images.
+- I initially designed an **events page**, which I would have liked to implement, but it was not prioritized to ensure the website met its primary goal—encouraging users to visit the restaurant. However, I plan to add this feature in the future as it would add value to the site.
+- The **booking page** remains largely the same; however, I have added a section at the bottom that displays the user's current bookings, allowing them to edit or delete bookings with the click of a button.
+- The **contact page** hosts the address and an interactive map feature at the top of the page and when in a tyablet or larger device, the remaining details are listed below in a horizontal line using flex, instead of having the stagered appearance that it displayed within the wireframe modals. The order has been manipulated for aesthetics when on larger devices due to the size and importance of the sections involved.
+    - I wanted to include a contact page feature allowing users to leave comments or send messages to the restaurant. However, this was set aside in favor of implementing more essential features first.
+
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
+[wireframes]: static/images/wireframes.png
