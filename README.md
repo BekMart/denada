@@ -83,3 +83,17 @@ This project is for educational purposes. The main aim is to build a functional 
 - I want to receive personalized recommendations for events or menu items, so that I feel more connected to the restaurant’s cultural scene.
 - I want to engage with the community through exclusive events and discussions, so that I can meet like-minded people in a culturally rich environment.
 - I want to earn rewards or loyalty perks for repeat visits, so that I feel valued and encouraged to keep coming back.
+
+<h1 id="structure">Structure</h1>
+
+### Process Flow Chart
+
+![This is a flow chart demonstrating the structure of this website and the process to navigate around it.][flow-chart]
+
+- When users enter the website, they are directed to the home page, which provides navigation to all other pages.
+- A persistent header, present on every page, allows seamless navigation throughout the site. Logged-in users will see a logout option, while those who are not logged in will have access to the sign-up and login pages.
+- Upon logging in or out, users receive confirmation feedback and are redirected to the home page.
+- When a user creates or modifies a booking, they receive appropriate feedback and are redirected to the booking page, where their current bookings are listed.
+- The website is designed to provide clear and consistent feedback, ensuring a smooth user experience and making navigation intuitive.
+
+[flow-chart]: static/images/flow-chart.png
