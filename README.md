@@ -88,6 +88,8 @@ This project is for educational purposes. The main aim is to build a functional 
 
 ### Process Flow Chart
 
+The Process Flow Chart visually represents the structure of the website and the possible user navigation paths, helping to illustrate the user journey and overall functionality.
+
 ![This is a flow chart demonstrating the structure of this website and the process to navigate around it.][flow-chart]
 
 - When users enter the website, they are directed to the home page, which provides navigation to all other pages.
@@ -96,4 +98,15 @@ This project is for educational purposes. The main aim is to build a functional 
 - When a user creates or modifies a booking, they receive appropriate feedback and are redirected to the booking page, where their current bookings are listed.
 - The website is designed to provide clear and consistent feedback, ensuring a smooth user experience and making navigation intuitive.
 
+### ERD
+
+The ERD below illustrates the different models used within the database and the relationships between them.
+
+![This is the ERD which was created to show the database structure and the relationships held between the different models][erd]
+
+- In hindsight, I believe the design could have been more concise and efficient. As this was my first time creating a database model, I learned a lot throughout the process. I had to add models and modify fields along the way, which led to challenges when populating existing fields. This experience underscored the importance of thorough planning, as having a well-structured design from the outset would have made the process much smoother.
+- Looking back, I could have structured the models more effectively by linking the main pages to the restaurant model and attaching subsections to the relevant pages, rather than connecting everything directly to the restaurant model.
+- Additionally, I now realize that placing the address and contact details within the main restaurant model was not the best approach. Instead, these details would have been more appropriately stored in separate models where they are specific and relevant to their context. 
+
 [flow-chart]: static/images/flow-chart.png
+[erd]: static/images/erd.png
