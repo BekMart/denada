@@ -523,6 +523,12 @@ Feature: Each menu item would be clickable, leading to a dedicated page with det
     - Offers more transparency about menu items, catering to health-conscious customers or those with dietary restrictions.
     - Allows users to see available alternatives (e.g., plant-based options, gluten-free substitutes).
     - Enhances customer decision-making, making it easier to choose suitable dishes before visiting.
+- When designing the Food and Drink models, I anticipated the need for detailed product pages. To support this functionality, I included the following fields:
+    - Slug – Enables clean and SEO-friendly URLs for individual item pages.
+    - Description – Provides space for a detailed explanation of each item, including ingredients and flavors.
+    - Food Image – Allows for visual representation, enhancing presentation and user appeal.
+    - Boolean Fields (Vegan, Vegetarian, Gluten-Free) – These classifications help users quickly identify menu items that align with their dietary preferences.
+- By incorporating these fields early in development, the foundation is already in place for future enhancements, such as dedicated product pages with more tailored information, filtering options, and personalized recommendations.
 
 ### Reviews & Ratings System
 Feature: A user-generated review and rating system allowing customers to rate menu items or leave feedback on their overall dining experience.
