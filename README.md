@@ -500,7 +500,42 @@ The page is styled consistently with the rest of the website, maintaining a prof
 This ensures that users encountering a broken or incorrect link are guided smoothly back to the main site without frustration.
     ![Screenshot of the custom styled 404 error page.][404-error-screenshot]
 
- 
+
+<h2 id="features-to-implement">Features Left To Implement</h2> 
+
+### Events Calendar
+Feature: A dedicated events calendar displaying upcoming events at the restaurant, such as live music, themed nights, book readings, or special promotions.
+- Why This Would Add Value:
+    - Helps customers plan their visits around events that interest them.
+    - Encourages more foot traffic on event days by promoting engaging activities.
+    - Enhances the sense of community, reinforcing the café’s ethos of being an inclusive and welcoming space.
+
+### Contact Form with a Comments Box
+Feature: A comments box within the contact section for authenticated users to send questions, queries, or suggestions directly to the restaurant.
+- Why This Would Add Value:
+    - Provides a direct and easy communication channel between customers and the restaurant.
+    - Encourages customer engagement by making it simple to ask about menu items, dietary accommodations, or upcoming events.
+    - Helps gather valuable feedback, allowing the restaurant to improve based on user suggestions.
+
+### Clickable Menu Item Links for More Product Information 
+Feature: Each menu item would be clickable, leading to a dedicated page with details such as nutritional information, dietary alternatives, ingredients, and pairing recommendations.
+- Why This Would Add Value:
+    - Offers more transparency about menu items, catering to health-conscious customers or those with dietary restrictions.
+    - Allows users to see available alternatives (e.g., plant-based options, gluten-free substitutes).
+    - Enhances customer decision-making, making it easier to choose suitable dishes before visiting.
+
+### Reviews & Ratings System
+Feature: A user-generated review and rating system allowing customers to rate menu items or leave feedback on their overall dining experience.
+- Why This Would Add Value:
+    - Authentic customer reviews help new visitors make informed decisions when choosing menu items.
+    - Allows customers to share their experiences, fostering community interaction and a sense of connection with the restaurant.
+    - Helps the restaurant identify popular dishes, make improvements, and respond to customer concerns.
+    - Customers with dietary preferences or allergies can benefit from insights shared by others who have similar needs.
+    - Positive reviews can reinforce customer loyalty, making them more likely to return.
+
+[Back to Contents](#contents)
+
+
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
