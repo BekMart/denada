@@ -545,7 +545,7 @@ h5 {
 }
 
 /* Login error message */
-.errorlist .nonfield li{
+.errorlist.nonfield li{
     color: #C64A03 !important;
 }
 
