@@ -15,7 +15,7 @@ body {
     display: flex; 
     flex-direction: column; 
     /* Generic project style */
-    background-color: #fcf4d9;
+    background-color: #FCF4D9;
     color: #0B5509;
     font-family: 'Vidaloka', serif;
     font-size: larger;
@@ -30,7 +30,7 @@ body {
 
 /* Header */
 header {
-    background-color: #fcf4d9;
+    background-color: #FCF4D9;
     position: fixed;
     z-index: 99;
     width: 100vw;
@@ -53,8 +53,8 @@ nav {
     background-color: transparent !important;
 }
 
-/* Links/icon links in body */
-body a,
+/* Links/icon links in header */
+header a,
 a>i {
     text-decoration: none;
     color: #0B5509 !important;
@@ -83,7 +83,7 @@ a>i {
 /* slide out menu */
 #slide-out {
     margin-top: 70px;
-    background-color: #fcf4d9;
+    background-color: #FCF4D9;
 }
 
 /* Horizontal line in slide out navigation */
@@ -126,7 +126,7 @@ main {
 /* Footer */
 footer {
     background-color: #0B5509;
-    color: #fcf4d9;
+    color: #FCF4D9;
     font-size: small;
     font-weight: 500;
 }
@@ -176,7 +176,7 @@ footer {
 #social-links i {
     font-size: 150%;
     padding: 2px;
-    color: #fcf4d9 !important;
+    color: #FCF4D9 !important;
     margin-bottom: 0;
 }
 

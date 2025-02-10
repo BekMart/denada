@@ -24,7 +24,7 @@ class Restaurant(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     address = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)  # Changed to Charfield to enable styling via summernote
     restaurant_image = CloudinaryField('image', default='placeholder', blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 

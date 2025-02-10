@@ -86,6 +86,8 @@ This project is for educational purposes. The main aim is to build a functional 
 
 <h1 id="structure">Structure</h1>
 
+This website has been designed and developed using built-in Django features such as template language tags, Django Allauth for authentication, and Crispy Forms for enhanced form styling. Additionally, CSS styling and media queries have been implemented to ensure responsiveness for devices with a minimum width of 320px.
+
 ### Process Flow Chart
 
 The Process Flow Chart visually represents the structure of the website and the possible user navigation paths, helping to illustrate the user journey and overall functionality.
@@ -124,6 +126,67 @@ Below are the original wireframe images created during the design thinking proce
 - The **booking page** remains largely the same; however, I have added a section at the bottom that displays the user's current bookings, allowing them to edit or delete bookings with the click of a button.
 - The **contact page** hosts the address and an interactive map feature at the top of the page and when in a tyablet or larger device, the remaining details are listed below in a horizontal line using flex, instead of having the stagered appearance that it displayed within the wireframe modals. The order has been manipulated for aesthetics when on larger devices due to the size and importance of the sections involved.
     - I wanted to include a contact page feature allowing users to leave comments or send messages to the restaurant. However, this was set aside in favor of implementing more essential features first.
+
+<h1 id="surface">Surface</h1>
+
+### Colours
+
+The following colors have been used throughout the website to ensure consistency and a professional appearance. They comply with contrast recommendations for accessibility.
+
+#### Header
+
+- Background color: `#FCF4D9` (*Vanilla Beige*)
+- Font and Navigation links: `#0B5509` (*Deep Forest Green*)
+
+#### Main Body
+
+- Background color: `#FCF4D9` (*Vanilla Beige*)
+- Headings: `#0B5509` (*Deep Forest Green*)
+- Text: `#5E625E` (*Soft Graphite*)
+- Links: `#C64A03` (*Deep Rust*)
+- Inside borders: `#F9F6EE` (*Warm Ivory*)
+
+#### Footer
+
+- Background color: `#0B5509` (*Deep Forest Green*)
+- Font and Navigation links: `#FCF4D9` (*Vanilla Beige*)
+
+These colors provide high contrast for readability while maintaining a neutral, earthy palette. The light background creates a warm, inviting, and natural aesthetic, while the deep green, rust, and graphite tones reinforce the restaurant’s eco-friendly ethos. 
+
+To enhance visibility and clarity, lighter borders are used around forms and buttons, adding contrast and contributing to a refined, accessible user experience.
+
+### Fonts
+
+A combination of carefully selected fonts has been used throughout the website to create visual contrast, readability, and a refined aesthetic. These fonts contribute to the website's professional yet inviting feel.
+
+#### Headings & Links
+
+- Primary Font: `'Vidaloka'` (Serif)  
+- Fallback Font: `'Serif'`  
+- This elegant serif font is used for headings, links, and the contact section, providing a classic and sophisticated feel. Its high contrast and sharp details make it ideal for drawing attention to key elements.  
+- These fonts have been sourced from Google Fonts and imported into `style.css`, which is linked to the `base.html` template to ensure consistency across all pages.
+
+#### Main Text
+
+- Primary Font: `'Helvetica Neue'` (Sans-serif)  
+- A clean, modern sans-serif font used for large areas of text, including the home page and main menu page. Its neutral and legible design enhances readability, making long passages of text easy to consume.  
+- This font has been implemented via the Django Summernote admin panel to maintain consistency in content management.
+
+#### Buttons
+
+- The buttons inherit their styling from Crispy Forms built-in font, ensuring compatibility with form elements and maintaining a clean, user-friendly appearance.
+
+The pairing of Vidaloka for headings and Helvetica Neue for body text creates a visually appealing contrast that improves readability and user experience. The serif font conveys elegance and tradition, while the sans-serif font brings modernity and clarity, aligning with the website’s professional yet warm and welcoming theme.  
+
+### Images
+
+All images used on the website were generated using the ChatGPT AI image tool. These images maintain a consistent style and size, ensuring a cohesive visual experience across the site.  
+
+To enhance responsiveness, media queries have been implemented to dynamically adjust the layout of images across different screen sizes, improving the overall user experience on various devices.
+
+Images are stored using Cloudinary, a third-party media hosting platform, for efficient loading times and scalability. Additionally, all images are backed up locally within the static files in the IDE. This redundancy ensures that if Cloudinary becomes unavailable, the images can still be retrieved and displayed from local storage.
+ 
+Every image includes descriptive alt text, improving accessibility for visually impaired users and enhancing SEO.
 
 
 [flow-chart]: static/images/flow-chart.png
