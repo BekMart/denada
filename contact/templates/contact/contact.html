@@ -48,11 +48,11 @@
                     <h4>{{ contact.title }}</h4>
                     <!-- Display telephone number -->
                     <p>
-                        <h5>Telephone:</h5> {{ contact.restaurant.phone }}
+                        <h5>Telephone:</h5> {{ contact.restaurant.phone | safe }}
                     </p>
                     <!-- Display email address -->
                     <p>
-                        <h5>Email:</h5> {{ contact.restaurant.email }}
+                        <h5>Email:</h5> {{ contact.restaurant.email | safe }}
                     </p>
                 </div>
 

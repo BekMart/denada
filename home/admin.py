@@ -19,6 +19,7 @@ class RestaurantAdmin(SummernoteModelAdmin):
     search_fields = ['name',]
     list_filter = ('name',)
     prepopulated_fields = {'slug': ('name',)}
+    summernote_fields = ('address', 'phone', 'email')
 
 
 @admin.register(About)

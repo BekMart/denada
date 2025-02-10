@@ -23,8 +23,8 @@ class Restaurant(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     address = models.CharField(max_length=255)
-    phone = models.CharField(max_length=13)
-    email = models.EmailField()
+    phone = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
     restaurant_image = CloudinaryField('image', default='placeholder', blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
 

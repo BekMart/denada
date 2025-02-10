@@ -16,7 +16,7 @@ body {
     flex-direction: column; 
     /* Generic project style */
     background-color: #fcf4d9;
-    color: #d55b3e;
+    color: #0B5509;
     font-family: 'Vidaloka', serif;
     font-size: larger;
     font-weight: 300;
@@ -57,7 +57,7 @@ nav {
 body a,
 a>i {
     text-decoration: none;
-    color: #00aaa0 !important;
+    color: #0B5509 !important;
 }
 
 /* Vertical line in header */
@@ -65,7 +65,7 @@ a>i {
     height: 50px;
     margin-top: 10px;
     width: 1px;
-    background-color: #00aaa0;
+    background-color: #0B5509;
 }
 
 /* Sidenav menu button */
@@ -88,7 +88,7 @@ a>i {
 
 /* Horizontal line in slide out navigation */
 .divider {
-    background-color: #00aaa0 !important;
+    background-color: #0B5509 !important;
     width: 65% !important;
     margin-left: 50px !important;
 }
@@ -105,7 +105,7 @@ a>i {
 
 /* Hero image */
 #hero {
-    background-color: #d55b3e;
+    background-color: #C64A03;
     background: url('../images/hero.jpg') no-repeat center center/cover;
     position: relative;
     width: 100%;
@@ -125,7 +125,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #00aaa0;
+    background-color: #0B5509;
     color: #fcf4d9;
     font-size: small;
     font-weight: 500;
@@ -207,10 +207,10 @@ h1 {
 /* Link to food and drink menus */
 #food-title,
 #drink-title {
-    color: #d55b3e !important;
+    color: #C64A03 !important;
     padding: 5px 25px;
     margin-bottom: 5%;
-    border: solid 4px #00aaa0;
+    border: solid 4px #0B5509;
     border-radius: 10px;
     background-color: #F9F6EE;
 }
@@ -242,9 +242,9 @@ h1 {
     text-transform: uppercase;
     font-size: 200%;
     font-weight: 900;
-    color: #d55b3e;
+    color: #C64A03;
     background-color: #F9F6EE;
-    border: #00aaa0 solid 5px;
+    border: #0B5509 solid 5px;
     border-radius: 50px;
     height: 100px;
     width: 250px;
@@ -277,6 +277,7 @@ h2 {
 .food-item-list,
 .drink-item-list {
     font-size: smaller;
+    color: #5E625E;
 }
 
 /* Food/Drink displayed images */
@@ -322,9 +323,14 @@ li {
 #login-booking-box {
     margin: 0 auto 200px;
     background-color: #F9F6EE;
-    border: #00aaa0 solid 3px;
+    border: #0B5509 solid 3px;
     border-radius: 10px;
     padding-bottom: 20px;
+}
+
+/* Links to login/sign in pages */
+.auth-link {
+    color: #C64A03 !important;
 }
 
 /* Override box shadow from built in styling */
@@ -343,7 +349,7 @@ li {
 /* Booking/Edit booking forms */
 #bookingForm,
 #editForm {
-    border: #00aaa0 solid 3px;
+    border: #0B5509 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 15px;
@@ -353,16 +359,23 @@ li {
 
 /* Booking form headings */
 label {
-    color: #d55b3e !important;
+    color: #C64A03 !important;
     font-size: larger;
     display: flex;
     align-self: flex-start;
     margin-bottom: 0;
 }
 
+/* Override style for input underline in forms */
+input {
+    border-bottom: 1px solid #0B5509 !important;
+}
+
 /* Submit button */
 .btn-signup {
     border-radius: 10px;
+    background-color: #0B5509 !important;
+    color: #F9F6EE;
 }
 
 /* Current bookings section */
@@ -372,10 +385,14 @@ label {
     margin-bottom: 0;
 }
 
+#current-bookings-section li {
+    color: #5E625E;
+}
+
 /* Displayed booking details */
 #booking-details {
     text-align: center;
-    border: #00aaa0 3px solid;
+    border: #0B5509 3px solid;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 5px;
@@ -383,7 +400,8 @@ label {
 
 /* Edit button */
 #editButton {
-    color: #fff !important;
+    background-color: #0B5509 !important;
+    color: #F9F6EE !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     border-radius: 10px;
     margin: 5px 5px 20px;
@@ -391,7 +409,8 @@ label {
 
 /* Delete button */
 .btn-delete {
-    background-color: #d55b3e !important;
+    background-color: #C64A03 !important;
+    color: #F9F6EE;
     border-radius: 10px;
     margin: 5px 5px 20px;
 }
@@ -412,7 +431,7 @@ label {
 /* Modal box */
 .modal-content {
     background-color: #fcf4d9;
-    border: #00aaa0 3px solid;
+    border: #0B5509 3px solid;
     border-radius: 10px;
     align-items: center;
     width: 70% !important;
@@ -426,6 +445,8 @@ label {
 
 /* No button */
 .btn-secondary {
+    background-color: #0B5509;
+    color: #F9F6EE;
     border-radius: 10px;
     margin-right: 5px !important;
 }
@@ -433,8 +454,8 @@ label {
 /* Yes button */
 #deleteConfirm {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    color: #fff !important;
-    background-color: #d55b3e !important;
+    color: #F9F6EE !important;
+    background-color: #C64A03 !important;
     border-radius: 10px;
     margin-left: 5px !important;
 }
@@ -460,7 +481,7 @@ h5 {
 #map {
     width: 100vw;
     height: 250px;
-    border: 3px solid #00aaa0;
+    border: 3px solid #0B5509;
     border-radius: 10px;
     padding: 0;
 }
@@ -474,15 +495,20 @@ h5 {
 
 /* Social icons */
 #add-links i {
-    color: #d55b3e !important;
+    color: #5E625E !important;
     padding-right: 20px;
 }
 
 /* Authentication pages */
+/* Links to login/sign up pages if unauthenticated */
+#login-booking-box a {
+    color: #C64A03 !important;
+}
+
 /* Sign up and login forms */
 #signup_form,
 #login_form {
-    border: #00aaa0 solid 3px;
+    border: #0B5509 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 15px;
@@ -497,7 +523,7 @@ h5 {
 #signup_form li {
     font-size: xx-small;
     align-self: flex-start !important;
-    color: #00aaa0;
+    color:#5E625E;
 }
 
 /* Remember me label */
@@ -510,7 +536,6 @@ h5 {
 
 /* Remember me checbox */
 #id_remember {
-    border: #d55b3e 3px solid !important;
     height: 18px;
     width: 18px;
     background-color: #F9F6EE;
@@ -521,7 +546,7 @@ h5 {
 
 /* Logout form */
 #logout_form {
-    border: #00aaa0 solid 3px;
+    border: #0B5509 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 15px;
@@ -532,7 +557,7 @@ h5 {
 /* 404 error page */
 /* 404 error notice contents */
 #lost-box {
-    border: #00aaa0 solid 3px;
+    border: #0B5509 solid 3px;
     border-radius: 10px;
     background-color: #F9F6EE;
     padding: 15px;
@@ -618,7 +643,7 @@ h5 {
 
     /* Boarder around menu */
     fieldset {
-        border: 3px solid #00aaa0;
+        border: 3px solid #0B5509;
         border-radius: 10px;
         background-color: #F9F6EE;
         margin: 30px auto;
