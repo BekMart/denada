@@ -544,6 +544,11 @@ h5 {
     pointer-events: auto;
 }
 
+/* Login error message */
+.errorlist .nonfield li{
+    color: #C64A03 !important;
+}
+
 /* Logout form */
 #logout_form {
     border: #0B5509 solid 3px;
@@ -567,8 +572,14 @@ h5 {
 
 /* No entry icon */
 #lost-box i {
+    color: #C64A03 !important;
     margin: 50px auto 70px;
     scale: 5;
+}
+
+/* Lost box link to home */
+#lost-box a {
+    color: #C64A03 !important;
 }
 
 /* Media query: 344px and above */

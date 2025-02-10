@@ -188,6 +188,293 @@ Images are stored using Cloudinary, a third-party media hosting platform, for ef
  
 Every image includes descriptive alt text, improving accessibility for visually impaired users and enhancing SEO.
 
+[Back to Contents](#contents)
+
+<h1 id="features">Features</h1> 
+
+This program consists of 11 pages, each with distinct features and accessible through various routes.
+
+- 4 main pages are always accessible via the fixed navigation bar, ensuring easy access from anywhere on the site.
+- Drink and food menu pages are accessible exclusively via the main menu page.
+- A booking management page allows users to edit their reservations, only accessible via the main booking page.
+- 3 authentication pages enable users to create an account, log in, and log out.
+- A 404 error page ensures users receive a helpful message when they enter an incorrect web address.
+
+The program consists of the following features: 
+
+### Template Features: 
+
+- Header
+    - The header remains fixed at the top of every page for easy navigation.
+    - The restaurant name is bold and serves as a clickable link directing users to the homepage.
+    - The header contains a navigation menu providing access to the site's main pages.
+- Responsive Navigation
+    - On smaller devices (≤992px), the menu transforms into a slide-out navigation bar activated by a toggle menu icon, using Materialize CSS.
+    - On larger screens, the navigation menu is displayed horizontally on the right side of the header.
+    - A divider separates main navigation links from authentication links, adjusting based on screen size.
+- User Authentication Visibility
+    - If a user is logged in, only the log-out option is displayed.
+    - If a user is not logged in, sign-up and log-in links are visible in the navigation menu.
+- Hero Image
+    - A high-definition hero image featuring a barista in the background and a coffee being made in the foreground is displayed at the top of each page, just below the header. This image provides visual consistency across the site while creating a clear separation between the header and the page content.
+    - To ensure the image remains clear and visually appealing on all devices, media queries adjust its height and positioning dynamically, keeping the focus centered for an optimal viewing experience.
+- Login Status Message
+    - When a user is logged in, a personalized greeting appears on the right side, below the hero image, displaying:
+    "Hello, <username>"
+    - If a user is not logged in, a message informs them:
+    "You are not currently logged in."
+    - This feature provides a clear and user-friendly acknowledgment of the user's authentication status.
+- Footer
+    The footer provides key business information and maintains a consistent yet inverted color scheme that complements the overall design. It includes:
+    - Opening hours (left)
+    - Copyright message (top right)
+    - Social media icons (center bottom, evenly spaced)
+    Designed with responsive CSS styling, the footer maintains a clean, structured layout that is visually balanced, accessible across all devices, and ensures easy access to essential details while preserving a professional appearance.
+
+
+### Landing Page Features:
+
+- Welcome Heading
+    - Upon entering the website, users are greeted with a bold, centered welcome message on the landing page. This feature enhances user experience and engagement by:
+        - Creating a Strong First Impression – The large, attention-grabbing heading immediately welcomes visitors and establishes the website’s tone.
+        - Providing Clarity & Guidance – It helps orient users, confirming they’ve arrived at the right place.
+        - Reinforcing Branding & Personality – The message reflects the brand’s voice and contributes to a warm, inviting atmosphere.
+        - Enhancing Accessibility & Readability – The prominent, high-contrast text ensures the message is easy to read on all devices.
+    - This simple yet effective design choice improves user engagement, navigation, and overall experience.
+- About Us
+    - The 'About Us' section introduces users to the restaurant owners and provides a brief overview of the café’s ethos.
+        - This café is a community-focused space, welcoming both students and locals in an inclusive environment. They promote health-conscious living and actively support local artists, offering a space for them to perform and showcase their work.
+        - The section also includes images of the owners, the café’s storefront, and their pup, helping visitors get a sense of the people behind the café and its overall vibe. This personal touch allows potential customers to decide whether the café aligns with their values and interests.
+- Our Produce:
+    - The Produce section highlights the café’s commitment to supporting local businesses by sourcing all ingredients locally. 
+        - It reinforces their focus on fresh, organic, and healthy produce, while also catering to a variety of dietary requirements.
+        - The café emphasizes the importance of nutritious food for students, linking it to brain nourishment and overall well-being, while maintaining competitive pricing to remain accessible.
+        - Images of bakers, butchers, and a fresh vegetable stall add a personalized touch, showcasing the café’s ethical values and dedication to community support.
+- Visit us:
+    - The final section of the Home Page highlights the events and activities available at the café, reinforcing its inclusive and welcoming atmosphere.
+        - Visitors can enjoy a variety of social and creative experiences, including jam nights, board games, poetry nights, film screenings and more.
+        - The café is a pet-friendly space, ensuring a relaxed and inviting environment for all. Student discounts are also available, making it an affordable and appealing spot for young people.
+        - Images of individuals reading, groups playing board games, and live music performances help to sell the experience, giving users a visual glimpse of the vibrant and engaging atmosphere they can expect when visiting.
+
+
+### Menu Features:
+
+- Menu Introdcution
+    - This section provides general information about the café’s menus, including:
+        - Food availability and serving times.
+        - Where to access the individual menus.
+        - A reminder to check regularly for updates, as the menus frequently change.
+        - A prompt for customers to inform the café of any dietary requirements, allowing the team to adjust recipes accordingly.
+    - This ensures that visitors are well-informed about their dining options while reinforcing the café’s flexibility and commitment to accommodating all dietary needs.
+- Menu Links
+    - Links to the Food and Drink menus are prominently displayed with CSS styling to ensure they stand out from the rest of the page.
+    - To enhance usability and accessibility, responsive design has been implemented, allowing the links to adjust dynamically based on screen size. This ensures they are well-positioned and efficiently utilize available space across all devices. 
+- Menu Image
+    - This page features an image of a mature couple enjoying breakfast at the café, smiling and sharing a pleasent moment together. The image serves to sell the experience by showcasing:
+        - The stylish interior of the café
+        - The healthy, high-quality food served
+        - That the café is welcoming to all ages, not just students, despite much of the content being geared toward them
+    - This visual representation helps reinforce the café’s inclusive and inviting atmosphere, appealing to a broader audience.
+- Small Print
+    - Beneath the image, a small print section provides important but non-prominent details, including:
+        - Calorie information is approximate
+        - Semi-skimmed milk is used unless otherwise specified
+        - Plant-based milk alternatives are available
+        - Customers are encouraged to inform staff of any dietary requirements
+    - This space is reserved for useful but non-essential details, ensuring the information is available without distracting from the main content.
+- Booking Page Link
+    - At the bottom of the page, a bold, uppercase "BOOK A TABLE" link is prominently displayed, styled consistently with the menu links above.
+        - This serves as a clear call to action, encouraging users to book a table after exploring the food and drink options, making it easier for them to plan their visit.
+
+
+### Food/Drink menu Features:
+
+- Responsive Design
+    - The Food and Drink menus share a consistent CSS-styled layout for a cohesive look. They are fully responsive, adapting to different screen sizes:
+        - On smaller devices, menu items are aligned vertically for better readability.
+        - On larger screens, menu items are enclosed within a border, with images positioned to the right of the list.
+    - Media queries ensure consistent spacing between content and the border, maintaining a balanced layout without the menu taking up excessive space.
+- Menu Contents
+    - Items are categorized by type, with each section headed by a bold title. Menu entries are displayed in the following format:
+        - Food/drink item name
+        - Estimated calories (in small font, enclosed in brackets)
+        - Price (aligned to the right, with spacing for clarity)
+        - Items are listed in ascending order of price for an intuitive browsing experience.
+        - Each category includes a circular image representing the food or drink type, displayed below or alongside the menu list, depending on screen size.
+
+
+### Booking page Features:
+
+- Unauthenticated Users 
+    - If a user navigates to the Booking Page without being logged in, a notification box appears with clear instructions to either log in or create an account before booking a table.
+    - The "Log In" and "Create an Account" links are highlighted in a different color to stand out as clickable actions.
+    - This page is intentionally minimalistic, ensuring users are not distracted and are guided smoothly through the authentication process to complete their booking.
+    - The simple design serves a business goal, encouraging users to sign in and proceed with their reservation efficiently.
+- Booking form:
+    - If an authenticated user accesses the Booking Page, they are presented with a personalized greeting that addresses them by their username, instructing them to complete the booking form.
+    - The form was built using Crispy Forms, providing a solid foundation for its structure and functionality. To ensure visual consistency across the website, custom CSS styling was applied to:
+        - The form itself, with the same border and backgrund colour as other sections within the website.
+        - Input field labels, including font and color.
+        - The submit button.
+    - The form includes the following fields:
+        - Party Size*
+            - Users must enter a whole number between 1 and 10.
+            - If an invalid input is entered, they receive real-time feedback prompting them to enter a valid number.
+        - Date*
+            - The field initially displays the date format as a guide.
+            - Users can manually enter a date or click the calendar icon to select a date from the calendar picker.
+            - Feedback is provided if the date format is incorrect or if the selected date is in the past.
+        - Time*
+            - A dropdown menu allows users to select a time in 30-minute increments during the café’s opening hours.
+            - If a user attempts to book a time that has already passed, they receive an error message prompting them to select a valid time.
+        - Special Requests (Optional)
+            - Users can add special requests or dietary requirements before their booking.
+            - This field is optional, meaning the form can be submitted without completing it.
+        - Any field marked with an asterisk (*) is required, and users will receive feedback prompting them to complete any missing fields before they can submit the form.
+    - When a user submits a booking request, they receive immediate feedback based on availability:
+        - Successful Booking:
+            - If there is availability, the user is notified of their successful reservation.
+            - Their booking is then added to the 'Your Current Bookings' section below the form for easy reference.
+        - No Availability:
+            - If the requested date, time, or party size is unavailable, an error message informs the user.
+            - They are then prompted to resubmit the form with an alternative booking option.
+        - This ensures clear communication and a seamless booking experience, allowing users to quickly adjust their reservations when needed.
+- User Bookings Display
+    - If a logged-in user has any approved future bookings, they will be displayed below the booking form for easy reference and management.
+        - Booking List Display:
+            - Heading: "Your Current Bookings:" appears above the list.
+            - Sorting: Bookings are displayed in chronological order, with the nearest date first.
+        - Layout:
+            - Each booking is shown in a vertical list, centered on the page.
+            - Each entry is enclosed within a bordered container for clear separation.
+            - The booking details include date, time, and party size.
+        -  Management Options:
+            - Below each booking, users have access to "Edit" and "Cancel" buttons, allowing them to modify or remove their reservations if needed.
+    - This feature ensures users can quickly view, manage, and update their bookings in a structured and intuitive way.
+
+
+### Edit Booking Page Features:
+
+When a user clicks the "Edit" button on one of their listed bookings, they are directed to a separate page containing a form titled "Edit Booking".
+- Editing Process
+    - The form is pre-populated with the party size and date of the existing booking.
+    - Users can modify their booking details and submit an update request.
+- Feedback & User Flow
+    - If availability exists, the booking is updated, and the user is redirected to the main Booking Page, where the updated booking will be displayed in the ‘Your Current Bookings’ section.
+    - If the requested date, time, or party size is unavailable, an error message informs the user.
+    - They remain on the Edit Booking Page and are prompted to select an alternative option.
+This ensures a smooth user experience, allowing for seamless modifications while maintaining clarity through real-time feedback.
+
+
+### Delete Booking Model:
+
+When a user clicks the "Cancel" button next to one of their current bookings, a confirmation modal appears at the center of the screen, overlaying the current page.
+- Modal Functionality
+    - The modal prompts the user to confirm their cancellation and reminds them that this action cannot be undone.
+    - The user must select either:
+        - "Yes" – to confirm the cancellation.
+        - "No" – to close the modal and return to the previous page without making changes.
+- Feedback & User Flow
+    - If "Yes" is clicked:
+        - The user receives confirmation that their booking has been successfully canceled.
+        - They are redirected to the main Booking Page, where their updated list of current bookings is displayed.
+    - If "No" is clicked:
+        - The modal closes, and the user remains on the current page, with no changes made.
+This confirmation step ensures that users do not accidentally delete their reservations, providing a smooth and secure experience.
+
+
+### Contact Page Features: 
+
+At the top of the Contact Page, a heading encourages users to visit the restaurant, setting a welcoming tone. The page is structured with clear headings labeling each section:
+- Location:
+    - The restaurant’s address is displayed prominently at the top center of the page.
+    - Below the address, an interactive Google Maps widget features a marker pinpointing the restaurant's location.
+        - The map was created using the Google Maps API, allowing users to click the link and open Google Maps for personalized directions from their current location.
+- Opening Times:
+    - A full list of the restaurant’s operating hours.
+- Get in Touch: 
+    - Contact details, including telephone number and email address.
+- Add Us:
+    - Social media links with their associated icons encouraging users to connect.
+- Responsive Design
+    - On mobile devices, all sections are displayed vertically for easy readability.
+    - On larger screens, Flexbox styling is used to align the last three sections (Opening Times, Contact Info, and Social Media Links) horizontally at the bottom, improving symmetry and visual balance.
+    - This layout ensures ease of access to key contact details, enhancing the user experience while keeping the design clean and intuitive.
+
+
+### Sign Up Page Features:
+
+The Sign-Up Page provides a clear and welcoming experience for new users, ensuring a smooth registration process.
+- Page Structure & User Guidance
+    - A large heading welcomes users, followed by a brief introductory message.
+    - A line divider separates the form from a prompt for returning users, asking if they already have an account.
+    - A highlighted link directs existing users to the Login Page for easy access.
+- Sign-Up Form Features
+    - The form was built using Crispy Forms, ensuring a clean and structured layout.
+    - Custom CSS styling maintains visual consistency with other forms on the website, enhancing its professional appearance.
+    - The form includes four fields:
+        - Username (required)
+        - Email (optional)
+        - Password (required)
+        - Confirm Password (required)
+- User Feedback & Validation
+    - If any required fields are left blank, the user receives real-time feedback prompting them to complete them.
+    - A small print section outlines password requirements.
+    - If the password does not meet the minimum security criteria, an error message informs the user why and guides them to correct it.
+- Form Submission
+    - Once the form is completed correctly, users can click the submit button to proceed with registration.
+This setup ensures an intuitive, user-friendly registration process while maintaining professional design consistency across the website.
+
+
+### Login Page Features:
+
+The Login Page provides a clear and structured experience, guiding users through the authentication process.
+- Page Structure & User Guidance
+    - A prominent heading welcomes users, followed by a message informing them that they must log in to create or amend a reservation.
+    - A line divider separates the login form from a prompt for new users.
+    - If a user does not have an account, they are instructed to sign up first, with a highlighted link directing them to the Sign-Up Page.
+- Login Form Features
+    - The form is styled consistently with the rest of the website’s forms for a professional and cohesive look.
+    - It contains two input fields:
+        - Username
+        - Password
+    - A "Remember Me" checkbox allows users to stay signed in for future visits.
+    - A "Sign In" button submits the form.
+- User Feedback & Authentication
+    - If a user enters incorrect credentials, an error message appears at the top of the page, prompting them to try again.
+    - If login is successful, a confirmation message is displayed, and the user is redirected to the Home Page.
+This layout ensures a smooth, user-friendly login process, reducing friction while maintaining clarity and accessibility.
+
+
+### Logout Page Features:
+
+The Logout Page is intentionally simple, ensuring a clear and seamless sign-out process.
+- Page Structure & Functionality
+    - A bold heading informs the user that they are about to log out.
+    - A confirmation message is displayed inside a styled box, asking the user to confirm their decision.
+    - A "Sign Out" button allows them to proceed.
+- User Feedback & Redirect
+    - Upon clicking the Sign Out button, users receive feedback confirming they have been logged out.
+    - They are then automatically redirected to the Home Page.
+This design keeps the process quick, intuitive, and distraction-free, ensuring users can log out efficiently when needed.
+
+
+### 404 Error Page
+
+If a user enters an incorrect URL, they are directed to a custom-styled 404 error page, ensuring a clear and user-friendly experience.
+- Page Structure & Features
+    - A bold, clear title indicating that the page cannot be found.
+    - A large "No Entry" icon, visually reinforcing the error.
+    - A brief message explaining that the requested page does not exist and prompting users to:
+        - Check the URL and try again.
+        - Click a highlighted link to return to the Home Page.
+- Navigation & Styling
+    - The Home Page link stands out with contrasting colors, making it easy to find.
+    - If clicked, the user is redirected back to the Home Page for a seamless experience.
+The page is styled consistently with the rest of the website, maintaining a professional and cohesive design.
+This ensures that users encountering a broken or incorrect link are guided smoothly back to the main site without frustration.
+
+ 
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
