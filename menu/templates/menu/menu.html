@@ -12,7 +12,7 @@
       <h3>{{ menu.title }}</h3>
 
       <!-- General information about the menus and instructins on hw to find menu's-->
-      <p id="menu-description">{{ menu.about | safe }}</p>
+      <p id="menu-description">{{ menu.about | safe }}
 
       <!-- Links to food and drink menu's -->
       {% comment %}
@@ -35,27 +35,24 @@
           class="card-img-top" 
           src="{% static 'images/menu_image.jpg' %}" 
           alt="Image of smiley older couple sat across the table from eachother, having breakfast infront of the window."
-        />
+        >
         {% else %}
           <img 
           class="card-img-top" 
           src="{{menu.menu_image.url}}" 
           alt="Image of smiley older couple sat across the table from eachother, having breakfast infront of the window."
-        />
+        >
         {% endif %}
       </div>
 
       <!-- Small print about menus/alternatives -->
-      <p class="note">{{ menu.note | safe }}</p>
+      <p class="note">{{ menu.note | safe }}
 
       <!-- Link to booking page -->
       {% comment %}
       Button to navigate to the booking page.
-      - Wraps the button inside an <a> tag to make it clickable.
       {% endcomment %}
-      <a href="{% url 'book' %}">
-        <button id="book-link">Book a table</button>
-      </a>
+      <a href="{% url 'book' %}" id="book-link">Book a table</a>
     </div>
   </div>
 </div>

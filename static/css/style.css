@@ -246,9 +246,9 @@ h1 {
   background-color: #f9f6ee;
   border: #0b5509 solid 5px;
   border-radius: 50px;
-  height: 100px;
   width: 250px;
-  margin-bottom: 25px;
+  padding: 10px;
+  margin: 25px;
 }
 
 /* Food/Drink menu pages */
