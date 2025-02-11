@@ -47,9 +47,10 @@ def booking_page(request):
     # Initialise an empty booking form
     booking_form = BookingForm()
     # Retrieve user's exsting bookings if they are authenticated
-    user_bookings = get_user_bookings(request.user)
-    if request.user.is_authenticated
-    else None
+    if request.user.is_authenticated:
+        user_bookings = get_user_bookings(request.user)
+    else:
+        user_bookings = None
 
     if request.method == "POST":  # Handle form submission
         booking_form = BookingForm(data=request.POST)

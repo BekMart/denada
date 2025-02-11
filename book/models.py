@@ -89,9 +89,9 @@ class Booking(models.Model):
     def __str__(self):
         """String representation of the booking."""
         return (
-            f"Booking for {self.restaurant} |
-            {self.party_size} guests |
-            {self.date} |
-            {self.time} |
-            {self.get_status_display()}"
+            f"Booking for {self.restaurant} | "
+            f"{self.party_size} guests | "
+            f"{self.date} | "
+            f"{self.time} | "
+            f"{self.get_status_display()}"
         )
