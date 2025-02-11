@@ -14,9 +14,7 @@
                 <div id="address-section">
                     <h3>{{ address.title }}</h3>
                     <!-- Displays address -->
-                    <p>
-                        <h5>Location:</h5> {{ address.restaurant.address | safe }}
-                    </p>
+                    <p><h5>Location:</h5> {{ address.restaurant.address | safe }}
                 </div>
 
                 <!-- Embedded interactive map -->
@@ -25,6 +23,7 @@
                 - Uses Google Maps API with an embedded query.
                 - Replace the "q" parameter value with the correct restaurant address.
                 {% endcomment %}
+                <h3 class="hidden-text">Interactive Google Map</h3>
                 <iframe id="map"
                     src="https://maps.googleapis.com/maps/embed/v1/place?key=AIzaSyD58rZJ7jykBhKYsTg4IuTLybiz_XmyaX4&q=123_Mutley_Plain_Mutley_Plymouth"
                     allowfullscreen>
@@ -40,20 +39,16 @@
                 <div id="opening-times-section">
                     <h4>{{ time.title }}</h4>
                     <!-- Display list of daily opening times -->
-                    <p class="times-display">{{ time.time_list | safe }}</p>
+                    <p class="times-display">{{ time.time_list | safe }}
                 </div>
 
                 <!-- Contact details section -->
                 <div id="contact-section">
                     <h4>{{ contact.title }}</h4>
                     <!-- Display telephone number -->
-                    <p>
-                        <h5>Telephone:</h5> {{ contact.restaurant.phone | safe }}
-                    </p>
+                    <p><h5>Telephone:</h5> {{ contact.restaurant.phone | safe }}
                     <!-- Display email address -->
-                    <p>
-                        <h5>Email:</h5> {{ contact.restaurant.email | safe }}
-                    </p>
+                    <p><h5>Email:</h5> {{ contact.restaurant.email | safe }}
                 </div>
 
                 <!-- Social media section -->
