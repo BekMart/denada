@@ -10,7 +10,7 @@ def homepage(request):
     and visit details, and passes them to the homepage template.
     """
     # Retrieve the latest updated details for the homepage sections
-    latest_about = About.objects.latest('updated_on') 
+    latest_about = About.objects.latest('updated_on')
     latest_produce = Produce.objects.latest('updated_on')
     latest_visit = Visit.objects.latest('updated_on')
 

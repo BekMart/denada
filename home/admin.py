@@ -16,7 +16,7 @@ class RestaurantAdmin(SummernoteModelAdmin):
     Admin interface for the Restaurant model.
     """
     list_display = ('name', 'id',)
-    search_fields = ['name',]
+    search_fields = ['name', ]
     list_filter = ('name',)
     prepopulated_fields = {'slug': ('name',)}
     summernote_fields = ('address', 'phone', 'email')
