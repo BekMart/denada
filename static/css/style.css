@@ -1,714 +1,708 @@
 /* Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 
 /* Asterisk wildcard selector to override default styles added by browser */
 /* Resets margin and padding for all elements and ensures consistent box sizing. */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* General styles */
 body {
-    min-height: 100vh; /* Body takes up full height of the viewport */
-    display: flex; 
-    flex-direction: column; 
-    /* Generic project style */
-    background-color: #FCF4D9;
-    color: #0B5509;
-    font-family: 'Vidaloka', serif;
-    font-size: larger;
-    font-weight: 300;
-    text-align: center;
+  min-height: 100vh; /* Body takes up full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  /* Generic project style */
+  background-color: #fcf4d9;
+  color: #0b5509;
+  font-family: "Vidaloka", serif;
+  font-size: larger;
+  font-weight: 300;
+  text-align: center;
 }
 
 /* Hidden headers */
 .hidden-text {
-    display: none;
+  display: none;
 }
 
 /* Header */
 header {
-    background-color: #FCF4D9;
-    position: fixed;
-    z-index: 99;
-    width: 100vw;
-    height: 70px;
+  background-color: #fcf4d9;
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 70px;
 }
 
 /* Logo/Page Title */
 #logo {
-    text-transform: uppercase;
-    font-size: 200%;
-    font-weight: 700;
-    margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 /* Navigation */
 /* Override materialize built in styling */
 nav {
-    height: 70px !important;
-    line-height: 70px !important;
-    background-color: transparent !important;
+  height: 70px !important;
+  line-height: 70px !important;
+  background-color: transparent !important;
 }
 
 /* Links/icon links in header */
 header a,
-a>i {
-    text-decoration: none;
-    color: #0B5509 !important;
+a > i {
+  text-decoration: none;
+  color: #0b5509 !important;
 }
 
 /* Vertical line in header */
 .vert-line {
-    height: 50px;
-    margin-top: 10px;
-    width: 1px;
-    background-color: #0B5509;
+  height: 50px;
+  margin-top: 10px;
+  width: 1px;
+  background-color: #0b5509;
 }
 
 /* Sidenav menu button */
 .sidenav-trigger i {
-    font-size: 200% !important;
-    line-height: 70px !important;
+  font-size: 200% !important;
+  line-height: 70px !important;
 }
 
 /* Sidenav background */
 .sidenav-overlay {
-    opacity: 0 !important;
-    z-index: 1 !important;
+  opacity: 0 !important;
+  z-index: 1 !important;
 }
 
 /* slide out menu */
 #slide-out {
-    margin-top: 70px;
-    background-color: #FCF4D9;
+  margin-top: 70px;
+  background-color: #fcf4d9;
 }
 
 /* Horizontal line in slide out navigation */
 .divider {
-    background-color: #0B5509 !important;
-    width: 65% !important;
-    margin-left: 50px !important;
+  background-color: #0b5509 !important;
+  width: 65% !important;
+  margin-left: 50px !important;
 }
 
 /* Alert messages */
 .alert {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Space below alert message display */
 #alert-row {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Hero image */
 #hero {
-    background-color: #C64A03;
-    background: url('../images/hero.jpg') no-repeat center center/cover;
-    position: relative;
-    width: 100%;
-    min-height: 200px;
+  background-color: #c64a03;
+  background: url("../images/hero.jpg") no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
 }
 
 /* Main Content */
 main {
-    flex: 1 0 auto; /* Make main element take up any surplus space to push the footer down */
-    margin-top: 70px !important; /* Push the start of element down so it isn't hidden by header */
+  flex: 1 0 auto; /* Make main element take up any surplus space to push the footer down */
+  margin-top: 70px !important; /* Push the start of element down so it isn't hidden by header */
 }
 
 /* Space around user authentication message */
 .m-3 {
-    margin: 0 1rem 0 0 !important;
+  margin: 0 1rem 0 0 !important;
 }
 
 /* Footer */
 footer {
-    background-color: #0B5509;
-    color: #FCF4D9;
-    font-size: small;
-    font-weight: 500;
+  background-color: #0b5509;
+  color: #fcf4d9;
+  font-size: small;
+  font-weight: 500;
 }
 
 /* Opening times */
 #opening-times {
-    text-align: left;
+  text-align: left;
 }
 
 /* Opening times header */
 #opening-times h5 {
-    margin-bottom: 2px;
-    text-decoration: none;
+  margin-bottom: 2px;
+  text-decoration: none;
 }
 
 /* Opening times details */
 #opening-times ul {
-    padding-left: 5px;
-    margin-bottom: 0;
+  padding-left: 5px;
+  margin-bottom: 0;
 }
 
 #opening-times li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /* Copyright section */
 #copyright {
-    text-align: right;
+  text-align: right;
 }
 
 /* Copyright content */
 #copyright p {
-    font-size: medium;
+  font-size: medium;
 }
 
 /* Social newtork section */
 #social-links ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-self: center;
-    padding: 2px;
-    justify-content: space-evenly;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  padding: 2px;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
 
 /* Social network icons */
 #social-links i {
-    font-size: 150%;
-    padding: 2px;
-    color: #FCF4D9 !important;
-    margin-bottom: 0;
+  font-size: 150%;
+  padding: 2px;
+  color: #fcf4d9 !important;
+  margin-bottom: 0;
 }
 
 /* Home Page */
 /* Main title of landing page */
 h1 {
-    margin: 0;
+  margin: 0;
 }
 
 /* Images in home page */
 .home-images {
-    display: flex;
-    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
-    justify-content: space-between; /* Space images evenly within the container */
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+  justify-content: space-between; /* Space images evenly within the container */
 }
 
 .home-images img {
-    padding: 2px;
+  padding: 2px;
 }
 
 .card-img-top {
-    height: auto;
-    margin-bottom: 10px;
-    object-fit: cover;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: cover;
 }
 
 /* Main menu Page */
 /* Link to food and drink menus */
 #food-title,
 #drink-title {
-    color: #C64A03 !important;
-    padding: 5px 25px;
-    margin-bottom: 5%;
-    border: solid 4px #0B5509;
-    border-radius: 10px;
-    background-color: #F9F6EE;
+  color: #c64a03 !important;
+  padding: 5px 25px;
+  margin-bottom: 5%;
+  border: solid 4px #0b5509;
+  border-radius: 10px;
+  background-color: #f9f6ee;
 }
 
 #food-title {
-    float: left;
-    margin-left: 20%;
+  float: left;
+  margin-left: 20%;
 }
 
 #drink-title {
-    float: right;
-    margin-right: 20%;
+  float: right;
+  margin-right: 20%;
 }
 
 /* Image on menu page */
 .menu-image {
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .menu-image .card-img-top {
-    max-height: 300px;
-    background-position: 20%;
+  max-height: 300px;
+  background-position: 20%;
 }
 
 /* link to booking page */
 #book-link {
-    font-family: 'Vidaloka', serif;
-    text-transform: uppercase;
-    font-size: 200%;
-    font-weight: 900;
-    color: #C64A03;
-    background-color: #F9F6EE;
-    border: #0B5509 solid 5px;
-    border-radius: 50px;
-    height: 100px;
-    width: 250px;
-    margin-bottom: 25px;
+  font-family: "Vidaloka", serif;
+  text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 900;
+  color: #c64a03;
+  background-color: #f9f6ee;
+  border: #0b5509 solid 5px;
+  border-radius: 50px;
+  height: 100px;
+  width: 250px;
+  margin-bottom: 25px;
 }
 
 /* Food/Drink menu pages */
 /* Space around menu */
 #drink-container .row,
 #food-container .row {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* Menu title */
 h2 {
-    text-align: center;
-    text-decoration: underline 4px;
-    margin: 1rem;
+  text-align: center;
+  text-decoration: underline 4px;
+  margin: 1rem;
 }
 
 /* Food/Drink type headings */
 .type-heading {
-    text-decoration: underline;
-    font-size: x-large;
-    font-weight: 800;
-    padding-bottom: 10px;
+  text-decoration: underline;
+  font-size: x-large;
+  font-weight: 800;
+  padding-bottom: 10px;
 }
 
 /* Food/Drink list items */
 .food-item-list,
 .drink-item-list {
-    font-size: smaller;
-    color: #5E625E;
+  font-size: smaller;
+  color: #5e625e;
 }
 
 /* Food/Drink displayed images */
 .food-menu-image,
 .drink-menu-image {
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 50%;
-    margin: 0 auto;
-    padding: 10px 0 30px;
-    object-fit: cover;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 10px 0 30px;
+  object-fit: cover;
 }
 
 /* List of items */
 ul {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 /* Individual list items */
 li {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Title and calorie span */
 .title-calories {
-    float: left;
+  float: left;
 }
 
 /* Calorie details */
 .calories {
-    font-size: x-small;
+  font-size: x-small;
 }
 
 /* Cost details */
 .cost {
-    float: right;
+  float: right;
 }
 
 /* Booking page */
 /* Unauthenticated/login or sign up box */
 #login-booking-box {
-    margin: 0 auto 200px;
-    background-color: #F9F6EE;
-    border: #0B5509 solid 3px;
-    border-radius: 10px;
-    padding-bottom: 20px;
+  margin: 0 auto 200px;
+  background-color: #f9f6ee;
+  border: #0b5509 solid 3px;
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 /* Links to login/sign in pages */
 .auth-link {
-    color: #C64A03 !important;
+  color: #c64a03 !important;
 }
 
 /* Override box shadow from built in styling */
 #book-box {
-    box-shadow: none;
-    border: none;
+  box-shadow: none;
+  border: none;
 }
 
 /* Override styling frm built in crispy forms */
 .card-body {
-    background-color: #fcf4d9 !important;
-    border: none;
-    padding: 0;
+  background-color: #fcf4d9 !important;
+  border: none;
+  padding: 0;
 }
 
 /* Booking/Edit booking forms */
 #bookingForm,
 #editForm {
-    border: #0B5509 solid 3px;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 500px;
+  border: #0b5509 solid 3px;
+  border-radius: 10px;
+  background-color: #f9f6ee;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
 }
 
 /* Booking form headings */
 label {
-    color: #C64A03 !important;
-    font-size: larger;
-    display: flex;
-    align-self: flex-start;
-    margin-bottom: 0;
+  color: #c64a03 !important;
+  font-size: larger;
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 0;
 }
 
 /* Override style for input underline in forms */
 input {
-    border-bottom: 1px solid #0B5509 !important;
+  border-bottom: 1px solid #0b5509 !important;
 }
 
 /* Submit button */
 .btn-signup {
-    border-radius: 10px;
-    background-color: #0B5509 !important;
-    color: #F9F6EE;
+  border-radius: 10px;
+  background-color: #0b5509 !important;
+  color: #f9f6ee;
 }
 
 /* Current bookings section */
 /* List of users current bookings */
 #current-bookings-section ul {
-    display: inline-block;
-    margin-bottom: 0;
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 #current-bookings-section li {
-    color: #5E625E;
+  color: #5e625e;
 }
 
 /* Displayed booking details */
 #booking-details {
-    text-align: center;
-    border: #0B5509 3px solid;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 5px;
+  text-align: center;
+  border: #0b5509 3px solid;
+  border-radius: 10px;
+  background-color: #f9f6ee;
+  padding: 5px;
 }
 
 /* Edit button */
 #editButton {
-    background-color: #0B5509 !important;
-    color: #F9F6EE !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    border-radius: 10px;
-    margin: 5px 5px 20px;
+  background-color: #0b5509 !important;
+  color: #f9f6ee !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  margin: 5px 5px 20px;
 }
 
 /* Delete button */
 .btn-delete {
-    background-color: #C64A03 !important;
-    color: #F9F6EE;
-    border-radius: 10px;
-    margin: 5px 5px 20px;
+  background-color: #c64a03 !important;
+  color: #f9f6ee;
+  border-radius: 10px;
+  margin: 5px 5px 20px;
 }
 
 /* Delete Modal */
 /* Modal background */
 .modal {
-    background-color: rgba(0, 0, 0, 0);
-    width: 100vw !important;
-    max-height: 100% !important;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw !important;
+  max-height: 100% !important;
 }
 
 /* Built in close button */
 .modal-header .btn-close {
-    display: none; 
+  display: none;
 }
 
 /* Modal box */
 .modal-content {
-    background-color: #fcf4d9;
-    border: #0B5509 3px solid;
-    border-radius: 10px;
-    align-items: center;
-    width: 70% !important;
-    margin: 50px auto;
+  background-color: #fcf4d9;
+  border: #0b5509 3px solid;
+  border-radius: 10px;
+  align-items: center;
+  width: 70% !important;
+  margin: 50px auto;
 }
 
 /* Where buttons sit in modal */
 .modal-footer {
-    background-color: #fcf4d9 !important;
+  background-color: #fcf4d9 !important;
 }
 
 /* No button */
 .btn-secondary {
-    background-color: #0B5509;
-    color: #F9F6EE;
-    border-radius: 10px;
-    margin-right: 5px !important;
+  background-color: #0b5509;
+  color: #f9f6ee;
+  border-radius: 10px;
+  margin-right: 5px !important;
 }
 
 /* Yes button */
 #deleteConfirm {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    color: #F9F6EE !important;
-    background-color: #C64A03 !important;
-    border-radius: 10px;
-    margin-left: 5px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #f9f6ee !important;
+  background-color: #c64a03 !important;
+  border-radius: 10px;
+  margin-left: 5px !important;
 }
 
 /* Contact Page */
 /* Title headings */
 h4 {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 /* Detail headings */
 h5 {
-    font-weight: 900;
-    text-decoration: underline;
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 /* Address details */
 #address-section p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /* Map */
 #map {
-    width: 100vw;
-    height: 250px;
-    border: 3px solid #0B5509;
-    border-radius: 10px;
-    padding: 0;
+  width: 100vw;
+  height: 250px;
+  border: 3px solid #0b5509;
+  border-radius: 10px;
+  padding: 0;
 }
 
 /* Social links*/
 #add-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 /* Social icons */
 #add-links i {
-    color: #5E625E !important;
-    padding-right: 20px;
+  color: #5e625e !important;
+  padding-right: 20px;
 }
 
 /* Authentication pages */
 /* Links to login/sign up pages if unauthenticated */
 #login-booking-box a {
-    color: #C64A03 !important;
+  color: #c64a03 !important;
 }
 
 /* Sign up and login forms */
 #signup_form,
 #login_form {
-    border: #0B5509 solid 3px;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 15px;
-    margin-top: -30px;
+  border: #0b5509 solid 3px;
+  border-radius: 10px;
+  background-color: #f9f6ee;
+  padding: 15px;
+  margin-top: -30px;
 }
 
 #signup_form {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 /* Password requirements */
 #signup_form li {
-    font-size: xx-small;
-    align-self: flex-start !important;
-    color:#5E625E;
+  font-size: xx-small;
+  align-self: flex-start !important;
+  color: #5e625e;
 }
 
 /* Remember me label */
 .login p:last-of-type {
-    font-size: x-small;
-    display: flex;
-    align-self: flex-start;
-    margin-bottom: 0;
+  font-size: x-small;
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 0;
 }
 
 /* Remember me checbox */
 #id_remember {
-    height: 18px;
-    width: 18px;
-    background-color: #F9F6EE;
-    margin-left: 120px;
-    opacity: 1;
-    pointer-events: auto;
+  height: 18px;
+  width: 18px;
+  background-color: #f9f6ee;
+  margin-left: 120px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Login error message */
-.errorlist.nonfield li{
-    color: #C64A03 !important;
+.errorlist.nonfield li {
+  color: #c64a03 !important;
 }
 
 /* Logout form */
 #logout_form {
-    border: #0B5509 solid 3px;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 15px;
-    max-width: 500px;
-    margin-bottom: 200px;
+  border: #0b5509 solid 3px;
+  border-radius: 10px;
+  background-color: #f9f6ee;
+  padding: 15px;
+  max-width: 500px;
+  margin-bottom: 200px;
 }
 
 /* 404 error page */
 /* 404 error notice contents */
 #lost-box {
-    border: #0B5509 solid 3px;
-    border-radius: 10px;
-    background-color: #F9F6EE;
-    padding: 15px;
-    max-width: 600px;
-    margin: 0 auto 200px;
+  border: #0b5509 solid 3px;
+  border-radius: 10px;
+  background-color: #f9f6ee;
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto 200px;
 }
 
 /* No entry icon */
 #lost-box i {
-    color: #C64A03 !important;
-    margin: 50px auto 70px;
-    scale: 5;
+  color: #c64a03 !important;
+  margin: 50px auto 70px;
+  display: inline-block; /* to enable scale due to validation error */
+  transform: scale(5); /* to enable scale due to validation error */
 }
 
 /* Lost box link to home */
 #lost-box a {
-    color: #C64A03 !important;
+  color: #c64a03 !important;
 }
 
 /* Media query: 344px and above */
 @media screen and (min-width: 344px) {
-    
-    /* Larger logo - doesn't push icon into main  */
-    #logo {
-        font-size: 300%;
-    }
-
+  /* Larger logo - doesn't push icon into main  */
+  #logo {
+    font-size: 300%;
+  }
 }
 
 /* Media query: 390px and above */
 @media screen and (min-width: 390px) {
+  /* Menu item list */
+  .food-item-list,
+  .drink-item-list {
+    font-size: medium;
+  }
 
-    /* Menu item list */
-    .food-item-list,
-    .drink-item-list {
-        font-size: medium;
-    }
-
-    /* Menu image */
-    .food-menu-image,
-    .drink-menu-image {
-        max-height: 350px;
-        max-width: 350px;
-    }
-
+  /* Menu image */
+  .food-menu-image,
+  .drink-menu-image {
+    max-height: 350px;
+    max-width: 350px;
+  }
 }
 
 /* Media query: 500px and above */
 @media screen and (min-width: 500px) {
-    
-    /* Hero image */
-    #hero {
-        background-position: 0 70%; /* Push image up slightly */
-        min-height: 400px;
-    }
-
+  /* Hero image */
+  #hero {
+    background-position: 0 70%; /* Push image up slightly */
+    min-height: 400px;
+  }
 }
 
 /* Media query: tablets & larger (768px and above) */
 @media screen and (min-width: 768px) {
+  /* Home images */
+  .home-images .card-img-top {
+    max-width: 33%; /* Aligned horizontally in a row */
+  }
 
-    /* Home images */
-    .home-images .card-img-top {
-        max-width: 33%; /* Aligned horizontally in a row */
-    }
+  /* Food/Drink menu pages */
+  /* Space inside menu */
+  #food-container,
+  #drink-container {
+    width: 90%; /* Creates space inside the menu border */
+    padding: 0 5%; /* Spacing between border and menu contents */
+  }
 
-    /* Food/Drink menu pages */
-    /* Space inside menu */
-    #food-container,
-    #drink-container {
-        width: 90%; /* Creates space inside the menu border */
-        padding: 0 5%; /* Spacing between border and menu contents */
-    }
+  /* Menu item list */
+  .food-item-list,
+  .drink-item-list {
+    float: left; /* Float on the left of the menu */
+    width: 50%; /* Take up 50% */
+    margin-right: 5%; /* Padding between list and picture */
+  }
 
-    /* Menu item list */
-    .food-item-list,
-    .drink-item-list {
-        float: left; /* Float on the left of the menu */
-        width: 50%; /* Take up 50% */
-        margin-right: 5%; /* Padding between list and picture */
-    }
+  /* Menu images */
+  .food-menu-image,
+  .drink-menu-image {
+    float: right; /* Float to the right of the menu */
+    height: 300px; /* Reduce size to fit nicely alongisde ist items */
+  }
 
-    /* Menu images */
-    .food-menu-image,
-    .drink-menu-image {
-        float: right; /* Float to the right of the menu */
-        height: 300px; /* Reduce size to fit nicely alongisde ist items */
-    }
+  /* Boarder around menu */
+  fieldset {
+    border: 3px solid #0b5509;
+    border-radius: 10px;
+    background-color: #f9f6ee;
+    margin: 30px auto;
+    width: 700px; /* Set width so that boarder doesn't fill vw */
+  }
 
-    /* Boarder around menu */
-    fieldset {
-        border: 3px solid #0B5509;
-        border-radius: 10px;
-        background-color: #F9F6EE;
-        margin: 30px auto;
-        width: 700px; /* Set width so that boarder doesn't fill vw */
-    }
+  /* Booking page */
+  /* All booking forms and notice/link to login if unauthenticated */
+  #login-booking-box,
+  #bookingForm,
+  #editForm {
+    width: 60%;
+    max-width: 700px;
+  }
 
-    /* Booking page */
-    /* All booking forms and notice/link to login if unauthenticated */
-    #login-booking-box,
-    #bookingForm,
-    #editForm {
-        width: 60%; 
-        max-width: 700px;
-    }
+  /* Contact Page */
+  /* Map */
+  #map {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
 
-    /* Contact Page */
-    /* Map */
-    #map {
-        max-width: 50vw;
-        margin: 0 auto;
-    }
+  /* Bottom section of contact page */
+  #contact-flex {
+    display: flex; /* Use flex for layout */
+    justify-content: space-between;
+    flex-wrap: nowrap; /* All elements aligned */
+    flex-direction: row; /* In a row */
+    width: 90%;
+    margin: 0 auto; /* Centered */
+  }
 
-    /* Bottom section of contact page */
-    #contact-flex {
-        display: flex; /* Use flex for layout */
-        justify-content: space-between;
-        flex-wrap: nowrap; /* All elements aligned */
-        flex-direction: row; /* In a row */
-        width: 90%;
-        margin: 0 auto; /* Centered */
-    }
+  /* Contact details */
+  #contact-section {
+    order: 1; /* Change order of display - appears first */
+  }
 
-    /* Contact details */
-    #contact-section {
-        order: 1; /* Change order of display - appears first */
-    }
+  /* Opening times display */
+  #opening-times-section {
+    order: 2; /* Swapped position so that this is in the center */
+  }
 
-    /* Opening times display */
-    #opening-times-section {
-        order: 2; /* Swapped position so that this is in the center */
-    }
-
-    /* Social media links/icons */
-    #social-section {
-        order: 3; /* Now appears last */
-    }
-
+  /* Social media links/icons */
+  #social-section {
+    order: 3; /* Now appears last */
+  }
 }
 
 /* Media query: laptops & larger (1280px and above) */
 @media screen and (min-width: 1280px) {
-    /* Menus */
-    fieldset {
-        width: 1000px; /* Increase width to 1000px */
-    }
-
+  /* Menus */
+  fieldset {
+    width: 1000px; /* Increase width to 1000px */
+  }
 }
