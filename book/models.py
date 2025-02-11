@@ -15,7 +15,10 @@ class DiningTable(models.Model):
     - seats (PositiveIntegerField): Number of seats available at the table.
     """
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_table", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_table",
+        default=1
     )
     seats = models.PositiveIntegerField()
 
@@ -43,7 +46,10 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name="user_booking"
     )
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_booking", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_booking",
+        default=1
     )
     table = models.ForeignKey(
         DiningTable, on_delete=models.CASCADE, related_name="table_booking"
@@ -71,9 +77,10 @@ class Booking(models.Model):
             booking_datetime = make_aware(booking_datetime)
 
         self.start_time = booking_datetime  # Assign value to strat time
-        self.end_time = self.start_time + timedelta(minutes=60)  # Assign value to end time - 1 hour after start time
+        # Assign value to end time - 1 hour after start time
+        self.end_time = self.start_time + timedelta(minutes=60)
 
-        # Call the parent class's save method to save the object to the database
+        # Call the parent class's save method to save object to database
         super().save(*args, **kwargs)
 
     class Meta:
@@ -81,4 +88,10 @@ class Booking(models.Model):
 
     def __str__(self):
         """String representation of the booking."""
-        return f"Booking for {self.restaurant} | {self.party_size} guests | {self.date} | {self.time} | {self.get_status_display()}"
+        return (
+            f"Booking for {self.restaurant} |
+            {self.party_size} guests |
+            {self.date} |
+            {self.time} |
+            {self.get_status_display()}"
+        )

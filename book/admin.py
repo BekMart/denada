@@ -11,7 +11,16 @@ class BookingAdmin(admin.ModelAdmin):
     allowing easier management of bookings via list display,
     filtering, and searching.
     """
-    list_display = ('user', 'restaurant', 'date', 'time', 'party_size', 'table', 'status', 'id')
+    list_display = (
+        'user',
+        'restaurant',
+        'date',
+        'time',
+        'party_size',
+        'table',
+        'status',
+        'id'
+        )
     search_fields = ['user__username', 'date', 'time']
     list_filter = ('restaurant', 'user', 'date')
 

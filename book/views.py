@@ -30,8 +30,8 @@ def get_available_tables(party_size, start_time, end_time):
         seats__gte=party_size  # Tables with seats >= party size
     ).exclude(
         # Exclude tables that are already booked during the requested time slot
-        table_booking__start_time__lt=end_time,  # A booking starts before the requested end time
-        table_booking__end_time__gt=start_time,  # A booking ends after the requested start time
+        table_booking__start_time__lt=end_time,  # starts before the end_time
+        table_booking__end_time__gt=start_time,  # ends after the start_time
     )
 
 
@@ -41,14 +41,17 @@ def booking_page(request):
     - Takes the HTTP request object.
     - Assigns a table to booking if there is one available.
     - Feedback provided if booking is successful or declined.
-    - Returns rendered template with the booking form and list of users existing bookings.
+    - Returns rendered template with the booking form and list of
+    users existing bookings.
     """
     # Initialise an empty booking form
     booking_form = BookingForm()
     # Retrieve user's exsting bookings if they are authenticated
-    user_bookings = get_user_bookings(request.user) if request.user.is_authenticated else None
+    user_bookings = get_user_bookings(request.user)
+    if request.user.is_authenticated
+    else None
 
-    if request.method == "POST":  #Handle form submission
+    if request.method == "POST":  # Handle form submission
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():  # Validate form data
             # Extract cleaned data from the form
@@ -58,24 +61,35 @@ def booking_page(request):
 
             # Combine date and timme to form a datetime object
             start_time = datetime.combine(booking_date, booking_time)
-            end_time = start_time + timedelta(minutes=60)  # Booking slot ends 1 hour after start time
+            end_time = start_time + timedelta(minutes=60)  # 1 hour slot
 
             # Get available tables for the selected time and party size
-            available_tables = get_available_tables(party_size, start_time, end_time)
+            available_tables = get_available_tables(
+                party_size,
+                start_time,
+                end_time
+                )
 
-            if available_tables.exists():  # If a table is available, create the booking
-                booking = booking_form.save(commit=False)  # Do not save yet, assign user and table first
-                booking.user = request.user  # Assign the booking to the current user
-                booking.table = available_tables.first()  # Assign the first available table
+            if available_tables.exists():  # If available table, create booking
+                # Do not save yet, assign user and table first
+                booking = booking_form.save(commit=False)
+                # Assign booking to authenticated user
+                booking.user = request.user
+                # Assign first available table
+                booking.table = available_tables.first()
                 booking.save()  # Save the booking to the database
                 # Feedback provided
                 messages.success(
-                    request, "Your booking has been approved!<br>We look forward to seeing you soon."
+                    request,
+                    "Your booking has been approved!<br>\
+                    We look forward to seeing you soon."
                 )
                 return redirect('book')  # Redirect to booking page
             else:
                 messages.error(
-                    request, "No available tables match your booking request.<br>Please try a different time or date."
+                    request,
+                    "No available tables match your booking request.<br>\
+                    Please try a different time or date."
                 )
 
     # Render the booking page with the booking form and user's bookings
@@ -99,20 +113,27 @@ def edit_booking(request, booking_id):
 
     if request.method == 'POST':
         if request.user == booking.user:  # Ensure the user owns the booking
-            edit_form = EditForm(data=request.POST, instance=booking)  # Load the form with POST data
+            edit_form = EditForm(
+                data=request.POST,
+                instance=booking)  # Load the form with POST data
             if edit_form.is_valid():  # Validate the form
                 edit_form.save()  # Save changes to the database
                 messages.success(request, 'Booking updated successfully!')
                 return redirect('book')  # Redirect back to the booking page
             else:
                 messages.error(
-                    request, "No available tables match your booking request.<br>Please try a different time or date."
+                    request,
+                    "No available tables match your booking request.<br>\
+                    Please try a different time or date."
                 )
         else:
-            messages.error(request, 'You are not authorised to edit this booking.')
-            return redirect('book')  # Redirect unauthorised users to booking page
+            messages.error(
+                request,
+                'You are not authorised to edit this booking.'
+                )
+            return redirect('book')  # Redirect unauthorised users to book page
     else:
-        # Load the form pre-filled with the existing booking data for GET requests
+        # Load form pre-filled with the existing booking data for GET requests
         edit_form = EditForm(instance=booking)
 
     # Render the template with the form
@@ -130,12 +151,18 @@ def cancel_booking(request, booking_id):
     - Feedback given to user.
     - Redirects to booking page after cancellation.
     """
-    booking = Booking.objects.get(pk=booking_id) 
+    booking = Booking.objects.get(pk=booking_id)
 
     if request.user == booking.user:  # Ensure the user owns the booking
         booking.delete()  # Delete record of booking from database
-        messages.add_message(request, messages.SUCCESS, 'Your booking has been cancelled!')
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Your booking has been cancelled!'
+            )
     else:
-        messages.add_message(request, messages.ERROR, 'You can only cancel your own booking!')
+        messages.add_message(
+            request, messages.ERROR,
+            'You can only cancel your own booking!'
+            )
 
     return redirect('book')  # Redirect back to the booking page

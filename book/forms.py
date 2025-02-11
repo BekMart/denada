@@ -19,14 +19,17 @@ class BookingForm(forms.ModelForm):
         fields = ('party_size', 'date', 'time', 'special_requests',)
 
     # Integer field for party size (must be between 1 - 10)
-    party_size = forms.IntegerField(widget=forms.NumberInput(attrs={'min': 1, 'max': 10}))
+    party_size = forms.IntegerField(
+        widget=forms.NumberInput(attrs={'min': 1, 'max': 10})
+        )
 
     # Date field (must be today or after)
     date = forms.DateField(
-        widget=forms.DateInput(attrs={'type': 'date', 'min': date.today().isoformat()})
+        widget=forms.DateInput(
+            attrs={'type': 'date', 'min': date.today().isoformat()})
     )
 
-    # Dropdown selection for time slots in 30-minute increments between 08:00-21:30
+    # Dropdown selection time slots - 30-min increments between 08:00-21:30
     TIME_SLOTS = [(f"{hour:02d}:{minute:02d}", f"{hour:02d}:{minute:02d}")
                   for hour in range(8, 22)  # These are the opening times
                   for minute in (0, 30)]  # Display in 30 minute increments
@@ -34,7 +37,9 @@ class BookingForm(forms.ModelForm):
     time = forms.ChoiceField(choices=TIME_SLOTS)
 
     # Optional text field for user to add special requests
-    special_requests = forms.CharField(required=False, widget=forms.Textarea(attrs={'rows': 3}))
+    special_requests = forms.CharField(
+        required=False, widget=forms.Textarea(attrs={'rows': 3})
+        )
 
     def clean(self):
         """
@@ -58,7 +63,8 @@ class BookingForm(forms.ModelForm):
         current_time = datetime.now()
 
         # Ensure users cannot select a time that has already passed today
-        if booking_date == current_time.date() and booking_time_obj < current_time.time():
+        if booking_date == current_time.date() and \
+           booking_time_obj < current_time.time():
             self.add_error('time', "You cannot book a time in the past.")
 
         # Replace string time with time object for further processing
@@ -82,14 +88,17 @@ class EditForm(forms.ModelForm):
         fields = ('party_size', 'date', 'time', 'special_requests',)
 
     # Integer field for party size (must be between 1 - 10)
-    party_size = forms.IntegerField(widget=forms.NumberInput(attrs={'min': 1, 'max': 10}))
+    party_size = forms.IntegerField(
+        widget=forms.NumberInput(attrs={'min': 1, 'max': 10})
+        )
 
     # Date field (must be today or after)
     date = forms.DateField(
-        widget=forms.DateInput(attrs={'type': 'date', 'min': date.today().isoformat()})
+        widget=forms.DateInput(
+            attrs={'type': 'date', 'min': date.today().isoformat()})
     )
 
-    # Dropdown selection for time slots in 30-minute increments between 08:00-21:30
+    # Dropdown selection time slots - 30-minute increments (08:00-21:30)
     TIME_SLOTS = [(f"{hour:02d}:{minute:02d}", f"{hour:02d}:{minute:02d}")
                   for hour in range(8, 22)  # These are the opening times
                   for minute in (0, 30)]  # Display in 30 minute increments
@@ -97,7 +106,9 @@ class EditForm(forms.ModelForm):
     time = forms.ChoiceField(choices=TIME_SLOTS)
 
     # Optional text field for user to add special requests
-    special_requests = forms.CharField(required=False, widget=forms.Textarea(attrs={'rows': 3}))
+    special_requests = forms.CharField(
+        required=False, widget=forms.Textarea(attrs={'rows': 3})
+        )
 
     def clean(self):
         """
@@ -121,7 +132,8 @@ class EditForm(forms.ModelForm):
         current_time = datetime.now()
 
         # Ensure users cannot select a time that has already passed today
-        if booking_date == current_time.date() and booking_time_obj < current_time.time():
+        if booking_date == current_time.date() and \
+           booking_time_obj < current_time.time():
             self.add_error('time', "You cannot book a time in the past.")
 
         # Replace string time with time object for further processing
