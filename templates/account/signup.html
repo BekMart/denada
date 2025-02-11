@@ -24,7 +24,7 @@
         A very warm welcome from everyone at De Nada!<hr>
         Already have an account?<br> 
         Please <a class="auth-link link" href="{{ login_url }}">sign in</a> instead.
-      {% endblocktrans %}</p>
+      {% endblocktrans %}
     </div>
   </div>
 
@@ -44,7 +44,7 @@
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" class="alert alert-block alert-danger"
-          value="{{ redirect_field_value }}" />
+          value="{{ redirect_field_value }}">
         {% endif %}
         <!-- Submit button -->
         <button class="btn btn-signup right" type="submit">
