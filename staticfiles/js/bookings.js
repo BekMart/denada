@@ -2,19 +2,21 @@
 // Select all elements with the class "btn-edit"
 const editButtons = document.getElementsByClassName("btn-edit");
 
+// Get the booking form
+const bookingForm = document.getElementById("bookingForm");
 // Iterate through each edit button and add an event listener
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     // Retrieve the booking ID stored in the button's `booking_id` attribute
     let bookingId = e.target.getAttribute("booking_id");
     // Get the hidden input field in the form that stores the booking ID
-    const bookingIdInput = document.getElementById("booking_id"); 
+    const bookingIdInput = document.getElementById("booking_id");
     // If the hidden input field exists, update its value with the selected booking ID
     if (bookingIdInput) {
-      bookingIdInput.value = bookingId; 
+      bookingIdInput.value = bookingId;
     }
     // Submit the form to process the booking update
-    bookingForm.submit(); 
+    bookingForm.submit();
   });
 }
 
