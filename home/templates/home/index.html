@@ -19,7 +19,7 @@
       <!-- Title -->
       <h3>{{ about.title }}</h3>
       <!-- Information about the restaurant from the database -->
-      <p class="about-content">{{ about.content | safe }}</p>
+      <p class="about-content">{{ about.content | safe }}
       <!-- Image gallery for about section -->
       <span class="home-images">
         {% comment %} 
@@ -34,13 +34,13 @@
           class="card-img-top"
           src="{% static 'images/about_1.jpg' %}"
           alt="Close up image of the yung cuple who own the resturant. They both look smiley and friendly."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{about.image_1.url}}"
           alt="Close up image of the yung cuple who own the resturant. They both look smiley and friendly"
-        />
+        >
         {% endif %}
 
         <!-- Image of restaurant -->
@@ -49,13 +49,13 @@
           class="card-img-top"
           src="{% static 'images/about_2.jpg' %}"
           alt="Image of the front of the restaurant. It's gt a green exterior and very wooden decor with lots of plants and a balcony n the first floor."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{about.image_2.url}}"
           alt="Image of the front of the restaurant. It's gt a green exterior and very wooden decor with lots of plants and a balcony n the first floor."
-        />
+        >
         {% endif %}
 
         <!-- Image of the resident dog -->
@@ -64,13 +64,13 @@
           class="card-img-top"
           src="{% static 'images/about_3.jpg' %}"
           alt="Close up image of the owner's dog, sat on a chair outside of the restaurant. A very cute, foxy looking dog, with a big smile."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{about.image_3.url}}"
           alt="Close up image of the owner's dog, sat on a chair outside of the restaurant. A very cute, foxy looking dog, with a big smile."
-        />
+        >
         {% endif %}
       </span>
     </div>
@@ -91,13 +91,13 @@
           class="card-img-top"
           src="{% static 'images/produce_1.jpg' %}"
           alt="Image of a kind looking elderly lady in a bakery, holding a loaf of fresh sourdough bread."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{produce.image_1.url}}"
           alt="Image of a kind looking elderly lady in a bakery, holding a loaf of fresh sourdough bread."
-        />
+        >
         {% endif %}
 
         <!-- Image of vegtable stand -->
@@ -106,13 +106,13 @@
           class="card-img-top"
           src="{% static 'images/produce_2.jpg' %}"
           alt="Image of a vegtable stand. All the vegtables are stacked in nice wooden crates and all loook really fresh and colourful."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{produce.image_2.url}}"
           alt="Image of a vegtable stand. All the vegtables are stacked in nice wooden crates and all loook really fresh and colourful."
-        />
+        >
         {% endif %}
 
         <!-- Image of butcher -->
@@ -121,13 +121,13 @@
           class="card-img-top"
           src="{% static 'images/produce_3.jpg' %}"
           alt="Image of a young smiling butcher in front of the counter of a butchers shop with some fresh meats hanging behind him."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{produce.image_3.url}}"
           alt="Image of a young smiling butcher in front of the counter of a butchers shop with some fresh meats hanging behind him."
-        />
+        >
         {% endif %}
       </span>
     </div>
@@ -148,13 +148,13 @@
           class="card-img-top"
           src="{% static 'images/visit_1.jpg' %}"
           alt="Image of a young asian student girl with her headphones on, reading a book at a table with a coffee."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{visit.image_1.url}}"
           alt="Image of a young asian student girl with her headphones on, reading a book at a table with a coffee."
-        />
+        >
         {% endif %}
 
         <!-- Image of playing boardgame -->
@@ -163,13 +163,13 @@
           class="card-img-top"
           src="{% static 'images/visit_2.jpg' %}"
           alt="Image of 3 young, alternative people laughing and playing a board game in the resturant."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{visit.image_2.url}}"
           alt="Image of 3 young, alternative people laughing and playing a board game in the resturant."
-        />
+        >
         {% endif %}
 
         <!-- Image of girl singing -->
@@ -178,13 +178,13 @@
           class="card-img-top"
           src="{% static 'images/visit_3.jpg' %}"
           alt="Image of a young girl singing and playing guitar in the restaurant."
-        />
+        >
         {% else %}
         <img
           class="card-img-top"
           src="{{visit.image_3.url}}"
           alt="Image of a young girl singing and playing guitar in the restaurant."
-        />
+        >
         {% endif %}
       </span>
     </div>
