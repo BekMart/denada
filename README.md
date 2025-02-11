@@ -634,6 +634,52 @@ These tools ensured code quality, accessibility, and performance across the proj
 
 [Back to Contents](#contents)
 
+<h1 id="testing">Testing</h1> 
+
+<h2 id="functionality">Functionality Testing</h2> 
+
+- Below is a table to show all of the functions of the program, their expected outcomes and whether or not they work as intended. 
+
+- All testing has been conducted manually. 
+
+| Action | Expected Result | Result | 
+| --- | --- | ---| 
+| Run program | Program launches successfully | Pass | 
+| Navigation | All navigation links direct users to their respective pages | Pass |
+| Slide-out navigation | Opens when toggle is clicked, closes when user clicks outside, links function correctly | Pass |
+| External links | Links to external webpages open in a separate window | Pass |
+| Responsive deisgn | Media queries trigger at appropriate device widths | Pass |
+| Verified unauthenticated | "You are not currently logged in." message appears when a user is not logged in | Pass |
+| Unauthenticated header display | "Sign Up" and "Login" page navigation is visible, but "Logout" is not | Pass |
+| Restricted access | Unauthenticated users cannot access the booking form. Links to authentication pages displayed instead | Pass |
+| Verified authenticated | A personalized message is displayed when a user is logged in | Pass |
+| Authenticated header display | "Sign Up" and "Login" page navigation is hidden, only "Logout" is visible | Pass |
+| Menu display | Menus are structured with types as headings, and items listed in ascending price order | Pass |
+| Form validation | Users receive prompts for incorrect data input or missing required fields | Pass |
+| Feedback | Relevant feedback is displayed at the top of the screen after actions | Pass |
+| Party size field | Only whole numbers between 1-10 can be entered | Pass |
+| Date field | Only today's date or a future date can be selected | Pass |
+| Time field | 	Users can only select a time later than the current time | Pass |
+| Check availability | Availability is verified based on date, time, and party size | Fail |
+| Assign table | If available, a suitable table is assigned and marked as occupied for one hour | Pass |
+| Create Booking | Booking details are added to the database upon confirmation | Pass |
+| Bookings display | All confirmed future bookings should appear under "Current Bookings" | Fail |
+| Edit booking availability | Availability is rechecked for updated booking details | Fail |
+| Suitable table reassignment | A new table is reassigned if needed | Fail |
+| Update Booking | Database is updated with new booking details upon submission | Pass |
+| Delete booking | Booking is removed from the database upon user confirmation | Pass |
+
+### Failing functions
+
+- Check availability
+    - Occasionally, the system incorrectly states that no availability exists, despite available tables being present in the database.
+- Bookings display
+    - While all current and future bookings are displayed correctly, past bookings from earlier in the day are still shown, as the system does not account for the time of day.
+- Edit booking availability
+    - Availability checks are not functioning correctly when modifying an existing booking.
+- Suitable table reassignment
+    - When a user edits a booking, the system automatically assigns the same table as before, even if the new party size exceeds the table's seating capacity.
+
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
 [wireframes]: static/images/wireframes.png
