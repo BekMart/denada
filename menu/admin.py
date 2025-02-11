@@ -5,7 +5,8 @@ from django_summernote.admin import SummernoteModelAdmin
 """
 Admin configuration for the Menu app.
 This module registers and customizes the administration interface
-for the Menu, Type, Food, and Drink models using Summernote for rich-text fields.
+for the Menu, Type, Food, and Drink models using Summernote for
+rich-text fields.
 """
 
 
@@ -15,7 +16,8 @@ class MenuAdmin(SummernoteModelAdmin):
     Admin interface for the Menu model.
     """
     list_display = ('restaurant', 'title',)
-    summernote_fields = ('about', 'note')  # Enables Summernote editor for these fields
+    # Enables Summernote editor for these fields
+    summernote_fields = ('about', 'note')
 
 
 @admin.register(Type)
@@ -26,8 +28,10 @@ class TypeAdmin(SummernoteModelAdmin):
     list_display = ('name',)
     search_fields = ['name']  # Enables search functionality by type name
     list_filter = ('name',)  # Adds a filter by name
-    prepopulated_fields = {'slug': ('name',)}  # Auto-generates slug from the name
-    summernote_fields = ('description')  # Enables Summernote editor for description field
+    # Auto-generates slug from the name
+    prepopulated_fields = {'slug': ('name',)}
+    # Enables Summernote editor for description field
+    summernote_fields = ('description')
 
 
 @admin.register(Food)
