@@ -541,7 +541,74 @@ Feature: A user-generated review and rating system allowing customers to rate me
 
 [Back to Contents](#contents)
 
+<h1 id="technology-used">Technology Used</h1> 
 
+### Languages & Frameworks
+- HTML
+    - The structural foundation of the website, used to create the page layout and content elements.
+- CSS
+    - Responsible for styling and layout, ensuring consistency, responsiveness, and a visually appealing design.
+- Python
+    - Was the main language used for backend development in Django, handling data processing, authentication, and business logic.
+- Django
+    - A Python-based web framework that handles database management, authentication, and server-side logic.
+- JavaScript
+    - Added interactivity to the site, enabling dynamic features like event handling, form validation, and animations.
+### Development, Version Control & Deployment
+- GitHub
+    - Used for agile development, version control, storing the project repository, tracking changes, and enabling collaboration.
+- Gitpod/VS Code
+    - The Integrated Development Environments (IDEs) used for writing, debugging, and managing the project’s code efficiently.
+    - Initially I started by using Gitpod but have migrated my project over to VS Code mid project.
+- Heroku
+    - A cloud platform used to deploy and host the live website, making it accessible to users online.
+### Django Extensions & Libraries
+- Django AllAuth
+    - Handles user authentication, account registration and login/logout.
+- Crispy Forms
+    - Provides enhanced form rendering, ensuring a clean, professional, and styled user interface.
+- Django Template Language (DTL)
+    - Used for dynamic content rendering, allowing flexible data presentation within templates.
+- Summernote
+    - A rich-text editor integrated via Django-Summernote, allowing formatted content editing within the Django admin panel.
+### Design & Planning Tools
+- Figma 
+    - A UI/UX design tool used for wireframing and prototyping the website layout before development, as well as creating a process flowchart to visualize the user journey and system interactions.
+- Lucidchart 
+    - A diagramming tool used to create the Entity Relationship Diagram (ERD) for database schemas and architectural diagrams to plan the project structure and data flow.
+### Media & Storage Services
+- Cloudinary 
+    - A media storage and management platform used for storing and serving images dynamically, ensuring fast and efficient image delivery.
+- Google Cloud 
+    - Used to support API integration and enable the seamless use of the Google Maps API within the project.
+- PostgreSQL 
+    - A robust relational database system used in the production environment for handling and storing structured data efficiently.
+### Third-Party APIs & Libraries
+- Google Maps API
+    - Google Maps API was implemented in the Contact Page, allowing users to view the restaurant’s location, interact with the map, and get personalized directions.
+- Materialize CSS 
+    - A CSS framework used for modern UI components, including a responsive sliding navigation bar on smaller devices.
+- Bootstrap
+    - Used for layout styling, grid-based responsiveness, and UI components to maintain consistency.
+### Additional Tools & Libraries
+- ChatGPT
+    - Used to generate images for the website, ensuring a consistent and visually appealing design.
+    - Assisted in debugging issues, providing explanations and solutions for resolving code errors and logic problems throughout development.
+- Google Fonts
+    - Used to import and apply custom fonts and icons, ensuring a consistent, aesthetically pleasing, and readable typography across the website.
+    - Helps maintain brand identity and enhances the overall user experience.
+### Validation & Code Quality Tools
+These tools ensured code quality, accessibility, and performance across the project:
+- W3C Validator
+    - Checked HTML validity.
+- Jigsaw 
+    - Verified CSS correctness.
+- CI Linter 
+    - Ensured clean, structured Python and Django code.
+- JSHint 
+    - Analyzed JavaScript for potential errors.
+
+[Back to Contents](#contents) 
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
