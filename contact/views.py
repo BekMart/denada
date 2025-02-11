@@ -8,7 +8,7 @@ def contact_page(request):
     Renders the contact page with the latest restaurant details.
     - Takes the incoming request object.
     - Fetches the most recently updated records for the restaurant's details.
-    - Including business hours, address, contact information, and social media links.
+    - Including business hours, address, contact info, and social media links.
     """
 
     # Retrieve the latest updated details for the restaurant

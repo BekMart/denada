@@ -14,13 +14,16 @@ This module defines models for managing restaurant-related details, including:
 class Time(models.Model):
     """
     Represents business hours for a restaurant.
-    - restaurant (FK): The restaurant that the opening times are associated with.
+    - restaurant (FK): The restaurant the opening times are associated with.
     - title (CharField): A short name fr the time entry.
-    - time_list (TextField): Details of business hours (summernote enabled for rich text).
+    - time_list (TextField): Detailed business hours (summernote - rich text).
     - updated_on (DateTimeField): Timestamp of the last update.
     """
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_times", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_times",
+        default=1
     )
     title = models.CharField(max_length=50, unique=True)
     time_list = models.TextField()
@@ -39,7 +42,10 @@ class Address(models.Model):
     - updated_on (DateTimeField): Timestamp of the last update.
     """
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_address", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_address",
+        default=1
     )
     title = models.CharField(max_length=50, unique=True)
     updated_on = models.DateTimeField(auto_now_add=True)
@@ -57,7 +63,10 @@ class Contact(models.Model):
     - updated_on (DateTimeField): Timestamp of the last update.
     """
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_contact", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_contact",
+        default=1
     )
     title = models.CharField(max_length=50, unique=True)
     updated_on = models.DateTimeField(auto_now_add=True)
@@ -78,7 +87,10 @@ class Social(models.Model):
     -  updated_on (DateTimeField): Timestamp of the last update.
     """
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="restaurant_socials", default=1
+        Restaurant,
+        on_delete=models.CASCADE,
+        related_name="restaurant_socials",
+        default=1
     )
     title = models.CharField(max_length=50, unique=True)
     facebook = models.CharField(max_length=350)
