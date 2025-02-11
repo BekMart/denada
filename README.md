@@ -10,6 +10,8 @@ This project is for educational purposes. The main aim is to build a functional 
 
 <h1 id="contents">Table of Contents</h1> 
 
+- [Agile Devlopment](#agile-development)
+    - [Kanan board](#kanban-board)
 - [UX](#UX)
     - [User-Centered Problem Statement](#user-centered-problem-statement)
     - [Website Owner Business Goals](#website-owner-goals)
@@ -29,6 +31,28 @@ This project is for educational purposes. The main aim is to build a functional 
     - [Code Validation](#validation) 
 - [Deployment](#deployment)
 - [Credits](#credits)
+
+<h1 id="agile-development">Agile Development
+
+<h2 id="kanban-board">Kanban Board</h2>
+
+### The Role of a Kanban Board in Project Management
+- A Kanban board is a visual workflow management tool that helps track tasks, organize work, and improve productivity. It is widely used in project development to streamline processes, identify bottlenecks, and ensure efficient task prioritization. 
+
+### My Experience with a Kanban Board
+- For this project, I set up a Kanban board divided into three main columns: "To Do," "In Progress," and "Done." This structure allowed me to manage my workload effectively, ensuring I focused on one task at a time while maintaining visibility over the project's overall progress.
+- To optimize task management, I incorporated the following features:
+    - Labels using the MoSCoW method – I categorized tasks into "Must Have," "Should Have," "Could Have," and "Won’t Have" to prioritize essential work.
+    - Epics – I grouped related tasks under broader sections to organize work into meaningful categories.
+    - Milestones – I used this feature to track progress and assess whether I was on schedule, allowing me to adjust my time management strategies as needed.
+- Initially, I set up my Kanban board at the start of the project. However, after an early-stage review, I decided to restart the project due to dissatisfaction with my initial approach. Since the Kanban board remained linked to my new project, I continued using it. However, after an extended break from development, I accidentally deleted my old repository, which also removed the Kanban board.
+- Upon returning to the project, I discovered the board was gone, making it seem as though I had not used one at all. To recover my workflow, I reconstructed the board based on my commit messages, handwritten notes, and memory. Upon returning to the project, I discovered the board was gone, making it seem as though I had not used one at all. To recover my workflow, I reconstructed the board based on my commit messages, handwritten notes, and memory. As a result, many of the timestamps on tasks do not accurately reflect their actual completion dates, but rather when they were recreated on the board.
+
+### The Value of Kanban for Project Development
+- Revisiting the Kanban method has given me a deeper appreciation for its benefits, particularly in time management, task prioritization, and workflow organization. By categorizing tasks under epics, assigning priority labels, and defining milestones, I was able to create a structured roadmap for development. This not only ensured that tasks remained organized but also made progress easily trackable.
+- One of the most significant advantages I found was that the Kanban board helped me maintain focus on one task at a time. I often find myself switching between multiple tasks before completing them, leading to a disorganized workflow. By visualizing my tasks on a Kanban board, I could better structure my workload and stay on track without becoming overwhelmed.
+
+[Back to Contents](#contents)
 
 <h1 id="UX">UX</h1>
 
@@ -608,7 +632,7 @@ These tools ensured code quality, accessibility, and performance across the proj
 - JSHint 
     - Analyzed JavaScript for potential errors.
 
-[Back to Contents](#contents) 
+[Back to Contents](#contents)
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
