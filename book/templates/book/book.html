@@ -19,9 +19,9 @@
         {% if user.is_authenticated%}
 
         <!-- Greeting the authenticated user -->
-        <h3>
-          Hey {{ user.username }},<br />fill in the form below to book a table!
-        </h3>
+        <h2>
+          Hey {{ user.username }},<br>fill in the form below to book a table!
+        </h2>
 
         <!-- Booking form -->
         {% comment %} 
@@ -36,7 +36,7 @@
             id="booking_id"
             name="booking_id"
             value="{{ booking.id }}"
-          />
+          >
           {{ booking_form | crispy }} {% csrf_token %}
           <button id="submitButton" type="submit" class="btn btn-signup btn-jg">
             Submit
@@ -56,22 +56,27 @@
             {% if user_bookings %} 
             {% for booking in user_bookings %}
             <!-- Display existing/upcoming bookings -->
-            <li id="booking-details">
+            <li class="booking-details">
               Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
               {{ booking.party_size }}
             </li>
             <!-- Edit button -->
-            <a
-              id="editButton"
-              type="submit"
-              class="btn btn-signup btn-jg"
-              href="{% url 'edit_booking' booking.id %}"
-              >Edit</a
-            >
+            <li>
+              <a
+                class="editButton btn btn-signup btn-jg"
+                href="{% url 'edit_booking' booking.id %}"
+                >Edit</a
+              >
+            </li>
             <!-- Cancel button -->
-            <button class="btn btn-delete" booking_id="{{ booking.id }}">
-              Cancel
-            </button>
+            <li>
+              <a class="btn btn-delete" 
+              data-booking-id="{{ booking.id }}" 
+              data-url="{% url 'cancel_booking' 0 %}" 
+              href="#">
+                Cancel
+              </a>
+            </li>
             {% endfor %} {% else %}
             <li>You have no current bookings.</li>
             {% endif %}
@@ -85,12 +90,12 @@
         If the user is not authenticated, display a prompt with login and signup links.
         {% endcomment %}
         <div id="login-booking-box">
-          <h3>
-            Please<br /><a href="{% url 'account_login' %}">log in</a>/<a
+          <h2>
+            Please<br><a href="{% url 'account_login' %}">log in</a>/<a
               href="{% url 'account_signup' %}"
               >create an account</a
-            ><br />to book a table!
-          </h3>
+            ><br>to book a table!
+          </h2>
         </div>
         {% endif %}
       </div>
@@ -120,7 +125,7 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body">
-        Are you sure you want to cancel your reservation?<br />
+        Are you sure you want to cancel your reservation?<br>
         This action cannot be undone.
       </div>
       <!-- Modal footer with buttons -->

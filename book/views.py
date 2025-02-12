@@ -152,7 +152,7 @@ def cancel_booking(request, booking_id):
     - Feedback given to user.
     - Redirects to booking page after cancellation.
     """
-    booking = Booking.objects.get(pk=booking_id)
+    booking = get_object_or_404(Booking, pk=booking_id)
 
     if request.user == booking.user:  # Ensure the user owns the booking
         booking.delete()  # Delete record of booking from database

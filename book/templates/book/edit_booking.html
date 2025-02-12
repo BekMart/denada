@@ -26,7 +26,7 @@
             id="edit_booking_id"
             name="edit_booking_id"
             value="{{ edit_booking.id }}"
-          />
+          >
           {{ edit_form | crispy }} {% csrf_token %}
           <button id="updateButton" type="submit" class="btn btn-signup btn-jg">
             Update
