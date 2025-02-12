@@ -782,6 +782,36 @@ I tested the website on the following hardware devices and no issues were found:
     - bookings.js: "bootstrap is undefined" error (Bootstrap is correctly linked).
     - script.js: Resolved an "Optional chaining" error (ES11 feature) by adding "/* jshint esversion: 11 */" to the code and turning off the New JavaScript Features in the configuration panel. "M is undefined" error is fine as the Materialize library is correctly.
 
+[Back to Contents](#contents) 
+
+<h1 id="deployment">Deployment</h1> 
+
+- I started creating the website in Gitpod and migrated it over to VS Code mid-way through due to instructions form Code Institute.
+- The website was deployed to Heroku via GitHub. The steps to deploy were as follows: 
+    - Firstly, I created a list of dependencies that the project needs to run, as Heroku will need to install these also.  
+        - To obtain this list type 'pip3 freeze > requirements.txt' into the Git pod terminal and the list will appear in requirements.txt file.
+        - I madse sure that "DEBUG = False" was set in my settings.py file within my IDE.
+    - I clicked 'Create new app' on the Heroku dashboard of my existing account.
+        - I added the app name and selected my region, then clicked 'Create app'. 
+    - On the app dashboard I went to "Settings".
+        - In settings, I went to 'Config vars' and added the following: 
+            - Key: SECRET_KEY / Value: (Copy and paste generated key sourced from [Djecrety](https://djecrety.ir/)).
+            - Key: DATABASE_URL / Value: (Copy and paste URL sent to my email from Code Institute)
+            - Key: CLOUDINARY_URL / Value: (Copy and paste API enviroment variable link from my Cloudinary account dashboard) 
+        - Then to the 'Buildpacks' section within settings and clicked "Add build pack".
+            - I added the python buildpack.
+    - I left settings by clicking the "Deploy" tab.
+        - I selected GitHub as the deployment method.
+        - I input the repository name to search for it the App connected to GitHub section and clicked 'Connect'.
+        - In the manual deploy section, I checked that it was set to 'main' and pressed 'Deploy branch'.
+        - Once the program had been deployed a message was displayed "Your app was successfully deployed".  
+        - I then clicked 'View' to view the deployed version.
+
+Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/) 
+
+[Back to Contents](#contents) 
+
+
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
 [wireframes]: static/images/wireframes.png
