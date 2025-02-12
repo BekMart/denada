@@ -424,10 +424,13 @@ h4 {
 }
 
 /* Edit/Delete button container */
-#crud-buttons {
+.crud-buttons {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Edit button */
@@ -648,6 +651,14 @@ h5 {
   .drink-menu-image {
     max-height: 350px;
     max-width: 350px;
+  }
+}
+
+/* Media query: 400px and above */
+@media screen and (min-width: 400px) {
+  /* Displayed booking details */
+  .booking-details {
+    display: inline-block;
   }
 }
 
