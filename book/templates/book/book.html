@@ -46,7 +46,7 @@
         <!-- Current booking section -->
         <div id="current-bookings-section">
           <h4>Your current bookings:</h4>
-          <ul>
+          <div>
             {% comment %} 
             Display the user's current/upcoming bookings in a list format. 
             - If the user has bookings, display each booking with its details. 
@@ -56,33 +56,33 @@
             {% if user_bookings %} 
             {% for booking in user_bookings %}
             <!-- Display existing/upcoming bookings -->
-            <li class="booking-details">
+            <span class="booking-details">
               Date: {{ booking.date }} | Time: {{ booking.time }} | Party Size:
               {{ booking.party_size }}
-            </li>
+            </span>
             <!-- Edit button -->
-            <div id="crud-buttons">
-              <li>
+            <div class="crud-buttons">
+              <span>
                 <a
                   class="editButton btn btn-signup btn-jg"
                   href="{% url 'edit_booking' booking.id %}"
                   >Edit</a
                 >
-              </li>
+              </span>
               <!-- Cancel button -->
-              <li>
+              <span>
                 <a class="btn btn-delete" 
                 data-booking-id="{{ booking.id }}" 
                 data-url="{% url 'cancel_booking' 0 %}" 
                 href="#">
                   Cancel
                 </a>
-              </li>
+              </span>
             </div>
             {% endfor %} {% else %}
-            <li>You have no current bookings.</li>
+            <p>You have no current bookings.</p>
             {% endif %}
-          </ul>
+          </div>
         </div>
 
         {% else %} 
