@@ -842,6 +842,53 @@ Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/)
 [Back to Contents](#contents)
 
 
+<h1 id="credits">Credits</h1>
+
+### Resources
+
+- Initial Template: [Code Institute](https://github.com/Code-Institute-Org/ci-full-template)  
+- Process Flow Chart/Wireframe: [Figma](https://www.figma.com/templates/flowchart-maker/)  
+- Entity-Relationship Diagram (ERD): [Lucidchart](https://www.lucidchart.com/pages)  
+- Slide Navigation Bar: [Materialize CSS](https://materializecss.com/sidenav.html)
+- API Services & Integrations: [Google Cloud Platform](https://cloud.google.com/)
+    - Google Map Integration: [Google Maps Platform](https://developers.google.com/maps)  
+- Image Hosting & Management: [Cloudinary](https://cloudinary.com/)  
+- Database Hosting: [Google Cloud PostgreSQL](https://cloud.google.com/sql/docs/postgres)   
+- Web Hosting & Deployment: [Heroku](https://www.heroku.com/)  
+- Version Control & Collaboration: [GitHub](https://github.com/)  
+- Development Environment: [Gitpod](https://www.gitpod.io/) | [VS Code](https://code.visualstudio.com/)  
+
+### Frameworks & Libraries Used
+
+- Frontend Framework: [Bootstrap](https://getbootstrap.com/) 
+- Django Packages: 
+  - Form Rendering: [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)  
+  - Admin Panel Management: [Django Summernote](https://github.com/summernote/django-summernote)  
+  - User Authentication : [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
+  - Content Rendering: [Django Template Language (DTL)](https://docs.djangoproject.com/en/5.1/ref/templates/language/)
+
+### Debugging & Support
+
+- Code Institute Tutor Support
+- Google DevTools  
+- Slack Community 
+- ChatGPT
+- Validation Tools: 
+  - [W3C HTML Validator](https://validator.w3.org/)  
+  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
+  - [JSHint](https://jshint.com/) *(JavaScript)*  
+  - [PEP8 Online](http://pep8online.com/) *(Python)*  
+
+### Media & Assets
+
+- Fonts: [Google Fonts](https://fonts.google.com/)  
+- Icons: [Font Awesome](https://fontawesome.com/)  
+- Favicon: [HiClipart](https://www.hiclipart.com/free-transparent-background-png-clipart-jupwz)  
+- Images Generator: [ChatGPT](https://openai.com/index/chatgpt/)  
+
+[Back to Contents](#contents)
+
+
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
 [wireframes]: static/images/wireframes.png
