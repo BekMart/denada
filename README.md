@@ -691,6 +691,63 @@ I tested the website on the following hardware devices and no issues were found:
 - Galaxy S24
 
 
+<h2 id="story-testing">User Stories Testing</h2> 
+
+### As a web designer...
+
+- I want to create an engaging and visually appealing website, so that users feel inspired to book a table and visit the restaurant.
+    - The website was built using templates to ensure a consistent and professional look, with common features, a cohesive color scheme, carefully chosen fonts, and uniform styling.
+    - Various features engage users, including welcoming text that introduces the restaurant, its menu, and upcoming events.
+    - Images are incorporated to convey the restaurant’s ethos and enhance the website’s aesthetics.
+    - Media queries have been implemented to ensure the design remains visually appealing and functional on all devices.
+- I want to implement a secure and user-friendly online booking system, so that users can easily make, manage, and cancel reservations without confusion.
+    - The booking form is simple and intuitive, providing immediate feedback if any fields are entered incorrectly or left blank.
+    - Any confirmed bookings are displayed beneath the booking form, so users can easily see their reservations.
+    - Clear buttons allow users to edit or cancel their bookings with ease.
+- I want to develop a relational database model, so that all booking, user, and event data is efficiently stored and managed.
+    - An Entity-Relationship Diagram (ERD) was used to plan the database models.
+    - Different models were created for various app components, with Foreign Keys linking them to enable smooth functionality and an improved user experience.
+    - I didn’t create an events page or model, but this is something I would have implemented if I had more time and resources.
+- I want to offer authenticated users access to exclusive content, so that they feel valued and engaged with the restaurant’s events and promotions.
+    - Users must log in to access the booking form and make a reservation.
+    - Once authenticated, users can edit or delete their existing bookings.
+- I want to track and manage user reservations and preferences, so that I can offer personalized recommendations and loyalty perks to returning customers.
+    - An admin panel was created using Django Summernote, allowing superusers to manage database information easily, track user activity, and oversee reservations.
+
+### As a new user...
+
+- I want to discover what makes this restaurant unique, so that I can decide if it matches my personality and interests.
+    - The homepage includes essential information about the restaurant, its owners, the ingredients used, and the types of events held, giving visitors a strong sense of the restaurant’s ethos and what to expect.
+    - A menu page showcases the available food and drink options.
+    - Carefully curated images capture the essence of the venue and emphasize its inclusive community culture.
+- I want to easily browse the menu, upcoming events, and ambiance details, so that I can decide if this is a place I’d like to visit.
+    - A clear and intuitive navigation system is fixed at the top of the screen across all pages, allowing users to access any section of the website at any time.
+    - Additional links are strategically placed throughout the website, providing helpful explanations and feedback to guide users to their desired destinations.
+    - A custom-styled 404 error page directs users back to the homepage if they enter an incorrect URL.
+- I want to create an account quickly, so that I can save my preferences and easily book a table.
+    - The website includes sign-up, login, and logout pages with clear instructions and detailed feedback to ensure a seamless authentication process.
+    - A "Remember Me" feature allows users to save their login credentials for convenience.
+- I want to make a hassle-free booking, so that I can secure a table without unnecessary steps or confusion.
+    - The booking system is simple and instant, providing relevant feedback at every step.
+    - The edit and delete functions are easy to use, enabling users to manage their bookings efficiently and view their confirmed reservations.
+
+### As a returning customer...
+
+- I want to log in quickly and access my bookings, so that I can modify or cancel them if necessary.
+    - The login form includes a "Remember Me" option to pre-fill user details upon return.
+    - If a user tries to access the booking page without being logged in, they are redirected to the login page, ensuring a smooth user journey.
+- I want to receive personalized recommendations for events or menu items, so that I feel more connected to the restaurant’s cultural scene.
+    - This feature has yet to be implemented.
+    - Users are encouraged to check the menu regularly for updates, including new items and pricing.
+    - Clear guidance is provided on how customers can request menu modifications to accommodate dietary needs.
+- I want to engage with the community through exclusive events and discussions, so that I can meet like-minded people in a culturally rich environment.
+    - I initially planned to create an events page listing upcoming events to engage users, but due to time constraints, this was not implemented.
+    - The homepage provides details about the types of events the restaurant typically hosts, along with supporting images.
+- I want to earn rewards or loyalty perks for repeat visits, so that I feel valued and encouraged to keep coming back.
+    - A student discount is currently mentioned on the website.
+    - I would like to implement a loyalty program for returning customers in the future.
+
+
 ### Validation
 
 - HTML
