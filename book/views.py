@@ -119,14 +119,39 @@ def edit_booking(request, booking_id):
     if request.method == 'POST':
         edit_form = EditForm(request.POST, instance=booking)
         if edit_form.is_valid():
-            edit_form.save()
-            messages.success(request, 'Booking updated successfully!')
-            return redirect('book')
+            # Extract new booking details
+            new_date = edit_form.cleaned_data["date"]
+            new_time = edit_form.cleaned_data["time"]
+            new_party_size = edit_form.cleaned_data["party_size"]
+
+            # Compute new start and end times
+            new_start_time = datetime.combine(new_date, new_time)
+            new_end_time = new_start_time + timedelta(minutes=60)
+
+            # Check for available tables with the new party size
+            available_tables = get_available_tables(
+                new_party_size,
+                new_start_time,
+                new_end_time
+            )
+
+            if available_tables.exists():
+                # Assign the first available suitable table
+                booking.table = available_tables.first()
+                edit_form.save()  # Save changes to the booking
+                messages.success(request, 'Booking updated successfully!')
+                return redirect('book')
+            else:
+                messages.error(
+                    request,
+                    "No available tables match your new booking request.<br>\
+                    Please try a different time or date."
+                )
         else:
             messages.error(
                 request,
-                "No available tables match your booking request.<br>\
-                Please try a different time or date."
+                "There was an error with your booking details.<br>\
+                Please check again."
             )
     else:
         edit_form = EditForm(instance=booking)
