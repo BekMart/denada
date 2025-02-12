@@ -747,6 +747,36 @@ I tested the website on the following hardware devices and no issues were found:
     - A student discount is currently mentioned on the website.
     - I would like to implement a loyalty program for returning customers in the future.
 
+<h2 id="issues">Issues Found</h2> 
+
+### Solved Bugs
+
+- Migration issue
+    - When I migrated from Gitpod to VS Code, I accidentally connected the wrong GitHub account credentials, which caused authentication issues. I sought help from Tutor Support and followed their guidance using the IDE terminal to identify my correct credentials. After updating them accordingly, the issue was resolved.
+
+- Delete function issue
+    - My delete button was not functioning properly and was unresponsive when clicked. After troubleshooting, I discovered that the issue was caused by the following line in main/urls.py: 'handler404 = "helpers.views.handle_error_404"'. Once I removed this line, the delete button started working as expected. My mentor assisted me in identifying and fixing this issue.
+
+- Slide navigation links not responding
+    - The navigation links within my slide menu were not responding as expected. The issue was due to the closeButton event listener not being properly handled. To fix this, I modified script.js by adding an optional chaining operator (?.) to check if closeButton exists before adding an event listener. This not only resolved the issue but also prevented errors from appearing in DevTools.
+
+- Unautherised access to Edit Booking page
+    - During testing, I discovered that users could access the Edit Booking page by entering the URL directly, even if they were not authenticated. This posed a security risk, as it allowed unauthorized users to view booking details. To address this, I updated the edit_booking function to check the user's authentication status before loading the page. If the user is not authenticated, they receive feedback and are redirected to the login page.
+
+- Table reassignment issue
+    - Initially, when updating a booking through the Edit Booking function, the system would update the booking details but fail to reassign a suitable table. This resulted in cases where a party size increased but remained assigned to a table that was no longer appropriate. To fix this, I modified the edit_booking function to evaluate the updated form data and run the get_available_tables function. This ensures that the assigned table is both suitable and available for the updated booking.
+ 
+### Unsolved bugs
+
+- Mixed content warning
+    - While using DevTools, I encountered a Mixed Content warning: "Mixed Content: The page at '<URL>' was loaded over HTTPS, but requested an insecure element '<URL>'. This request was automatically upgraded to HTTPS. For more information, see <URL>." This warning appeared for all image links hosted on Cloudinary. 
+    - Additionally, my Lighthouse Best Practices report flagged this issue, stating: "Does not use HTTPS."
+    - To resolve this, I attempted to modify my settings.py file by following the instructions in the Cloudinary documentation. However, the issue persisted. I planned to revisit it later, but I ran out of time before I could fully address it.
+
+- Availability issue
+    - I implemented a function called get_available_tables, which retrieves available tables based on the time period extracted from the user's booking form data. The function returns a list of suitable tables, and it is called within the booking_page function. If an appropriate table is available, it is assigned to the booking, and feedback is provided to the user.
+    - While this functionality works most of the time, I noticed inconsistencies during testing. In several instances, available tables were still shown as unavailable. To investigate, I first checked the admin panel to confirm that tables were available for specific dates and times. I then cross-referenced this data using the Python shell in the IDE terminal. However, when attempting to book these tables through the system, the reservation was still unsuccessful.
+    - I also discovered that users are largely unable to book the table for 10 guests, but I’m currently unsure how to resolve this issue.
 
 <h2 id="performance">Performance Testing</h2> 
 
@@ -809,7 +839,7 @@ I tested the website on the following hardware devices and no issues were found:
 
 Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/) 
 
-[Back to Contents](#contents) 
+[Back to Contents](#contents)
 
 
 [flow-chart]: static/images/flow-chart.png
