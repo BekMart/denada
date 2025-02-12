@@ -625,9 +625,9 @@ Feature: A user-generated review and rating system allowing customers to rate me
 These tools ensured code quality, accessibility, and performance across the project:
 - W3C Validator
     - Checked HTML validity.
-- Jigsaw 
+- W3C Jigsaw Validator
     - Verified CSS correctness.
-- CI Linter 
+- CI Python Linter 
     - Ensured clean, structured Python and Django code.
 - JSHint 
     - Analyzed JavaScript for potential errors.
@@ -668,6 +668,7 @@ These tools ensured code quality, accessibility, and performance across the proj
 | Suitable table reassignment | A new table is reassigned if needed | Fail |
 | Update Booking | Database is updated with new booking details upon submission | Pass |
 | Delete booking | Booking is removed from the database upon user confirmation | Pass |
+| 404 error display | A custom "404 - Page Not Found" message is shown when an incorrect URL is entered | Pass |
 
 ### Failing functions
 
@@ -679,6 +680,26 @@ These tools ensured code quality, accessibility, and performance across the proj
     - Availability checks are not functioning correctly when modifying an existing booking.
 - Suitable table reassignment
     - When a user edits a booking, the system automatically assigns the same table as before, even if the new party size exceeds the table's seating capacity.
+
+
+### Validation
+
+- HTML
+    Using the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input), I addressed issues across multiple pages:
+    - General: Removed unnecessary trailing slashes and redundant closing </p> tags.
+    - Summernote: Fixed obsolete color attributes and replaced with CSS styling.
+    - Menu Page: Resolved a nested button within an anchor tag.
+    - Book Page: Modified the delete functionality by replacing the invalid custom attribute (booking_id) with a valid data-booking-id attribute, then dynamically constructing the delete URL in JavaScript using dataset.bookingId.
+    - Sign Up Page: Stray element errors exist within a Crispy Form, which I cannot directly modify.
+- Python
+    Using [CI Python Linter](https://pep8ci.herokuapp.com/), I validated all Python files, primarily to address lines exceeding the recommended length and remove trailing whitespace.  
+    - In settings.py, some longer lines were left as-is per mentor guidance.
+- CSS
+    Using the [W3C Validation service](https://jigsaw.w3.org/css-validator/#validate_by_input), I fixed a "Property scale doesn't exist" error by changing the affected element's display property to inline-block.
+- JavaScript
+    Using the [JSHint](https://jshint.com/) validator, I resolved the following issues: to validate my JavaScript code.
+    - bookings.js: "bootstrap is undefined" error (Bootstrap is correctly linked).
+    - script.js: Resolved an "Optional chaining" error (ES11 feature) by adding "/* jshint esversion: 11 */" to the code and turning off the New JavaScript Features in the configuration panel. "M is undefined" error is fine as the Materialize library is correctly.
 
 [flow-chart]: static/images/flow-chart.png
 [erd]: static/images/erd.png
