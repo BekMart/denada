@@ -12,7 +12,7 @@
 
                 <!-- Address section -->
                 <div id="address-section">
-                    <h3>{{ address.title }}</h3>
+                    <h2>{{ address.title }}</h2>
                     <!-- Displays address -->
                     <p><h5>Location:</h5> {{ address.restaurant.address | safe }}
                 </div>
@@ -23,7 +23,7 @@
                 - Uses Google Maps API with an embedded query.
                 - Replace the "q" parameter value with the correct restaurant address.
                 {% endcomment %}
-                <h3 class="hidden-text">Interactive Google Map</h3>
+                <h4 class="hidden-text">Interactive Google Map</h4>
                 <iframe id="map"
                     src="https://maps.googleapis.com/maps/embed/v1/place?key=AIzaSyD58rZJ7jykBhKYsTg4IuTLybiz_XmyaX4&q=123_Mutley_Plain_Mutley_Plymouth"
                     allowfullscreen>

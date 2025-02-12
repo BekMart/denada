@@ -1,13 +1,13 @@
 // Edit Booking Functinality
 // Select all elements with the class "btn-edit"
 const editButtons = document.getElementsByClassName("btn-edit");
-
 // Get the booking form
 const bookingForm = document.getElementById("bookingForm");
+
 // Iterate through each edit button and add an event listener
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
-    // Retrieve the booking ID stored in the button's `booking_id` attribute
+    // Retrieve the booking ID stored in the button's booking_id attribute
     let bookingId = e.target.getAttribute("booking_id");
     // Get the hidden input field in the form that stores the booking ID
     const bookingIdInput = document.getElementById("booking_id");
@@ -31,11 +31,14 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 // Iterate through each delete button and add an event listener
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
-    // Retrieve the booking ID stored in the button's `booking_id` attribute
-    let bookingId = e.target.getAttribute("booking_id");
-    // Update the delete confirmation button's `href` to include the correct booking ID
-    // This directs the user to the correct cancellation link
-    deleteConfirm.href = `cancel_booking/${bookingId}`;
+    // Retrieve the booking ID stored in the button's data-booking_id attribute
+    let bookingId = e.currentTarget.dataset.bookingId;
+    // Get the base URL from the button's data-url attribute
+    let baseUrl = e.currentTarget.dataset.url;
+    // Replace the placeholder '0' in the URL with the actual booking ID
+    let deleteUrl = baseUrl.replace("0", bookingId);
+    // Update the delete confirmation button's href attribute with the final URL
+    deleteConfirm.setAttribute("href", deleteUrl);
     // Show the delete confirmation modal to ask the user for confirmation
     deleteModal.show();
   });

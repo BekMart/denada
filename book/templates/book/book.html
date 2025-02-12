@@ -61,22 +61,24 @@
               {{ booking.party_size }}
             </li>
             <!-- Edit button -->
-            <li>
-              <a
-                class="editButton btn btn-signup btn-jg"
-                href="{% url 'edit_booking' booking.id %}"
-                >Edit</a
-              >
-            </li>
-            <!-- Cancel button -->
-            <li>
-              <a class="btn btn-delete" 
-              data-booking-id="{{ booking.id }}" 
-              data-url="{% url 'cancel_booking' 0 %}" 
-              href="#">
-                Cancel
-              </a>
-            </li>
+            <div id="crud-buttons">
+              <li>
+                <a
+                  class="editButton btn btn-signup btn-jg"
+                  href="{% url 'edit_booking' booking.id %}"
+                  >Edit</a
+                >
+              </li>
+              <!-- Cancel button -->
+              <li>
+                <a class="btn btn-delete" 
+                data-booking-id="{{ booking.id }}" 
+                data-url="{% url 'cancel_booking' 0 %}" 
+                href="#">
+                  Cancel
+                </a>
+              </li>
+            </div>
             {% endfor %} {% else %}
             <li>You have no current bookings.</li>
             {% endif %}

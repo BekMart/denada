@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   /* Generic project style */
   background-color: #fcf4d9;
-  color: #0b5509;
+  color: #5e625e;
   font-family: "Vidaloka", serif;
   font-size: larger;
   font-weight: 300;
@@ -95,6 +95,7 @@ a > i {
 
 /* Alert messages */
 .alert {
+  color: #0b5509;
   margin-bottom: 0;
 }
 
@@ -110,6 +111,11 @@ a > i {
   position: relative;
   width: 100%;
   min-height: 200px;
+}
+
+/* Personalised message */
+.text-end {
+  color: #0b5509;
 }
 
 /* Main Content */
@@ -136,30 +142,27 @@ footer {
   text-align: left;
 }
 
-/* Opening times header */
-#opening-times h5 {
-  margin-bottom: 2px;
-  text-decoration: none;
+/* Footer headers */
+#opening-times p, 
+#copyright p {
+  margin: 10px 0 0;
+  font-size: large;
 }
 
 /* Opening times details */
 #opening-times ul {
   padding-left: 5px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #opening-times li {
   list-style-type: none;
+  font-size: medium;
 }
 
 /* Copyright section */
 #copyright {
   text-align: right;
-}
-
-/* Copyright content */
-#copyright p {
-  font-size: medium;
 }
 
 /* Social newtork section */
@@ -183,7 +186,15 @@ footer {
 /* Home Page */
 /* Main title of landing page */
 h1 {
-  margin: 0;
+  color: #0b5509;
+  margin: 0 0 1rem;
+}
+
+/* Page Headings */
+h2 {
+  color: #0b5509;
+  text-align: center;
+  margin: 1rem;
 }
 
 /* Images in home page */
@@ -208,7 +219,7 @@ h1 {
 #food-title,
 #drink-title {
   color: #c64a03 !important;
-  padding: 5px 25px;
+  padding: 0 15px;
   margin-bottom: 5%;
   border: solid 4px #0b5509;
   border-radius: 10px;
@@ -216,11 +227,13 @@ h1 {
 }
 
 #food-title {
+  font-size: 70%;
   float: left;
   margin-left: 20%;
 }
 
 #drink-title {
+  font-size: 70%;
   float: right;
   margin-right: 20%;
 }
@@ -238,6 +251,7 @@ h1 {
 
 /* link to booking page */
 #book-link {
+  display: inline-block;
   font-family: "Vidaloka", serif;
   text-transform: uppercase;
   font-size: 200%;
@@ -246,8 +260,8 @@ h1 {
   background-color: #f9f6ee;
   border: #0b5509 solid 5px;
   border-radius: 50px;
-  height: 100px;
   width: 250px;
+  padding: 2px;
   margin-bottom: 25px;
 }
 
@@ -258,11 +272,15 @@ h1 {
   margin-bottom: 0;
 }
 
-/* Menu title */
-h2 {
+/* Food/Drink Menu titles */
+h3 {
+  color: #0b5509;
   text-align: center;
-  text-decoration: underline 4px;
   margin: 1rem;
+  font-size: 400%;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline solid 4px;
 }
 
 /* Food/Drink type headings */
@@ -271,6 +289,7 @@ h2 {
   font-size: x-large;
   font-weight: 800;
   padding-bottom: 10px;
+  color: #0b5509;
 }
 
 /* Food/Drink list items */
@@ -380,6 +399,11 @@ input {
 
 /* Current bookings section */
 /* List of users current bookings */
+/* Section heading */
+h4 {
+  color: #0b5509;
+}
+
 #current-bookings-section ul {
   display: inline-block;
   margin-bottom: 0;
@@ -390,7 +414,8 @@ input {
 }
 
 /* Displayed booking details */
-#booking-details {
+.booking-details {
+  display: flex;
   text-align: center;
   border: #0b5509 3px solid;
   border-radius: 10px;
@@ -398,22 +423,31 @@ input {
   padding: 5px;
 }
 
+/* Edit/Delete button container */
+#crud-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 /* Edit button */
-#editButton {
+.editButton {
   background-color: #0b5509 !important;
   color: #f9f6ee !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   border-radius: 10px;
-  margin: 5px 5px 20px;
+  margin: 5px;
 }
 
 /* Delete button */
 .btn-delete {
   background-color: #c64a03 !important;
   color: #f9f6ee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   border-radius: 10px;
-  margin: 5px 5px 20px;
+  margin: 5px;
 }
 
 /* Delete Modal */
@@ -470,6 +504,7 @@ h4 {
 
 /* Detail headings */
 h5 {
+  color: #0b5509;
   font-weight: 900;
   text-decoration: underline;
 }
@@ -489,10 +524,17 @@ h5 {
 }
 
 /* Social links*/
-#add-links {
+#add-links a {
+  color: #5e625e !important;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 5px;
+  font-size: larger;
+}
+
+#add-links li {
+  justify-content: center;
 }
 
 /* Social icons */
