@@ -748,6 +748,21 @@ I tested the website on the following hardware devices and no issues were found:
     - I would like to implement a loyalty program for returning customers in the future.
 
 
+<h2 id="performance">Performance Testing</h2> 
+
+### Lighthouse 
+
+- I completed an audit through Chrome Devtools using the Lighthouse program.  
+- The performance value sometimes varies. 
+- The results were as follows when last checked:
+    - Performance at 97.
+    - Accessability at 100.
+    - Best Practices at 78.
+        - The main issue is with the image links from Cloudinary, as they are not protected with HTTPS.
+    - SEO at 100.
+![Image of lighthouse results showing performance at 97, Acessability at 100, Best Practices at 78 and SEO at 100.][lighthouse]
+
+
 ### Validation
 
 - HTML
@@ -798,3 +813,4 @@ I tested the website on the following hardware devices and no issues were found:
 [logout-screenshot]: static/images/logout.png
 [404-error-screenshot]: static/images/404-error.png
 [signup-screenshot]: static/images/signup.png
+[lighthouse]: static/images/lighthouse.png
