@@ -104,45 +104,34 @@ def booking_page(request):
 def edit_booking(request, booking_id):
     """
     View to edit an existing booking.
-    - Takes the HTTP request and booking ID.
+    - Ensures only the booking owner can access the edit page.
     - Displays the edit form pre-populated with booking details.
-    - Validates and updates the booking if user is authenticated.
-    - Returns rendered edit booking page or redirect on success.
+    - Validates and updates the booking if the user is authenticated.
+    - Redirects unauthorized users to the login page.
     """
-    # Get the booking object, or return 404 if it doesn't exist
     booking = get_object_or_404(Booking, pk=booking_id)
 
+    # Ensure the user owns the booking
+    if request.user != booking.user:
+        messages.error(request, "You must be logged in to edit a booking.")
+        return redirect('account_login')
+
     if request.method == 'POST':
-        if request.user == booking.user:  # Ensure the user owns the booking
-            edit_form = EditForm(
-                data=request.POST,
-                instance=booking)  # Load the form with POST data
-            if edit_form.is_valid():  # Validate the form
-                edit_form.save()  # Save changes to the database
-                messages.success(request, 'Booking updated successfully!')
-                return redirect('book')  # Redirect back to the booking page
-            else:
-                messages.error(
-                    request,
-                    "No available tables match your booking request.<br>\
-                    Please try a different time or date."
-                )
+        edit_form = EditForm(request.POST, instance=booking)
+        if edit_form.is_valid():
+            edit_form.save()
+            messages.success(request, 'Booking updated successfully!')
+            return redirect('book')
         else:
             messages.error(
                 request,
-                'You are not authorised to edit this booking.'
-                )
-            return redirect('book')  # Redirect unauthorised users to book page
+                "No available tables match your booking request.<br>\
+                Please try a different time or date."
+            )
     else:
-        # Load form pre-filled with the existing booking data for GET requests
         edit_form = EditForm(instance=booking)
 
-    # Render the template with the form
-    return render(
-        request,
-        'book/edit_booking.html',
-        {'edit_form': edit_form}
-    )
+    return render(request, 'book/edit_booking.html', {'edit_form': edit_form})
 
 
 def cancel_booking(request, booking_id):
