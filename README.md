@@ -682,6 +682,15 @@ These tools ensured code quality, accessibility, and performance across the proj
     - When a user edits a booking, the system automatically assigns the same table as before, even if the new party size exceeds the table's seating capacity.
 
 
+<h2 id="compatibility">Compatibility Testing</h2>
+
+This program has been tested in Chrome, Firefox and Safari web browsers with no issues on any of them.
+
+I tested the website on the following hardware devices and no issues were found: 
+- MacBook Pro 
+- Galaxy S24
+
+
 ### Validation
 
 - HTML
