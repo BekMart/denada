@@ -2,7 +2,7 @@
 
 ## Full Stack Project - Portfolio Project 4
 
-This website has been designed and built to adevrtise a restuarant and take bookings for customers to come and visit, taking into consideration the date, time and number of guests to ensure that there is availability. Users are able to create, read, edit and cancel their own bookings from the database, if they are authenticated by successfully logging into their account.
+This website has been designed and built to advertise a restaurant and take bookings for customers to come and visit, taking into consideration the date, time and number of guests to ensure that there is availability. Users are able to create, read, edit and cancel their own bookings from the database, if they are authenticated by successfully logging into their account.
 
 This project is for educational purposes. The main aim is to build a functional and responsive Full Stack website using HTML, CSS, Python, Django, JavaScript and Postgres as a relational database.
 
@@ -10,8 +10,8 @@ This project is for educational purposes. The main aim is to build a functional 
 
 <h1 id="contents">Table of Contents</h1> 
 
-- [Agile Devlopment](#agile-development)
-    - [Kanan board](#kanban-board)
+- [Agile Development](#agile-development)
+    - [Kanban board](#kanban-board)
 - [UX](#UX)
     - [User-Centered Problem Statement](#user-centered-problem-statement)
     - [Website Owner Business Goals](#website-owner-goals)
@@ -30,6 +30,7 @@ This project is for educational purposes. The main aim is to build a functional 
     - [Performance Testing](#performance)
     - [Code Validation](#validation) 
 - [Deployment](#deployment)
+- [Lessons Learned](#lessons)
 - [Credits](#credits)
 
 <h1 id="agile-development">Agile Development
@@ -46,11 +47,13 @@ This project is for educational purposes. The main aim is to build a functional 
     - Epics – I grouped related tasks under broader sections to organize work into meaningful categories.
     - Milestones – I used this feature to track progress and assess whether I was on schedule, allowing me to adjust my time management strategies as needed.
 - Initially, I set up my Kanban board at the start of the project. However, after an early-stage review, I decided to restart the project due to dissatisfaction with my initial approach. Since the Kanban board remained linked to my new project, I continued using it. However, after an extended break from development, I accidentally deleted my old repository, which also removed the Kanban board.
-- Upon returning to the project, I discovered the board was gone, making it seem as though I had not used one at all. To recover my workflow, I reconstructed the board based on my commit messages, handwritten notes, and memory. Upon returning to the project, I discovered the board was gone, making it seem as though I had not used one at all. To recover my workflow, I reconstructed the board based on my commit messages, handwritten notes, and memory. As a result, many of the timestamps on tasks do not accurately reflect their actual completion dates, but rather when they were recreated on the board.
+- Upon returning to the project, I discovered the board was gone, making it seem as though I had not used one at all. To recover my workflow, I reconstructed the board based on my commit messages, handwritten notes, and memory. As a result, many of the timestamps on tasks do not accurately reflect their actual completion dates, but rather when they were recreated on the board.
 
 ### The Value of Kanban for Project Development
 - Revisiting the Kanban method has given me a deeper appreciation for its benefits, particularly in time management, task prioritization, and workflow organization. By categorizing tasks under epics, assigning priority labels, and defining milestones, I was able to create a structured roadmap for development. This not only ensured that tasks remained organized but also made progress easily trackable.
 - One of the most significant advantages I found was that the Kanban board helped me maintain focus on one task at a time. I often find myself switching between multiple tasks before completing them, leading to a disorganized workflow. By visualizing my tasks on a Kanban board, I could better structure my workload and stay on track without becoming overwhelmed.
+
+![Screenshot of my kanban board](static/images/kanban.png)
 
 [Back to Contents](#contents)
 
@@ -72,14 +75,12 @@ This project is for educational purposes. The main aim is to build a functional 
 <h2 id="user-goals">User Goals</h2> 
 
 ### New Users 
-
 - Discover a unique and culturally rich social space.
 - Easily navigate the website and explore the available menus/events
 - Create an account for personalised bookings.
 - Make a booking with no hassle.
 
 ### Returning Users 
-
 - Quickly log in to create or manage any bookings.
 - Engage with the community and social scene.
 - Access exclusive perks and loyalty rewards.
@@ -87,7 +88,6 @@ This project is for educational purposes. The main aim is to build a functional 
 <h2 id="user-stories">User Stories</h2> 
 
 ### As a web designer... 
-
 - I want to create an engaging and visually appealing website, so that users feel inspired to book a table and visit the restaurant.
 - I want to implement a secure and user-friendly online booking system, so that users can easily make, manage, and cancel reservations without confusion.
 - I want to develop a relational database model, so that all booking, user, and event data is efficiently stored and managed.
@@ -95,14 +95,12 @@ This project is for educational purposes. The main aim is to build a functional 
 - I want to track and manage user reservations and preferences, so that I can offer personalized recommendations and loyalty perks to returning customers.
 
 ### As a new user...
-
 - I want to discover what makes this restaurant unique, so that I can decide if it matches my personality and interests.
 - I want to easily browse the menu, upcoming events, and ambiance details, so that I can decide if this is a place I’d like to visit.
 - I want to create an account quickly, so that I can save my preferences and easily book a table.
 - I want to make a hassle-free booking, so that I can secure a table without unnecessary steps or confusion.
 
 ### As a returning customer...
-
 - I want to log in quickly and access my bookings, so that I can modify or cancel them if necessary.
 - I want to receive personalized recommendations for events or menu items, so that I feel more connected to the restaurant’s cultural scene.
 - I want to engage with the community through exclusive events and discussions, so that I can meet like-minded people in a culturally rich environment.
@@ -113,7 +111,6 @@ This project is for educational purposes. The main aim is to build a functional 
 This website has been designed and developed using built-in Django features such as template language tags, Django Allauth for authentication, and Crispy Forms for enhanced form styling. Additionally, CSS styling and media queries have been implemented to ensure responsiveness for devices with a minimum width of 320px.
 
 ### Process Flow Chart
-
 The Process Flow Chart visually represents the structure of the website and the possible user navigation paths, helping to illustrate the user journey and overall functionality.
 
 ![This is a flow chart demonstrating the structure of this website and the process to navigate around it.][flow-chart]
@@ -125,7 +122,6 @@ The Process Flow Chart visually represents the structure of the website and the 
 - The website is designed to provide clear and consistent feedback, ensuring a smooth user experience and making navigation intuitive.
 
 ### ERD
-
 The ERD below illustrates the different models used within the database and the relationships between them.
 
 ![This is the ERD which was created to show the database structure and the relationships held between the different models][erd]
@@ -135,7 +131,6 @@ The ERD below illustrates the different models used within the database and the 
 - Additionally, I now realize that placing the address and contact details within the main restaurant model was not the best approach. Instead, these details would have been more appropriately stored in separate models where they are specific and relevant to their context.
 
 ### Wireframes
-
 Below are the original wireframe images created during the design thinking process for this website. While the final outcome has evolved, the core page structure remains intact. Creating wireframes was a valuable tool, providing a foundation to build upon and refine as development progressed.
 
 ![These are basic images outlining the initial website structure designed during the planning phase.][wireframes]
@@ -148,22 +143,19 @@ Below are the original wireframe images created during the design thinking proce
     - The food and drink menus consist of item lists, including prices and calorie details, accompanied by representative images.
 - I initially designed an **events page**, which I would have liked to implement, but it was not prioritized to ensure the website met its primary goal—encouraging users to visit the restaurant. However, I plan to add this feature in the future as it would add value to the site.
 - The **booking page** remains largely the same; however, I have added a section at the bottom that displays the user's current bookings, allowing them to edit or delete bookings with the click of a button.
-- The **contact page** hosts the address and an interactive map feature at the top of the page and when in a tyablet or larger device, the remaining details are listed below in a horizontal line using flex, instead of having the stagered appearance that it displayed within the wireframe modals. The order has been manipulated for aesthetics when on larger devices due to the size and importance of the sections involved.
+- The **contact page** hosts the address and an interactive map feature at the top of the page and when in a tablet or larger device, the remaining details are listed below in a horizontal line using flex, instead of having the staggered appearance that it displayed within the wireframe modals. The order has been manipulated for aesthetics when on larger devices due to the size and importance of the sections involved.
     - I wanted to include a contact page feature allowing users to leave comments or send messages to the restaurant. However, this was set aside in favor of implementing more essential features first.
 
 <h1 id="surface">Surface</h1>
 
 ### Colours
-
 The following colors have been used throughout the website to ensure consistency and a professional appearance. They comply with contrast recommendations for accessibility.
 
 #### Header
-
 - Background color: `#FCF4D9` (*Vanilla Beige*)
 - Font and Navigation links: `#0B5509` (*Deep Forest Green*)
 
 #### Main Body
-
 - Background color: `#FCF4D9` (*Vanilla Beige*)
 - Headings: `#0B5509` (*Deep Forest Green*)
 - Text: `#5E625E` (*Soft Graphite*)
@@ -171,7 +163,6 @@ The following colors have been used throughout the website to ensure consistency
 - Inside borders: `#F9F6EE` (*Warm Ivory*)
 
 #### Footer
-
 - Background color: `#0B5509` (*Deep Forest Green*)
 - Font and Navigation links: `#FCF4D9` (*Vanilla Beige*)
 
@@ -180,44 +171,35 @@ These colors provide high contrast for readability while maintaining a neutral, 
 To enhance visibility and clarity, lighter borders are used around forms and buttons, adding contrast and contributing to a refined, accessible user experience.
 
 ### Fonts
-
 A combination of carefully selected fonts has been used throughout the website to create visual contrast, readability, and a refined aesthetic. These fonts contribute to the website's professional yet inviting feel.
 
 #### Headings & Links
-
 - Primary Font: `'Vidaloka'` (Serif)  
 - Fallback Font: `'Serif'`  
 - This elegant serif font is used for headings, links, and the contact section, providing a classic and sophisticated feel. Its high contrast and sharp details make it ideal for drawing attention to key elements.  
 - These fonts have been sourced from Google Fonts and imported into `style.css`, which is linked to the `base.html` template to ensure consistency across all pages.
 
 #### Main Text
-
 - Primary Font: `'Helvetica Neue'` (Sans-serif)  
 - A clean, modern sans-serif font used for large areas of text, including the home page and main menu page. Its neutral and legible design enhances readability, making long passages of text easy to consume.  
 - This font has been implemented via the Django Summernote admin panel to maintain consistency in content management.
 
-#### Buttons
-
-- The buttons inherit their styling from Crispy Forms built-in font, ensuring compatibility with form elements and maintaining a clean, user-friendly appearance.
-
 The pairing of Vidaloka for headings and Helvetica Neue for body text creates a visually appealing contrast that improves readability and user experience. The serif font conveys elegance and tradition, while the sans-serif font brings modernity and clarity, aligning with the website’s professional yet warm and welcoming theme.  
 
+#### Buttons
+The buttons inherit their styling from Crispy Forms built-in font, ensuring compatibility with form elements and maintaining a clean, user-friendly appearance.
+
 ### Images
-
-All images used on the website were generated using the ChatGPT AI image tool. These images maintain a consistent style and size, ensuring a cohesive visual experience across the site.  
-
-To enhance responsiveness, media queries have been implemented to dynamically adjust the layout of images across different screen sizes, improving the overall user experience on various devices.
-
-Images are stored using Cloudinary, a third-party media hosting platform, for efficient loading times and scalability. Additionally, all images are backed up locally within the static files in the IDE. This redundancy ensures that if Cloudinary becomes unavailable, the images can still be retrieved and displayed from local storage.
- 
-Every image includes descriptive alt text, improving accessibility for visually impaired users and enhancing SEO.
+- All images used on the website were generated using the ChatGPT AI image tool. These images maintain a consistent style and size, ensuring a cohesive visual experience across the site.  
+- To enhance responsiveness, media queries have been implemented to dynamically adjust the layout of images across different screen sizes, improving the overall user experience on various devices.
+- Images are stored using Cloudinary, a third-party media hosting platform, for efficient loading times and scalability. Additionally, all images are backed up locally within the static files in the IDE. This redundancy ensures that if Cloudinary becomes unavailable, the images can still be retrieved and displayed from local storage.
+ - Every image includes descriptive alt text, improving accessibility for visually impaired users and enhancing SEO.
 
 [Back to Contents](#contents)
 
 <h1 id="features">Features</h1> 
 
 This program consists of 11 pages, each with distinct features and accessible through various routes.
-
 - 4 main pages are always accessible via the fixed navigation bar, ensuring easy access from anywhere on the site.
 - Drink and food menu pages are accessible exclusively via the main menu page.
 - A booking management page allows users to edit their reservations, only accessible via the main booking page.
@@ -227,14 +209,13 @@ This program consists of 11 pages, each with distinct features and accessible th
 The program consists of the following features: 
 
 ### Template Features: 
-
 - Header
     - The header remains fixed at the top of every page for easy navigation.
     - The restaurant name is bold and serves as a clickable link directing users to the homepage.
     - The header contains a navigation menu providing access to the site's main pages.
     ![Screenshot of the header when the user is logged out.][header-logged-out-screenshot]
 - Responsive Navigation
-    - On smaller devices (≤992px), the menu transforms into a slide-out navigation bar activated by a toggle menu icon, using Materialize CSS.
+    - On smaller devices (≤992px), the menu transforms into a slide-out navigation bar activated by a toggle menu icon (sourced from Materialize CSS).
     - On larger screens, the navigation menu is displayed horizontally on the right side of the header.
     - A divider separates main navigation links from authentication links, adjusting based on screen size.
 - User Authentication Visibility
@@ -259,9 +240,7 @@ The program consists of the following features:
     - Designed with responsive CSS styling, the footer maintains a clean, structured layout that is visually balanced, accessible across all devices, and ensures easy access to essential details while preserving a professional appearance.
     ![Screenshot of the footer.][footer-screenshot]
 
-
 ### Landing Page Features:
-
 - Welcome Heading
     - Upon entering the website, users are greeted with a bold, centered welcome message on the landing page. This feature enhances user experience and engagement by:
         - Creating a Strong First Impression – The large, attention-grabbing heading immediately welcomes visitors and establishes the website’s tone.
@@ -288,10 +267,8 @@ The program consists of the following features:
         - Images of individuals reading, groups playing board games, and live music performances help to sell the experience, giving users a visual glimpse of the vibrant and engaging atmosphere they can expect when visiting.
     ![Screenshot of the visit section on the hme page with images.][visit-screenshot]
 
-
 ### Menu Features:
-
-- Menu Introdcution
+- Menu Introduction
     - This section provides general information about the café’s menus, including:
         - Food availability and serving times.
         - Where to access the individual menus.
@@ -323,9 +300,7 @@ The program consists of the following features:
     - This serves as a clear call to action, encouraging users to book a table after exploring the food and drink options, making it easier for them to plan their visit.
     ![Screenshot of the link to the booking page, located on the menu page.][booking-link-screenshot]
 
-
 ### Food/Drink menu Features:
-
 - Menu Contents
     - Items are categorized by type, with each section headed by a bold title. Menu entries are displayed in the following format:
         - Food/drink item name
@@ -340,9 +315,7 @@ The program consists of the following features:
     - Media queries ensure consistent spacing between content and the border, maintaining a balanced layout without the menu taking up excessive space.
     ![Screenshot of the Food menu on a large device with a border and the image alongside the food item lists.][food-menu-screenshot]
 
-
 ### Booking page Features:
-
 - Unauthenticated Users 
     - If a user navigates to the Booking Page without being logged in, a notification box appears with clear instructions to either log in or create an account before booking a table.
     - The "Log In" and "Create an Account" links are highlighted in a different color to stand out as clickable actions.
@@ -395,9 +368,7 @@ The program consists of the following features:
     - This feature ensures users can quickly view, manage, and update their bookings in a structured and intuitive way.
     ![Screenshot of the list which displays any current booking that the user has.][bookings-display-screenshot]
 
-
 ### Edit Booking Page Features:
-
 When a user clicks the "Edit" button on one of their listed bookings, they are directed to a separate page containing a form titled "Edit Booking".
 - Editing Process
     - The form is pre-populated with the party size and date of the existing booking.
@@ -407,11 +378,9 @@ When a user clicks the "Edit" button on one of their listed bookings, they are d
     - If the requested date, time, or party size is unavailable, an error message informs the user.
     - They remain on the Edit Booking Page and are prompted to select an alternative option.
 - This ensures a smooth user experience, allowing for seamless modifications while maintaining clarity through real-time feedback.
-    ![Screenshot of the edit booking page which host a form for users to complete with ammended booking details.][edit-booking-screenshot]
-
+    ![Screenshot of the edit booking page which host a form for users to complete with amended booking details.][edit-booking-screenshot]
 
 ### Delete Booking Model:
-
 When a user clicks the "Cancel" button next to one of their current bookings, a confirmation modal appears at the center of the screen, overlaying the current page.
 - Modal Functionality
     - The modal prompts the user to confirm their cancellation and reminds them that this action cannot be undone.
@@ -427,9 +396,7 @@ When a user clicks the "Cancel" button next to one of their current bookings, a 
 This confirmation step ensures that users do not accidentally delete their reservations, providing a smooth and secure experience.
     ![Screenshot of the cancellation model that is displayed once the user clicks the 'cancel' button next to their current booking.][delete-modal-screenshot]
 
-
 ### Contact Page Features: 
-
 At the top of the Contact Page, a heading encourages users to visit the restaurant, setting a welcoming tone. The page is structured with clear headings labeling each section:
 - Location:
     - The restaurant’s address is displayed prominently at the top center of the page.
@@ -448,9 +415,7 @@ At the top of the Contact Page, a heading encourages users to visit the restaura
     - On larger screens, Flexbox styling is used to align the last three sections (Opening Times, Contact Info, and Social Media Links) horizontally at the bottom, improving symmetry and visual balance.
     - This layout ensures ease of access to key contact details, enhancing the user experience while keeping the design clean and intuitive.
 
-
 ### Sign Up Page Features:
-
 The Sign-Up Page provides a clear and welcoming experience for new users, ensuring a smooth registration process.
 - Page Structure & User Guidance
     - A large heading welcomes users, followed by a brief introductory message.
@@ -473,9 +438,7 @@ The Sign-Up Page provides a clear and welcoming experience for new users, ensuri
 - This setup ensures an intuitive, user-friendly registration process while maintaining professional design consistency across the website.
     ![Screenshot of the Sign up page including the heading, introduction, link to login page and the sign up form itself.][signup-screenshot]
 
-
 ### Login Page Features:
-
 The Login Page provides a clear and structured experience, guiding users through the authentication process.
 - Page Structure & User Guidance
     - A prominent heading welcomes users, followed by a message informing them that they must log in to create or amend a reservation.
@@ -495,7 +458,6 @@ The Login Page provides a clear and structured experience, guiding users through
     ![Screenshot of the Login page including the heading, introduction, link to sign up page and the login form itself.][login-screenshot]
 
 ### Logout Page Features:
-
 The Logout Page is intentionally simple, ensuring a clear and seamless sign-out process.
 - Page Structure & Functionality
     - A bold heading informs the user that they are about to log out.
@@ -507,9 +469,7 @@ The Logout Page is intentionally simple, ensuring a clear and seamless sign-out 
 - This design keeps the process quick, intuitive, and distraction-free, ensuring users can log out efficiently when needed.
     ![Screenshot of the Log out page.][logout-screenshot]
 
-
 ### 404 Error Page
-
 If a user enters an incorrect URL, they are directed to a custom-styled 404 error page, ensuring a clear and user-friendly experience.
 - Page Structure & Features
     - A bold, clear title indicating that the page cannot be found.
@@ -523,7 +483,6 @@ If a user enters an incorrect URL, they are directed to a custom-styled 404 erro
 The page is styled consistently with the rest of the website, maintaining a professional and cohesive design.
 This ensures that users encountering a broken or incorrect link are guided smoothly back to the main site without frustration.
     ![Screenshot of the custom styled 404 error page.][404-error-screenshot]
-
 
 <h2 id="features-to-implement">Features Left To Implement</h2> 
 
@@ -578,14 +537,16 @@ Feature: A user-generated review and rating system allowing customers to rate me
     - A Python-based web framework that handles database management, authentication, and server-side logic.
 - JavaScript
     - Added interactivity to the site, enabling dynamic features like event handling, form validation, and animations.
+
 ### Development, Version Control & Deployment
 - GitHub
     - Used for agile development, version control, storing the project repository, tracking changes, and enabling collaboration.
 - Gitpod/VS Code
     - The Integrated Development Environments (IDEs) used for writing, debugging, and managing the project’s code efficiently.
-    - Initially I started by using Gitpod but have migrated my project over to VS Code mid project.
+    - Initially, I started using Gitpod but migrated my project to VS Code midway through.
 - Heroku
     - A cloud platform used to deploy and host the live website, making it accessible to users online.
+
 ### Django Extensions & Libraries
 - Django AllAuth
     - Handles user authentication, account registration and login/logout.
@@ -595,11 +556,13 @@ Feature: A user-generated review and rating system allowing customers to rate me
     - Used for dynamic content rendering, allowing flexible data presentation within templates.
 - Summernote
     - A rich-text editor integrated via Django-Summernote, allowing formatted content editing within the Django admin panel.
+
 ### Design & Planning Tools
 - Figma 
     - A UI/UX design tool used for wireframing and prototyping the website layout before development, as well as creating a process flowchart to visualize the user journey and system interactions.
 - Lucidchart 
     - A diagramming tool used to create the Entity Relationship Diagram (ERD) for database schemas and architectural diagrams to plan the project structure and data flow.
+
 ### Media & Storage Services
 - Cloudinary 
     - A media storage and management platform used for storing and serving images dynamically, ensuring fast and efficient image delivery.
@@ -607,13 +570,15 @@ Feature: A user-generated review and rating system allowing customers to rate me
     - Used to support API integration and enable the seamless use of the Google Maps API within the project.
 - PostgreSQL 
     - A robust relational database system used in the production environment for handling and storing structured data efficiently.
+
 ### Third-Party APIs & Libraries
 - Google Maps API
     - Google Maps API was implemented in the Contact Page, allowing users to view the restaurant’s location, interact with the map, and get personalized directions.
 - Materialize CSS 
-    - A CSS framework used for modern UI components, including a responsive sliding navigation bar on smaller devices.
+    - A CSS framework used for modern UI components, utilised for a responsive sliding navigation bar on smaller devices.
 - Bootstrap
     - Used for layout styling, grid-based responsiveness, and UI components to maintain consistency.
+
 ### Additional Tools & Libraries
 - ChatGPT
     - Used to generate images for the website, ensuring a consistent and visually appealing design.
@@ -621,6 +586,7 @@ Feature: A user-generated review and rating system allowing customers to rate me
 - Google Fonts
     - Used to import and apply custom fonts and icons, ensuring a consistent, aesthetically pleasing, and readable typography across the website.
     - Helps maintain brand identity and enhances the overall user experience.
+
 ### Validation & Code Quality Tools
 These tools ensured code quality, accessibility, and performance across the project:
 - W3C Validator
@@ -638,63 +604,59 @@ These tools ensured code quality, accessibility, and performance across the proj
 
 <h2 id="functionality">Functionality Testing</h2> 
 
-- Below is a table to show all of the functions of the program, their expected outcomes and whether or not they work as intended. 
+Below is a table to show all of the functions of the program, their expected outcomes and whether or not they work as intended. 
 
-- All testing has been conducted manually. 
+All testing has been conducted manually. 
 
 | Action | Expected Result | Result | 
 | --- | --- | ---| 
 | Run program | Program launches successfully | Pass | 
 | Navigation | All navigation links direct users to their respective pages | Pass |
-| Slide-out navigation | Opens when toggle is clicked, closes when user clicks outside, links function correctly | Pass |
-| External links | Links to external webpages open in a separate window | Pass |
-| Responsive deisgn | Media queries trigger at appropriate device widths | Pass |
-| Verified unauthenticated | "You are not currently logged in." message appears when a user is not logged in | Pass |
-| Unauthenticated header display | "Sign Up" and "Login" page navigation is visible, but "Logout" is not | Pass |
-| Restricted access | Unauthenticated users cannot access the booking form. Links to authentication pages displayed instead | Pass |
-| Verified authenticated | A personalized message is displayed when a user is logged in | Pass |
-| Authenticated header display | "Sign Up" and "Login" page navigation is hidden, only "Logout" is visible | Pass |
-| Menu display | Menus are structured with types as headings, and items listed in ascending price order | Pass |
-| Form validation | Users receive prompts for incorrect data input or missing required fields | Pass |
+| Slide-out Navigation | Opens when toggle is clicked, closes when user clicks outside, links function correctly | Pass |
+| External Links | Links to external webpages open in a separate window | Pass |
+| Responsive Design | Media queries trigger at appropriate device widths | Pass |
+| Unauthenticated User Verification | "You are not currently logged in." message appears when a user is not logged in | Pass |
+| Unauthenticated User Header Display | "Sign Up" and "Login" page navigation is visible, but "Logout" is not | Pass |
+| Restricted Access | Unauthenticated users cannot access the booking form. Links to authentication pages displayed instead | Pass |
+| Authenticated User Verification | A personalized message is displayed when a user is logged in | Pass |
+| Authenticated User Header Display | "Sign Up" and "Login" page navigation is hidden, only "Logout" is visible | Pass |
+| Menu Display | Menus are structured with types as headings, and items listed in ascending price order | Pass |
+| Form Validation | Users receive prompts for incorrect data input or missing required fields | Pass |
 | Feedback | Relevant feedback is displayed at the top of the screen after actions | Pass |
-| Party size field | Only whole numbers between 1-10 can be entered | Pass |
-| Date field | Only today's date or a future date can be selected | Pass |
-| Time field | 	Users can only select a time later than the current time | Pass |
-| Check availability | Availability is verified based on date, time, and party size | Fail |
-| Assign table | If available, a suitable table is assigned and marked as occupied for one hour | Pass |
+| Party Size Field | Only whole numbers between 1-10 can be entered | Pass |
+| Date Field | Only today's date or a future date can be selected | Pass |
+| Time Field | 	Users can only select a time later than the current time | Pass |
+| Check Availability | Availability is verified based on date, time, and party size | Pass |
+| Assign Suitable Table | If available, a suitable table is assigned and marked as occupied for one hour | Pass |
 | Create Booking | Booking details are added to the database upon confirmation | Pass |
-| Bookings display | All confirmed future bookings should appear under "Current Bookings" | Fail |
-| Edit booking availability | Availability is rechecked for updated booking details | Fail |
-| Suitable table reassignment | A new table is reassigned if needed | Fail |
+| Bookings Display | All confirmed future bookings should appear under "Current Bookings" | Pass |
+| Edit Booking Availability Rechecked | Availability is rechecked for updated booking details | Pass |
+| Suitable Table Reassignment | A new table is reassigned if needed | Pass |
 | Update Booking | Database is updated with new booking details upon submission | Pass |
-| Delete booking | Booking is removed from the database upon user confirmation | Pass |
-| 404 error display | A custom "404 - Page Not Found" message is shown when an incorrect URL is entered | Pass |
+| Delete Booking | Booking is removed from the database upon user confirmation | Pass |
+| 404 Error Display | A custom "404 - Page Not Found" message is shown when an incorrect URL is entered | Pass |
 
 ### Failing functions
-
 - Check availability
     - Occasionally, the system incorrectly states that no availability exists, despite available tables being present in the database.
+    - This is detailed more in the [unsolved bugs](#issues) section.
 - Bookings display
     - While all current and future bookings are displayed correctly, past bookings from earlier in the day are still shown, as the system does not account for the time of day.
-- Edit booking availability
-    - Availability checks are not functioning correctly when modifying an existing booking.
-- Suitable table reassignment
-    - When a user edits a booking, the system automatically assigns the same table as before, even if the new party size exceeds the table's seating capacity.
-
 
 <h2 id="compatibility">Compatibility Testing</h2>
 
-This program has been tested in Chrome, Firefox and Safari web browsers with no issues on any of them.
+### Software Testing
+- This program has been tested on Chrome, Firefox, and Safari without any issues.
 
-I tested the website on the following hardware devices and no issues were found: 
-- MacBook Pro 
-- Galaxy S24
-
+### Hardware Testing 
+- I tested the website on the following devices: 
+    - MacBook Pro - No issues encountered.
+    - Galaxy S24 - No issues encountered.
+    - iPhone 13 - When entering a password, the contents are displayed instead of being masked with ***.
 
 <h2 id="story-testing">User Stories Testing</h2> 
 
 ### As a web designer...
-
 - I want to create an engaging and visually appealing website, so that users feel inspired to book a table and visit the restaurant.
     - The website was built using templates to ensure a consistent and professional look, with common features, a cohesive color scheme, carefully chosen fonts, and uniform styling.
     - Various features engage users, including welcoming text that introduces the restaurant, its menu, and upcoming events.
@@ -715,7 +677,6 @@ I tested the website on the following hardware devices and no issues were found:
     - An admin panel was created using Django Summernote, allowing superusers to manage database information easily, track user activity, and oversee reservations.
 
 ### As a new user...
-
 - I want to discover what makes this restaurant unique, so that I can decide if it matches my personality and interests.
     - The homepage includes essential information about the restaurant, its owners, the ingredients used, and the types of events held, giving visitors a strong sense of the restaurant’s ethos and what to expect.
     - A menu page showcases the available food and drink options.
@@ -732,7 +693,6 @@ I tested the website on the following hardware devices and no issues were found:
     - The edit and delete functions are easy to use, enabling users to manage their bookings efficiently and view their confirmed reservations.
 
 ### As a returning customer...
-
 - I want to log in quickly and access my bookings, so that I can modify or cancel them if necessary.
     - The login form includes a "Remember Me" option to pre-fill user details upon return.
     - If a user tries to access the booking page without being logged in, they are redirected to the login page, ensuring a smooth user journey.
@@ -750,38 +710,30 @@ I tested the website on the following hardware devices and no issues were found:
 <h2 id="issues">Issues Found</h2> 
 
 ### Solved Bugs
-
 - Migration issue
     - When I migrated from Gitpod to VS Code, I accidentally connected the wrong GitHub account credentials, which caused authentication issues. I sought help from Tutor Support and followed their guidance using the IDE terminal to identify my correct credentials. After updating them accordingly, the issue was resolved.
-
 - Delete function issue
     - My delete button was not functioning properly and was unresponsive when clicked. After troubleshooting, I discovered that the issue was caused by the following line in main/urls.py: 'handler404 = "helpers.views.handle_error_404"'. Once I removed this line, the delete button started working as expected. My mentor assisted me in identifying and fixing this issue.
-
 - Slide navigation links not responding
     - The navigation links within my slide menu were not responding as expected. The issue was due to the closeButton event listener not being properly handled. To fix this, I modified script.js by adding an optional chaining operator (?.) to check if closeButton exists before adding an event listener. This not only resolved the issue but also prevented errors from appearing in DevTools.
-
-- Unautherised access to Edit Booking page
+- Unauthorised access to Edit Booking page
     - During testing, I discovered that users could access the Edit Booking page by entering the URL directly, even if they were not authenticated. This posed a security risk, as it allowed unauthorized users to view booking details. To address this, I updated the edit_booking function to check the user's authentication status before loading the page. If the user is not authenticated, they receive feedback and are redirected to the login page.
-
 - Table reassignment issue
     - Initially, when updating a booking through the Edit Booking function, the system would update the booking details but fail to reassign a suitable table. This resulted in cases where a party size increased but remained assigned to a table that was no longer appropriate. To fix this, I modified the edit_booking function to evaluate the updated form data and run the get_available_tables function. This ensures that the assigned table is both suitable and available for the updated booking.
  
-### Unsolved bugs
-
+### Unsolved Bugs
 - Mixed content warning
     - While using DevTools, I encountered a Mixed Content warning: "Mixed Content: The page at '<URL>' was loaded over HTTPS, but requested an insecure element '<URL>'. This request was automatically upgraded to HTTPS. For more information, see <URL>." This warning appeared for all image links hosted on Cloudinary. 
     - Additionally, my Lighthouse Best Practices report flagged this issue, stating: "Does not use HTTPS."
     - To resolve this, I attempted to modify my settings.py file by following the instructions in the Cloudinary documentation. However, the issue persisted. I planned to revisit it later, but I ran out of time before I could fully address it.
-
 - Availability issue
-    - I implemented a function called get_available_tables, which retrieves available tables based on the time period extracted from the user's booking form data. The function returns a list of suitable tables, and it is called within the booking_page function. If an appropriate table is available, it is assigned to the booking, and feedback is provided to the user.
+    - I implemented a function called get_available_tables, which retrieves available tables based on the time period extracted from the user's booking form data, taking into account that the table will be occupied for an hour. The function returns a list of suitable tables, and it is called within the booking_page function. If an appropriate table is available, it is assigned to the booking, and feedback is provided to the user.
     - While this functionality works most of the time, I noticed inconsistencies during testing. In several instances, available tables were still shown as unavailable. To investigate, I first checked the admin panel to confirm that tables were available for specific dates and times. I then cross-referenced this data using the Python shell in the IDE terminal. However, when attempting to book these tables through the system, the reservation was still unsuccessful.
     - I also discovered that users are largely unable to book the table for 10 guests, but I’m currently unsure how to resolve this issue.
 
 <h2 id="performance">Performance Testing</h2> 
 
 ### Lighthouse 
-
 - I completed an audit through Chrome Devtools using the Lighthouse program.  
 - The performance value sometimes varies. 
 - The results were as follows when last checked:
@@ -791,7 +743,6 @@ I tested the website on the following hardware devices and no issues were found:
         - The main issue is with the image links from Cloudinary, as they are not protected with HTTPS.
     - SEO at 100.
 ![Image of lighthouse results showing performance at 97, Acessability at 100, Best Practices at 78 and SEO at 100.][lighthouse]
-
 
 ### Validation
 
@@ -816,18 +767,18 @@ I tested the website on the following hardware devices and no issues were found:
 
 <h1 id="deployment">Deployment</h1> 
 
-- I started creating the website in Gitpod and migrated it over to VS Code mid-way through due to instructions form Code Institute.
+- I started creating the website in Gitpod and migrated it over to VS Code mid-way through due to instructions from Code Institute.
 - The website was deployed to Heroku via GitHub. The steps to deploy were as follows: 
     - Firstly, I created a list of dependencies that the project needs to run, as Heroku will need to install these also.  
         - To obtain this list type 'pip3 freeze > requirements.txt' into the Git pod terminal and the list will appear in requirements.txt file.
-        - I madse sure that "DEBUG = False" was set in my settings.py file within my IDE.
+        - I made sure that "DEBUG = False" was set in my settings.py file within my IDE.
     - I clicked 'Create new app' on the Heroku dashboard of my existing account.
         - I added the app name and selected my region, then clicked 'Create app'. 
     - On the app dashboard I went to "Settings".
         - In settings, I went to 'Config vars' and added the following: 
             - Key: SECRET_KEY / Value: (Copy and paste generated key sourced from [Djecrety](https://djecrety.ir/)).
             - Key: DATABASE_URL / Value: (Copy and paste URL sent to my email from Code Institute)
-            - Key: CLOUDINARY_URL / Value: (Copy and paste API enviroment variable link from my Cloudinary account dashboard) 
+            - Key: CLOUDINARY_URL / Value: (Copy and paste API environment variable link from my Cloudinary account dashboard) 
         - Then to the 'Buildpacks' section within settings and clicked "Add build pack".
             - I added the python buildpack.
     - I left settings by clicking the "Deploy" tab.
@@ -841,11 +792,39 @@ Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/)
 
 [Back to Contents](#contents)
 
+<h1 id="lessons">Lessons Learned</h1>
+
+Throughout this project, I have gained valuable experience and developed a deeper understanding of various tools, methodologies, and best practices. Here are some of the key takeaways:
+
+### Commit Messages & Version Control
+- I initially wrote lengthy commit messages, but I learned the importance of keeping them concise. Towards the end of the project, I discovered Source Control in VS Code, which helped me refine my commit process by staging changes more effectively instead of committing everything at once.
+
+### Kanban Board for Task Management
+- This was my first time using a Kanban board, and while I didn’t utilize it to its full potential at first, I eventually got into the rhythm. I now recognize how useful it is for time management and task prioritization. In future projects, I will leverage it more effectively from the start to improve my workflow and organization. 
+- In the future, I’ll label issues more effectively instead of categorizing so many as must-haves. By carefully reviewing the criteria, I’ll be able to prioritize tasks more efficiently.
+
+### Entity-Relationship Diagrams (ERDs)
+- Creating ERD diagrams for the first time was a learning experience. Since I hadn't worked with databases before, I found that my initial diagrams could have been planned better. In future projects, I will focus on designing ERDs more effectively from the outset to streamline the development process.
+
+### Django Admin Panel
+- I found the Django Admin Panel to be a powerful tool for managing database content. It proved to be incredibly useful, and now that I have had hands-on experience, I feel confident that I can utilize it more efficiently in future projects.
+
+### Working with Different Frameworks & Libraries
+- Completing this project significantly boosted my confidence in working with various frameworks and libraries. In particular, I became more comfortable with Django for handling user authentication, forms, and database interactions. This experience has made me more adaptable to learning and implementing new technologies.
+
+### Fixtures for Database Population
+- I used fixtures to populate large portions of my database, which was incredibly helpful. This method saved time and ensured consistency across my data entries. I will continue using fixtures in future projects where applicable.
+
+### Using DevTools More Effectively
+- Although I had prior experience with DevTools, this project exposed me to its features in greater depth. I now feel much more confident troubleshooting, inspecting elements, and optimizing performance using these tools.
+
+This project has been an incredible learning journey, and I look forward to applying these lessons to future development work.
+
+[Back to Contents](#contents)
 
 <h1 id="credits">Credits</h1>
 
 ### Resources
-
 - Initial Template: [Code Institute](https://github.com/Code-Institute-Org/ci-full-template)  
 - Process Flow Chart/Wireframe: [Figma](https://www.figma.com/templates/flowchart-maker/)  
 - Entity-Relationship Diagram (ERD): [Lucidchart](https://www.lucidchart.com/pages)  
@@ -859,7 +838,6 @@ Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/)
 - Development Environment: [Gitpod](https://www.gitpod.io/) | [VS Code](https://code.visualstudio.com/)  
 
 ### Frameworks & Libraries Used
-
 - Frontend Framework: [Bootstrap](https://getbootstrap.com/) 
 - Django Packages: 
   - Form Rendering: [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)  
@@ -868,11 +846,11 @@ Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/)
   - Content Rendering: [Django Template Language (DTL)](https://docs.djangoproject.com/en/5.1/ref/templates/language/)
 
 ### Debugging & Support
-
 - Code Institute Tutor Support
 - Google DevTools  
-- Slack Community 
+- Slack Community
 - ChatGPT
+- My Assigned Mentor (rory_patrick_mentor)
 - Validation Tools: 
   - [W3C HTML Validator](https://validator.w3.org/)  
   - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
@@ -880,7 +858,6 @@ Visit the live website [here.](https://denada-2b03b2e8c951.herokuapp.com/)
   - [PEP8 Online](http://pep8online.com/) *(Python)*  
 
 ### Media & Assets
-
 - Fonts: [Google Fonts](https://fonts.google.com/)  
 - Icons: [Font Awesome](https://fontawesome.com/)  
 - Favicon: [HiClipart](https://www.hiclipart.com/free-transparent-background-png-clipart-jupwz)  
