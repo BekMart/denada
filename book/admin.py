@@ -33,11 +33,17 @@ class BookingAdmin(admin.ModelAdmin):
         return STATUS[obj.status][1]  # Access the second element
 
 
-@admin.register(DiningTable)
 class DiningTableAdmin(admin.ModelAdmin):
-    """
-    Admin configuration for the DiningTable model.
-    This class customizes the Django admin interface for DiningTable,
-    making it easier to manage bookings with associated tables.
-    """
-    list_display = ('restaurant', 'id', 'seats')
+    list_display = ('restaurant', 'id', 'seats', 'get_bookings')
+
+    def get_bookings(self, obj):
+        """Retrieve all bookings associated with this table."""
+        table_booking = obj.table_booking.all()  # All bookings related to table
+        if table_booking.exists():
+            return ", ".join([f"#{b.id} ({b.date} {b.time})" for b in table_booking])
+        return "No bookings"
+
+    get_bookings.short_description = "Bookings"  # Column name in Admin
+
+
+admin.site.register(DiningTable, DiningTableAdmin)
