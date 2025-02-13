@@ -218,24 +218,14 @@ h2 {
 /* Link to food and drink menus */
 #food-title,
 #drink-title {
+  display: inline-block;
+  text-transform: uppercase;
   color: #c64a03 !important;
   padding: 0 15px;
-  margin-bottom: 5%;
   border: solid 4px #0b5509;
   border-radius: 10px;
   background-color: #f9f6ee;
-}
-
-#food-title {
-  font-size: 70%;
-  float: left;
-  margin-left: 20%;
-}
-
-#drink-title {
-  font-size: 70%;
-  float: right;
-  margin-right: 20%;
+  font-size: 60%;
 }
 
 /* Image on menu page */
@@ -678,6 +668,24 @@ h5 {
     max-width: 33%; /* Aligned horizontally in a row */
   }
 
+  /* Link to food and drink menus */
+  #food-title, 
+  #drink-title {
+    margin-bottom: 2%;
+  }
+
+  #food-title {
+    font-size: 70%;
+    float: left;
+    margin-left: 20%;
+  }
+
+  #drink-title {
+    font-size: 70%;
+    float: right;
+    margin-right: 20%;
+  }
+
   /* Food/Drink menu pages */
   /* Space inside menu */
   #food-container,
@@ -738,17 +746,25 @@ h5 {
 
   /* Contact details */
   #contact-section {
-    order: 1; /* Change order of display - appears first */
+    order: 1 !important; /* Change order of display - appears first */
   }
 
   /* Opening times display */
   #opening-times-section {
-    order: 2; /* Swapped position so that this is in the center */
+    order: 2 !important; /* Swapped position so that this is in the center */
   }
 
   /* Social media links/icons */
   #social-section {
-    order: 3; /* Now appears last */
+    order: 3 !important; /* Now appears last */
+  }
+}
+
+/* Media query: (1200px and above) */  
+@media screen and (min-width: 1200px) {
+  /* link to booking page */
+  #book-link {
+    width: 300px;
   }
 }
 
