@@ -636,7 +636,7 @@ All testing has been conducted manually.
 | Delete Booking | Booking is removed from the database upon user confirmation | Pass |
 | 404 Error Display | A custom "404 - Page Not Found" message is shown when an incorrect URL is entered | Pass |
 
-### Failing functions
+### Limitations and Inconsistencies
 - Check availability
     - Occasionally, the system incorrectly states that no availability exists, despite available tables being present in the database.
     - This is detailed more in the [unsolved bugs](#issues) section.
