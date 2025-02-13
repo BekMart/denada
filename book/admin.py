@@ -38,9 +38,11 @@ class DiningTableAdmin(admin.ModelAdmin):
 
     def get_bookings(self, obj):
         """Retrieve all bookings associated with this table."""
-        table_booking = obj.table_booking.all()  # All bookings related to table
+        # All bookings related to table
+        table_booking = obj.table_booking.all()
         if table_booking.exists():
-            return ", ".join([f"#{b.id} ({b.date} {b.time})" for b in table_booking])
+            return ", ".join(
+                [f"#{b.id} ({b.date} {b.time})" for b in table_booking])
         return "No bookings"
 
     get_bookings.short_description = "Bookings"  # Column name in Admin
