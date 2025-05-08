@@ -570,6 +570,8 @@ Feature: A user-generated review and rating system allowing customers to rate me
     - Used to support API integration and enable the seamless use of the Google Maps API within the project.
 - PostgreSQL 
     - A robust relational database system used in the production environment for handling and storing structured data efficiently.
+- Neon 
+    - Used as the hosted PostgreSQL database provider for the Django API after switching from the original database due to authentication and accessibility issues during deployment.
 
 ### Third-Party APIs & Libraries
 - Google Maps API
@@ -720,6 +722,10 @@ All testing has been conducted manually.
     - During testing, I discovered that users could access the Edit Booking page by entering the URL directly, even if they were not authenticated. This posed a security risk, as it allowed unauthorized users to view booking details. To address this, I updated the edit_booking function to check the user's authentication status before loading the page. If the user is not authenticated, they receive feedback and are redirected to the login page.
 - Table reassignment issue
     - Initially, when updating a booking through the Edit Booking function, the system would update the booking details but fail to reassign a suitable table. This resulted in cases where a party size increased but remained assigned to a table that was no longer appropriate. To fix this, I modified the edit_booking function to evaluate the updated form data and run the get_available_tables function. This ensures that the assigned table is both suitable and available for the updated booking.
+- Website Accessibility Issue and Resolution
+    - After submitting this project, I was contacted by Code Institute and informed that the deployed URL could not be accessed for assessment. The issue stemmed from an authentication misconfiguration, which made the database connection fail on the deployed version of the site.
+    To resolve this, I created a new PostgreSQL database using Neon. However, the new database was completely empty, so I needed to create a new superuser account to update the content of the site using the admin panel in the back end and I populated some of the menu data using Django fixtures.
+    This approach ensured that my project was fully functional again, with all necessary data present for the assessment. This experience highlighted the importance of using fixtures for backup and ensuring environment configurations are correct and secure before deployment.
  
 ### Unsolved Bugs
 - Mixed content warning
